@@ -1,0 +1,165 @@
+.navbar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    background-color: rgb(14, 11, 11);
+    box-shadow: 0 2px 2px 2px rgba(20, 20, 20, 0.23);
+}
+
+.logo-img{
+    width: 60px;
+   margin-left: 1rem;
+   background-color: white;
+   border-radius: 50%;
+
+}
+
+.navbar-menu{
+    margin-left: auto;
+}
+
+.navbar-menu ul{
+    display: flex;
+    padding: 0;
+}
+
+.navbar-menu li{
+    list-style-type: none;
+    margin: 0 1rem;
+    
+}
+
+.navbar-menu li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: white;
+}
+
+.navbar-menu li a:hover{
+    color: rgb(60, 165, 235);
+}
+
+.login{
+    margin-left: auto;
+    margin-right: 3rem;
+    
+}
+
+.login ul{
+    display: flex;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.login li{
+    list-style-type: none;
+    margin: 0 1.5rem;
+}
+
+.login li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: white;
+}
+
+.login li a:hover{
+    color: rgb(60, 165, 235);
+}
+
+.login-img{
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.hamburger{
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #686363;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+   
+}
+
+.hamburger:hover{
+    background-color: rgb(60, 165, 235);
+}
+
+/* media queries */
+
+@media screen and (max-width:800px){
+    .hamburger{
+        display: block;
+    }
+
+    .navbar-menu ul {  
+         display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        /* height: calc(100vh - 77px); */
+        background-color: white;
+        border-top: 1px solid black;
+      }
+      .navbar-menu li {
+        
+        text-align: center;
+        margin: 0;
+      }
+      .navbar-menu li a {
+        color: black;
+        width: 100%;
+        padding: 1.5rem 0;
+      }
+      .navbar-menu li:hover {
+        background-color: #eee;
+      }
+      
+      .login{
+        margin: auto;
+      }
+      /* .login ul {  
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 77px);
+        background-color: white;
+        border-top: 1px solid black;
+      }
+      .login li {
+        
+        text-align: center;
+        margin: 0;
+      }
+      .login li a {
+        color: black;
+        width: 100%;
+        padding: 1.5rem 0;
+      }
+      .login li:hover {
+        background-color: #eee;
+      } */
+
+     .navbar-menu.expanded ul{
+        display: block;
+     }
+
+}
