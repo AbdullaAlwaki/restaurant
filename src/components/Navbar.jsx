@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
-import logo from "../images/MERN-1.png";
+import logo from "../images/MERN.svg";
 import login from "../images/login.png";
 
 function NavBar() {
