@@ -1,5 +1,5 @@
-.App {
-  font-size: xx-large;
-  text-align: center;
+*{box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
