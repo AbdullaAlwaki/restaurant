@@ -1,0 +1,36 @@
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.heading_offer {
+    text-align: center;
+    margin: 3rem;
+}
+
+.pictures /*container for pictures*/ {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+
+}
+
+section {
+    display: flex;
+}
+
+.food_img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.new_sticker {
+    width: 50px;
+    height: 20px;
+    background-color: greenyellow;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
