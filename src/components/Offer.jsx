@@ -28,6 +28,23 @@ function Offer() {
                         <figcaption>Food name</figcaption>
                     </figure>
                     <p className="new_sticker">new</p>
+                    
+                </section>
+                <section>
+                    <figure>
+                        <img className="food_img" src={food} alt="" />
+                        <figcaption>Food name</figcaption>
+                    </figure>
+                    <p className="new_sticker">new</p>
+                    
+                </section>
+                <section>
+                    <figure>
+                        <img className="food_img" src={food} alt="" />
+                        <figcaption>Food name</figcaption>
+                    </figure>
+                    <p className="new_sticker">new</p>
+                    
                 </section>
             </div>
         </div>
