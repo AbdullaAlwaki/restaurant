@@ -1,8 +1,9 @@
 .booking {
     background-color: yellow;
     width: 60%;
-    height: 5rem;
+    height: fit-content;
     margin: auto;
+
 }
 
 h2 {
@@ -10,7 +11,7 @@ h2 {
 }
 
 .form {
-    display: block;
+    display: inline-block;
     margin-left: 3rem;
 }
 

@@ -9,15 +9,24 @@ function Offer() {
             {/*container for pictures*/}
             <div className="pictures">
                 <section>
-                    <img className="food_img" src={food} alt="" />
+                    <figure>
+                        <img className="food_img" src={food} alt="" />
+                        <figcaption>Food name</figcaption>
+                    </figure>
                     <p className="new_sticker">new</p>
                 </section>
                 <section>
-                    <img className="food_img" src={food} alt="" />
+                    <figure>
+                        <img className="food_img" src={food} alt="" />
+                        <figcaption>Food name</figcaption>
+                    </figure>
                     <p className="new_sticker">new</p>
                 </section>
                 <section>
-                    <img className="food_img" src={food} alt="" />
+                    <figure>
+                        <img className="food_img" src={food} alt="" />
+                        <figcaption>Food name</figcaption>
+                    </figure>
                     <p className="new_sticker">new</p>
                 </section>
             </div>

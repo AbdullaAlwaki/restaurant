@@ -1,5 +1,6 @@
 .container {
     width: 60%;
+    height: fit-content;
     margin: auto;
 }
 
@@ -9,14 +10,15 @@
 }
 
 .pictures /*container for pictures*/ {
-    display: flex;
+    display: inline-block;
     margin: auto;
-    justify-content: space-around;
-
+    
+    
 }
 
 section {
-    display: flex;
+ display: inline-flex;
+ margin: 1rem 5rem;
 }
 
 .food_img {
