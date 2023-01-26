@@ -4,7 +4,7 @@ import food from "../images/food_example.png";
 
 function Offer() {
     return (
-        <div className="container">
+        <div className="offer_container">
             <h2 className="heading_offer">Offer of the week</h2>
             {/*container for pictures*/}
             <div className="pictures">

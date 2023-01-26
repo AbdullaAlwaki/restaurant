@@ -43,7 +43,7 @@ useEffect(()=>{
 
                 {slides.map((slide, index)=>(
                     <div className="carousel-item" key={index}>
-                    <img className='img' src={slide.image} />
+                    <img className='img' alt='food img' src={slide.image} />
                     </div>
                 ))}
             </div>
@@ -56,4 +56,4 @@ useEffect(()=>{
   )
 }
 
-export default Carousel
+export default Carousel;
