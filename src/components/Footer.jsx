@@ -1,8 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library} from "@fortawesome/fontawesome-svg-core"
-import 
-{ faFacebook,faTwitter,faLinkedinIn,faCcMastercard,faCcVisa,faPaypal} from "@fortawesome/free-brands-svg-icons"
+import { faFacebook,faTwitter,faLinkedinIn,faCcMastercard,faCcVisa,faPaypal} from "@fortawesome/free-brands-svg-icons"
 import "../styles/Footer.css";
 
 
@@ -32,7 +30,7 @@ function Footer() {
             
             <div className="Fservices fadd">
                 <h3>Services</h3>
-                <ul>
+                <ul className="ul_services">
                     <li><a href="/">Sign in</a></li>
                     <li><a href="/about">Order</a></li>
                 </ul>
@@ -47,9 +45,9 @@ function Footer() {
                 <p>Phone: +49 30 12345678</p>
                 <br />
                 <div className="Ficons">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-               <FontAwesomeIcon icon={faLinkedinIn} />
+                <FontAwesomeIcon className="facebook_icon" icon={faFacebook} />
+                <FontAwesomeIcon className="twitter_icon" icon={faTwitter} />
+               <FontAwesomeIcon className="linkedin_icon" icon={faLinkedinIn} />
                </div>
 
                 <div>

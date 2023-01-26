@@ -1,11 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background: #b51010;
-}
+
 iframe{
     width: 80%;
     height: 80%;
@@ -19,32 +12,24 @@ iframe{
 h3{
     position: absolute;
     top: 20px;
-   
     color: #fff;
     font-size: 1.5rem;
     margin-bottom: 1%;
 }
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     background: #111;
     color: #fff;
-  
-  
 }
 li{
     list-style: none;
     margin: 10% 0;
-
-
 }
 a{
     text-decoration: none;
     color: #fff;
-
 }
 a:hover{
     color: rgb(60, 165, 235);
@@ -79,20 +64,17 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    height:15%;
     background: rgb(61, 60, 60);
-    padding: 0 2%;
+    padding: 1% 2%;
 }
 
 .Fpayments{
     display: flex;
     justify-content: space-around;
-    width: 9%;
+    width: 15%;
     font-size:xx-large;
     cursor: pointer;
 }
@@ -100,11 +82,26 @@ a:hover{
     width: 20%;
 }
 @media screen and (max-width:1000px){
+    footer{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     h3{
         top: 50%;
         width: 50%;
+        text-align: center;
+        margin: 0;
     }
- 
+    .ul_services{
+        padding-bottom: 13%;
+    }
     .Fup{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -112,28 +109,33 @@ a:hover{
         grid-template-areas: "iframe Fpages" "Fservices Fcontact";
         
     }
-
+    .facebook_icon:hover{
+        color: rgb(0, 96, 191);
+    }
+    .twitter_icon:hover{
+        color: rgb(75, 166, 227);
+    }
+    .linkedin_icon:hover{
+        color: rgb(0, 73, 122);
+    }
     .Fpayments{
-        width: 100%;
+        width: 50%;
         font-size:xx-large;
-        cursor: pointer;
-        margin-bottom: 4%;
-        padding-top: 2%;
     }
     .Fpages{
-        padding-top: 25%;
+        padding-top: 15%;
     }
     
     .fadd{
         width: 100%;
-        height: 40vh;
-        text-align: center;
-    }
-    
-    .Fdown{
+        height: 30vh;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .Fpayments{
+        width:20%;
     }
     .pages{
         top: 30px;
@@ -146,10 +148,9 @@ a:hover{
         padding-top: 15%;
     }
     .Ficons{
-        width: 100%;
+        width: 50%;
         justify-content: space-around;
-        font-size: large;
+        font-size: xx-large;
         padding: 5px;
-        cursor: pointer;
     }
 }
