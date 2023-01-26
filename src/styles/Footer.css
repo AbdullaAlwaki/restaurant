@@ -1,0 +1,156 @@
+
+iframe{
+    width: 80%;
+    height: 80%;
+    padding: 1%;
+}
+.iframe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    color: #fff;
+}
+li{
+    list-style: none;
+    margin: 10% 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: rgb(60, 165, 235);
+}
+
+.Fup{
+    margin-bottom: 2%;
+    background: #111;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Ficons{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: large;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.Fpages{
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    padding-top: 45px;
+}
+.Fdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: rgb(61, 60, 60);
+    padding: 1% 2%;
+}
+
+.Fpayments{
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+    font-size:xx-large;
+    cursor: pointer;
+}
+.fadd{
+    width: 20%;
+}
+@media screen and (max-width:1000px){
+    footer{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h3{
+        top: 50%;
+        width: 50%;
+        text-align: center;
+        margin: 0;
+    }
+    .ul_services{
+        padding-bottom: 13%;
+    }
+    .Fup{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "iframe Fpages" "Fservices Fcontact";
+        
+    }
+    .facebook_icon:hover{
+        color: rgb(0, 96, 191);
+    }
+    .twitter_icon:hover{
+        color: rgb(75, 166, 227);
+    }
+    .linkedin_icon:hover{
+        color: rgb(0, 73, 122);
+    }
+    .Fpayments{
+        width: 50%;
+        font-size:xx-large;
+    }
+    .Fpages{
+        padding-top: 15%;
+    }
+    
+    .fadd{
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Fpayments{
+        width:20%;
+    }
+    .pages{
+        top: 30px;
+        
+    }
+    .Fcontact{
+        padding-top: 10%;
+    }
+    .Fservices{
+        padding-top: 15%;
+    }
+    .Ficons{
+        width: 50%;
+        justify-content: space-around;
+        font-size: xx-large;
+        padding: 5px;
+    }
+}

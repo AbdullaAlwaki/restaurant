@@ -34,7 +34,7 @@ useEffect(()=>{
     },10000)
 
     return ()=> clearInterval(slideInterval)
-},[])
+})
   return (
     <div className="container">
 
