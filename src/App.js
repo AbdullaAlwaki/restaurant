@@ -11,7 +11,6 @@ function App() {
      <NavBar/>
      <Booking/>
      <Offer/>
-     
      <Footer/>
     </div>
   );
