@@ -1,8 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library} from "@fortawesome/fontawesome-svg-core"
-import 
-{ faFacebook,faTwitter,faLinkedinIn,faCcMastercard,faCcVisa,faPaypal} from "@fortawesome/free-brands-svg-icons"
+import { faFacebook,faTwitter,faLinkedinIn,faCcMastercard,faCcVisa,faPaypal} from "@fortawesome/free-brands-svg-icons"
 import "../styles/Footer.css";
 
 
