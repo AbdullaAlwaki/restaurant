@@ -11,7 +11,7 @@ function Booking() {
             {/*number of person*/}
             <input type="number" placeholder="How many person?"/>
             {/*time for booking */}
-            <input type="datetime" placeholder="What time?"/>
+            <input type="time" placeholder="What time?" min={"18:00"}/>
             {/*day for booking*/}
             <input type="date" />
             {/*reservation button*/}
