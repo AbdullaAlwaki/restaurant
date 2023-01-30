@@ -15,7 +15,6 @@ function App() {
      <Booking/>
      <Offer/>
      <Footer/>
-     
     </div>
   );
 }
