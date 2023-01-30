@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import food1 from '../images/food1.jpg';
-import food2 from '../images/food7.jpg';
-import food3 from '../images/food3.jpg';
-import food4 from '../images/food6.jpg';
-import food5 from '../images/food5.jpg';
-import '../styles/Carousel.css';
+import food1 from '../../images/food1.jpg';
+import food2 from '../../images/food7.jpg';
+import food3 from '../../images/food3.jpg';
+import food4 from '../../images/food6.jpg';
+import food5 from '../../images/food5.jpg';
+import '../../styles/Home/Carousel.css';
 
 function Carousel() {
 
@@ -43,7 +43,7 @@ useEffect(()=>{
 
                 {slides.map((slide, index)=>(
                     <div className="carousel-item" key={index}>
-                    <img className='img' src={slide.image} />
+                    <img className='img' src={slide.image} alt='slidingimages'/>
                     </div>
                 ))}
             </div>

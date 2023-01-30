@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/Offer.css";
-import food from "../images/food_example.png";
+import "../../styles/Home/Offer.css";
+import food from "../../images/food_example.png";
 
 function Offer() {
     return (
-        <div className="container">
+        <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
             {/*container for pictures*/}
             <div className="pictures">
