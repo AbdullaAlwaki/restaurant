@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import NavBar from './components/Navbar.jsx';
 import Home from './pages/Home/Home.jsx';
 import Menu from './pages/Menu/Menu.jsx';
-import Services from './pages/Services/Services.jsx';
+
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
        <Routes>
         <Route  path='/' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
-        <Route path='/services' element={<Services/>}/>
+       
   
        </Routes>
       </div>
