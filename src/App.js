@@ -10,6 +10,7 @@ import Footer from './components/Footer.jsx';
 function App() {
   return (
     <div className="App">
+      
      <NavBar/>
      {/* <Carousel/>
      <Booking/>

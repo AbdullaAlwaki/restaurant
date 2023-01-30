@@ -10,6 +10,7 @@ function Offer() {
             }
         }).then((jsonRes) => setOffer(jsonRes.dishes));
     }, []);
+    console.log(offer);
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
