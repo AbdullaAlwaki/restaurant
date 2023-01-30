@@ -1,9 +1,16 @@
 .booking {
     background-color: yellow;
-    width: 60%;
+    width: 80%;
     height: fit-content;
     margin: auto;
     text-align: center;
+}
+
+/*phone size*/
+@media only screen and (max-width: 420px) {
+    .booking {
+        width: 100%;
+    }
 }
 
 h2 {
@@ -21,6 +28,7 @@ input {
     background-color: white;
     display: inline;
     margin: 1rem;
+    border: none;
 }
 
 button {
@@ -31,4 +39,5 @@ button {
     background-color: black;
     color: white;
     font-weight: bold;
+    border: none;
 }
