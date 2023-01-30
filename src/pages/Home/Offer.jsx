@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Offer.css";
+import "../../styles/Home/Offer.css";
 
 function Offer() {
     const [offer, setOffer] = React.useState([]);
@@ -11,7 +11,7 @@ function Offer() {
         }).then((jsonRes) => setOffer(jsonRes.dishes));
     }, []);
     return (
-        <div className="offer_container">
+        <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
             {offer.map((item) => (
                 <section key={item.id}>
