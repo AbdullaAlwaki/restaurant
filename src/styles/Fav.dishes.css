@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: #a3a1a1;
     padding: 0 20px;
 }
 .heading_fav_dishes{
@@ -16,7 +16,7 @@
 .fix{
     display: flex;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #a3a1a1;
     width: 100%;    
 }
 .pictures_fav{
@@ -63,6 +63,7 @@
 .food_name{
     text-align: center;
     font-size: 1.5rem;
+    color: black;
 }
 
 .fav_dishes_container .fav_dishes_wrapper .fav_dishes_card .fav_dishes_img {

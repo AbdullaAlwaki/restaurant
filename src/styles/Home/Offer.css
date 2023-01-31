@@ -1,7 +1,8 @@
-.offer_container {
+.container_offer {
     width: 60%;
     height: fit-content;
     margin: auto;
+    text-align: center;
 }
 
 .heading_offer {
@@ -12,8 +13,23 @@
 .pictures /*container for pictures*/ {
     display: inline-block;
     margin: auto;
-    
-    
+}
+
+/*tablet size*/
+@media only screen and (min-width:421px) and (max-width:1220px) {
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+        justify-items: center;
+    }
+}
+/*phone size*/
+@media only screen and (max-width:420px) {
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(1, 15rem);
+        justify-items: center;
+    }
 }
 
 section {

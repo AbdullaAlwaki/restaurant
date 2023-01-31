@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../images/MERN.svg";
 import login from "../images/login.png";
 
 function NavBar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const activeStyle = {color: "yellow"}
   
   return (
     <>
@@ -32,19 +34,34 @@ function NavBar() {
       }>
         <ul>
           <li>
-            <a href="/home">Home</a>
+            {/* <a href="/home">Home</a> */}
+            <NavLink 
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/'>Home</NavLink>
             </li>
           <li>
-            <a href="/about">About</a>
+            {/* <a href="/about">About</a> */}
+            <NavLink 
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/about'>About</NavLink>
             </li>
           <li>
-            <a href="/menu">Menu</a>
+            {/* <a href="/menu">Menu</a> */}
+            <NavLink 
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/menu'>Menu</NavLink>
             </li>
           <li>
-            <a href="/services">Services</a>
+            {/* <a href="/services">Services</a> */}
+            <NavLink 
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/services'>Services</NavLink>
           </li>
           <li>
-            <a href="/contact">Contact Us</a>
+            {/* <a href="/contact">Contact Us</a> */}
+            <NavLink 
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/contact'>Contact</NavLink>
           </li>
         </ul>
       </div>
