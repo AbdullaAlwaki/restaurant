@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook,faTwitter,faLinkedinIn,faCcMastercard,faCcVisa,faPaypal} from "@fortawesome/free-brands-svg-icons"
-import "../../styles/Home/Footer.css";
+import "../styles/Home/Footer.css";
 import { Link } from "react-router-dom";
 
 

@@ -1,13 +1,10 @@
-
-
 import React, { useState } from "react";
 import Cards from "./Cards.jsx";
 import Categories from "./Categories";
-import {items} from "./data.js";
+import { items } from "./data.js";
 import logo from "../../images/MERN.svg";
-import '../../styles/Menu.css';
-import Footer from "../Home/Footer.jsx";
-
+import "../../styles/Menu.css";
+import Footer from "../../components/Footer.jsx";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -27,7 +24,6 @@ const Menu = () => {
   };
 
   return (
-    
     <main>
       <section className="menu section">
         <div className="title">
@@ -44,7 +40,7 @@ const Menu = () => {
         <Cards items={menuItems} />
       </section>
 
-      <Footer/>
+      <Footer />
     </main>
   );
 };

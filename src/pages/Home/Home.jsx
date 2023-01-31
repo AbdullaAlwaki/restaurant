@@ -1,19 +1,16 @@
-import React from 'react'
-import Carousel from './Carousel.jsx';
-import Offer from './Offer.jsx';
-import Booking from './Booking.jsx';
-import Footer from './Footer.jsx';
+import React from "react";
+import Carousel from "./Carousel.jsx";
+import Offer from "./Offer.jsx";
+import Booking from "./Booking.jsx";
 
 function Home() {
   return (
     <div>
-     
-      <Carousel/>
-      <Booking/>
-      <Offer/>
-      <Footer/>
+      <Carousel />
+      <Booking />
+      <Offer />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
