@@ -10,9 +10,13 @@
     margin: 3rem;
 }
 
-.pictures /*container for pictures*/ {
-    display: inline-block;
-    margin: auto;
+/*desktop size*/
+@media only screen and (min-width: 1221px) {
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(3, 15rem);
+        justify-items: center;
+    }
 }
 
 /*tablet size*/

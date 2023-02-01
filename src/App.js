@@ -6,6 +6,7 @@ import Home from './components/Home/Home.jsx';
 import Menu from './components/Menu/Menu.jsx';
 import Footer from './components/Footer.jsx';
 import Services from './components/Services/Services.jsx';
+import Contact from './components/Contact/Contact';
 import AddDishes from './Admin/AddDishes.jsx';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route  path='/' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/services' element={<Services/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         <Route path='/addDishes' element={<AddDishes/>}/>
        </Routes>
       </div>
