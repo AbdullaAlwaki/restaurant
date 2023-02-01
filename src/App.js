@@ -5,12 +5,13 @@ import NavBar from './components/Navbar.jsx';
 import Home from './pages/Home/Home.jsx';
 import Menu from './pages/Menu/Menu.jsx';
 import Footer from './components/Footer.jsx';
+
 // import Services from './pages/Services/Services.jsx';
 
 function App() {
   return (
     <div className="App">
-      
+    
      <NavBar/>
      {/* <Carousel/>
      <Booking/>
