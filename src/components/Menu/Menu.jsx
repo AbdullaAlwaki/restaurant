@@ -5,11 +5,11 @@ import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
 
 
-
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
- const [categories, setCategories] = useState([]);
- const [activeCategory, setActiveCategory] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState([]);
+  const [allFood, setAllFood] = useState([]);
  
 
   React.useEffect(() => {
@@ -19,19 +19,20 @@ const Menu = () => {
             return res.json();
         }
     }).then((jsonRes) => jsonRes.dishes)
-    .then((jsonRes) => {setMenuItems(jsonRes);
-       return jsonRes})
+    .then((jsonRes) => {
+      setMenuItems(jsonRes);
+      setAllFood(jsonRes);
+      return jsonRes})
     .catch((error) => console.log(error))
 }, []);
-  console.log(menuItems);
 
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "all") {
-      setMenuItems(menuItems);
+      setMenuItems(allFood);
       return;
     }
-    const newItems = menuItems.filter((item) => item.category === category);
+    const newItems = allFood.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
 

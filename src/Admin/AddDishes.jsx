@@ -2,6 +2,12 @@ import React from "react";
 
 function AddDishes() {
   const [response, setResponse] = React.useState([]);
+  const [method, setMethod] = React.useState("POST");
+
+
+  const handleChange = (e) => {
+    setMethod(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +25,7 @@ function AddDishes() {
     };
     try {
       const response = await fetch("/api/addDishes", {
-        method: "POST",
+        method: method,
         headers: {
           "Content-Type": "application/json",
         },
@@ -35,6 +41,14 @@ function AddDishes() {
     <div>
       <form className="AddDishes_form" action="" method="post" onSubmit={handleSubmit} >
         <h1>Add Dishes</h1>
+
+        <select name="" id="" onChange={handleChange}>
+          <option value="POST">post</option>
+          <option value="GET">get</option>
+          <option value="PUT">update</option>
+          <option value="DELETE">delete</option>
+        </select>
+
         <input type="text" name="name" id="name" placeholder="dish name" />
 
         <input type="text" name="dish images" id="dish images" placeholder="dish images"/>

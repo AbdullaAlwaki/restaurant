@@ -13,12 +13,11 @@ function Offer() {
         .then((jsonRes) => setOffer(jsonRes))
         .catch((error) => console.log(error))
     }, []);
-    console.log(offer);
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
-            {offer.map((item) => (
-                <section key={item.id}>
+            {offer.map((index,item) => (
+                <section key={index}>
                     <figure>
                         <img className="food_img" src={item.images} alt="" />
                         <figcaption>{item.name}</figcaption>
