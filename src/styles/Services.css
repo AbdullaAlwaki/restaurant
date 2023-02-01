@@ -21,7 +21,7 @@
 .reservation, .delivery {
     display: grid;
     margin: 3rem;
-    background-color: #3845f536;
+    background-color:rgb(231, 231, 231);
     border-radius: 30px;
     border: 2px solid gray;
 }
