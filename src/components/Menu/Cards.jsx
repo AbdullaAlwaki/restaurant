@@ -5,16 +5,16 @@ function Cards({items}) {
   return (
     <div className='section-center'>
        {items.map((item)=>{
-        const {id, title, img, desc, price} = item;
+        const {id, name, images, description, price} = item;
         return(
             <div className="menu-item" key={id}>
-              <a href="#"><img className='photo' src={img} alt={title} /></a> 
+              <a href="/"><img className='photo' src={images} alt={name} /></a> 
                <div className="item-info">
                 <header>
-                    <h4>{title}</h4>
+                    <h4>{name}</h4>
                     <h4 className='price'>{price}</h4>
                 </header>
-                <p className='desc'>{desc}</p>
+                <p className='desc'>{description}</p>
                </div>
             </div>
         )

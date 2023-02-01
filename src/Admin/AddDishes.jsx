@@ -53,7 +53,7 @@ function AddDishes() {
             
        
 
-        <input type="number" name="price" id="price" placeholder="price" />
+        <input type="text" name="price" id="price" placeholder="price" />
         <input type="text" name="description" id="description" placeholder="description" />
 
         <h4>is Vegan</h4>
