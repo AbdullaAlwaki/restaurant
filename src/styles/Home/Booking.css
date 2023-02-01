@@ -13,7 +13,7 @@
     }
 }
 
-h2 {
+.headingBook {
     text-align: center;
 }
 
@@ -22,7 +22,7 @@ h2 {
     margin-left: 3rem;
 }
 
-input {
+.inputBook {
     width: 10rem;
     height: 1.5rem;
     background-color: white;
@@ -31,7 +31,7 @@ input {
     border: none;
 }
 
-button {
+.buttonBook {
     width: 10rem;
     height: 1.5rem;
     display: inline;
