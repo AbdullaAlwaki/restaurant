@@ -1,4 +1,5 @@
 import React from "react";
+import "./AddDishes.css"
 
 function AddDishes() {
   const [response, setResponse] = React.useState([]);
@@ -33,51 +34,82 @@ function AddDishes() {
   };
   return (
     <div>
-      <form className="AddDishes_form" action="" method="post" onSubmit={handleSubmit} >
+      <form className="addDishes" action="" method="post" onSubmit={handleSubmit} >
         <h1>Add Dishes</h1>
-        <input type="text" name="name" id="name" placeholder="dish name" />
-
-        <input type="text" name="dish images" id="dish images" placeholder="dish images"/>
+        {/*What dish with name and image*/}
+        <div className="whatDish">
+          <h4 className="headingAdd">What dish name?</h4>
+          <input className="inputWhatDish" type="text" name="name" id="name" placeholder="dish name" />
+          <input className="inputWhatDish" type="text" name="dish images" id="dish images"   placeholder="dish images"/>
+        </div>
+        
           {/* or
             <input type="file" name="dish images" id="dish images" placeholder="dish images" /> */}
-        
 
-        <label htmlFor="breakfast" >Breakfast</label>
-        <input type="radio" name="category" id="breakfast" value="breakfast"/>
-          
-        <label htmlFor="lunch" >Lunch</label>
-        <input type="radio" name="category" id="lunch" value="lunch" />
-            
-        <label htmlFor="dinner">Dinner</label>
-        <input type="radio" name="category" id="dinner" value="dinner" />
-            
+        {/*Kind of dish*/}
+        <div className="kindOfDish">
+          <h4>What kind of dish?</h4>
+          <section className="addBreakfast">
+            <label htmlFor="breakfast" >Breakfast</label>
+            <input type="radio" name="category" id="breakfast" value="breakfast"/>
+          </section>
+          <section className="addLunch">
+            <label htmlFor="lunch" >Lunch</label>
+            <input type="radio" name="category" id="lunch" value="lunch" />
+          </section>
+          <section className="addDinner">
+            <label htmlFor="dinner">Dinner</label>
+            <input type="radio" name="category" id="dinner" value="dinner" />
+          </section>
+        </div>
+        
+        {/*Price and description*/}
+        <div className="addPrice">
+          <h4>Price and description:</h4>
+          <input className="inputPrice" type="number" name="price" id="price" placeholder="price" />
+          <input className="inputDescription" type="text" name="description" id="description" placeholder="description" />
+        </div>
        
-
-        <input type="number" name="price" id="price" placeholder="price" />
-        <input type="text" name="description" id="description" placeholder="description" />
-
-        <h4>is Vegan</h4>
-        <label htmlFor="is Vegan true">True</label>
-        <input type="radio" name="is Vegan" id="is Vegan true" value="true" />
-        <label htmlFor="is Vegan false">False</label>
-        <input type="radio" name="is Vegan" id="is Vegan false" value="false"/>
+       {/*vegan*/}
+        <div className="veganDish">
+          <h4>Is the dish vegan?</h4>
+          <section className="veganTrue">
+            <label htmlFor="is Vegan true">Yes</label>
+            <input type="radio" name="is Vegan" id="vegan_true" value="true" />
+          </section>
+          <section className="veganFalse">
+            <label htmlFor="is Vegan false">No</label>
+            <input type="radio" name="is Vegan" id="vegan_false" value="false"/>
+          </section>
+        </div>
         
-
-
-        <h4>is Offers</h4>
-        <label htmlFor="is offers true">True</label>
-        <input type="radio" name="is offers" id="is offers true" value="true"/>
-        <label htmlFor="is offers false">False</label>
-        <input type="radio" name="is offers" id="is offers false" value="false"/>
-
-
-        <h4>is Favorites</h4>
-        <label htmlFor="is Favorites true">True</label>
-        <input type="radio" name="is Favorites" id="is Favorites true" value="true"/>
-        <label htmlFor="is Favorites false">False</label>
-        <input type="radio" name="is Favorites" id="is Favorites false" value="false"/>
-
-        <button type="submit">Add Dishes</button>
+        {/*offer of the week*/}
+        <div className="offerDish">
+          <h4>Is the dish an offer?</h4>
+          <section className="offerTrue">
+            <label htmlFor="is offers true">Yes</label>
+            <input type="radio" name="is offers" id="offer_true" value="true"/>
+          </section>
+          <section className="offerFalse">
+            <label htmlFor="is offers false">No</label>
+            <input type="radio" name="is offers" id="offer_false" value="false"/>
+          </section>
+        </div>
+        
+        {/*favorite dishes*/}
+        <div className="addFavoriteDish">
+          <h4>Is the dish a favorite dish?</h4>
+          <section className="favoriteTrue">
+            <label htmlFor="is Favorites true">Yes</label>
+            <input type="radio" name="is Favorites" id="favorite_true" value="true"/>
+          </section>
+          <section className="favoriteFalse">
+            <label htmlFor="is Favorites false">No</label>
+            <input type="radio" name="is Favorites" id="favorite_false" value="false"/>
+          </section>
+        </div>
+        
+        <button type="submit" className="buttonAddDish">Add Dishes</button>
       </form>
       {response ? <h1>{response.message}</h1> : null}
         {response ? <p>{response.error}</p> : null}
