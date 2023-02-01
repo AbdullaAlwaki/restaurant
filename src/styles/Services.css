@@ -1,0 +1,77 @@
+.containerServ {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation, .delivery {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.boxOne {
+    width: 25rem;
+    height: 12rem;
+    background-color: rgb(182, 221, 10, 0.5);
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.boxTwo {
+    width: 45rem;
+    height: 12rem;
+    background-color: rgb(161, 161, 161, 0.5);
+    text-align: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+/*tablet size*/
+@media only screen and (min-width: 421px) and (max-width: 1220px) {
+    .containerServ {
+        margin: 3rem 0;
+    }
+
+    .boxOne, .boxTwo {
+        height: 15rem;
+    }
+}
+
+/*phone size*/
+@media only screen and (max-width: 420px) {
+    .containerServ {
+        margin: 0;
+    }
+
+    .reservation, .delivery {
+        display: inline;
+    }
+
+    .boxOne {
+        width: auto;
+    }
+
+    .boxTwo {
+        width: auto;
+        height: fit-content;
+    }
+}
+
+.buttonServ {
+    border-radius: 20px ;
+    width: 10rem;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(50, 170, 245);
+    color: black;
+}
+
+.buttonServ:hover {
+    width: 12rem;
+    height: 40px;
+}

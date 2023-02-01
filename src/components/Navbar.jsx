@@ -63,6 +63,12 @@ function NavBar() {
             style={({isActive}) => (isActive? activeStyle : undefined)}
             to='/contact'>Contact</NavLink>
           </li>
+          <li>
+            {/* <a href="/addDishes">addishes Us</a> */}
+            <NavLink
+            style={({isActive}) => (isActive? activeStyle : undefined)}
+            to='/addDishes'>Add Dishes</NavLink>
+          </li>
         </ul>
       </div>
       <div className="login">
