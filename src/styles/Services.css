@@ -1,34 +1,38 @@
 .containerServ {
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
+    margin: 4rem;
+    background-color: rgba(245, 232, 56, 0.363);
 }
 
+.headingServ {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.containerServices {
+    display: flex; 
+    margin: 3rem; 
+}
 .reservation, .delivery {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-
+    display: grid;
+    margin-bottom: 3rem;
+    background-color: #3845f536;
+    border-radius: 30px;
 }
 
-.boxOne {
-    width: 25rem;
-    height: 12rem;
-    background-color: rgb(182, 221, 10, 0.5);
-    text-align: center;
-    padding-top: 5rem;
-    font-size: 25px;
-    font-weight: bold;
+.img_Serv {
+    width: 15rem;
+    height: 10rem;
+    padding-top: 1rem;
+    justify-self: center;
 }
 
-.boxTwo {
-    width: 45rem;
-    height: 12rem;
-    background-color: rgb(161, 161, 161, 0.5);
-    text-align: center;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.5rem;
+.headingBox {
+    padding-bottom: 1rem;
+}
+
+.textBox {
+    padding: 1rem;    
 }
 
 /*tablet size*/
@@ -63,12 +67,14 @@
 }
 
 .buttonServ {
+    margin-top: -1rem;
     border-radius: 20px ;
     width: 10rem;
     height: 30px;
     text-align: center;
-    background-color: rgb(50, 170, 245);
-    color: black;
+    justify-self: center;
+    background-color:black;
+    color: white;
 }
 
 .buttonServ:hover {
