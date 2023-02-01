@@ -8,13 +8,13 @@ function Cards({items}) {
         const {id, title, img, desc, price} = item;
         return(
             <div className="menu-item" key={id}>
-               <img className='photo' src={img} alt={title} />
+              <a href="#"><img className='photo' src={img} alt={title} /></a> 
                <div className="item-info">
                 <header>
                     <h4>{title}</h4>
                     <h4 className='price'>{price}</h4>
                 </header>
-                <p className='item-text'>{desc}</p>
+                <p className='desc'>{desc}</p>
                </div>
             </div>
         )

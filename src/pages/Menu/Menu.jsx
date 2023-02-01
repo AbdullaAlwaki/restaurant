@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import { items } from "./data.js";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
-import Footer from "../../components/Footer.jsx";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -39,8 +38,6 @@ const Menu = () => {
 
         <Cards items={menuItems} />
       </section>
-
-      <Footer />
     </main>
   );
 };
