@@ -7,7 +7,6 @@ import Menu from './pages/Menu/Menu.jsx';
 import Footer from './components/Footer.jsx';
 import Services from './pages/Services/Services.jsx';
 import AddDishes from './Admin/AddDishes.jsx';
-// import Services from './pages/Services/Services.jsx';
 
 function App() {
   return (
@@ -18,7 +17,8 @@ function App() {
        <Routes>
         <Route  path='/' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
-        {/* <Route path='/services' element={<Services/>}/> */}
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/addDishes' element={<AddDishes/>}/>
        </Routes>
       </div>
     <Footer/>

@@ -1,8 +1,4 @@
 import React from "react";
-import {Routes, Route} from 'react-router-dom';
-import Menu from "../Menu/Menu";
-import NavBar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import '../../styles/Services.css'
 
 function Services() {
