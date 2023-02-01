@@ -3,6 +3,7 @@ import Cards from "./Cards.jsx";
  import Categories from "./Categories";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
+import axios from "axios";
 
 
 const Menu = () => {
@@ -14,7 +15,12 @@ const Menu = () => {
 
   React.useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
-    fetch(`/api/addDishes`).then((res) => {
+    fetch(`/api/addDishes`,{
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin':'*'
+      }
+    }).then((res) => {
         if (res.ok) {
             return res.json();
         }
@@ -24,6 +30,15 @@ const Menu = () => {
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
+    // axios.get(`/api/addDishes`)
+    // .then((res) => {
+    //   setMenuItems(res.data.dishes);
+    //   setAllFood(res.data.dishes);
+    //   return res.data.dishes;
+    // }
+    // )
+    // .catch((error) => console.log(error))
+
   }, []);
   const filterItems = (category) => {
     setActiveCategory(category);
