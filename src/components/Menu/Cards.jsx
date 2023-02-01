@@ -5,7 +5,7 @@ function Cards({items}) {
   return (
     <div className='section-center'>
        {items.map((index,item)=>{
-        const {id, name, images, description, price} = item;
+        const {name, images, description, price} = item;
         return(
             <div className="menu-item" key={index}>
               <a href="/"><img className='photo' src={images} alt={name} /></a> 
