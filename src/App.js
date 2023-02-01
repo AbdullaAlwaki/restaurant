@@ -5,6 +5,7 @@ import NavBar from './components/Navbar.jsx';
 import Home from './pages/Home/Home.jsx';
 import Menu from './pages/Menu/Menu.jsx';
 import Footer from './components/Footer.jsx';
+import AddDishes from './Admin/AddDishes.jsx';
 // import Services from './pages/Services/Services.jsx';
 
 function App() {
@@ -12,14 +13,11 @@ function App() {
     <div className="App">
       
      <NavBar/>
-     {/* <Carousel/>
-     <Booking/>
-     <Offer/>
-      */}
       <div className='main-container'>
        <Routes>
         <Route  path='/' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
+        <Route path='/addDishes' element={<AddDishes/>}/>
         {/* <Route path='/services' element={<Services/>}/> */}
        </Routes>
       </div>

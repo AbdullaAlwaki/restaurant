@@ -8,7 +8,10 @@ function Offer() {
             if (res.ok) {
                 return res.json();
             }
-        }).then((jsonRes) => setOffer(jsonRes.dishes));
+        }).then((jsonRes) => jsonRes.dishes)
+        .then((jsonRes) => jsonRes.filter((item) => item.isOffers === true))
+        .then((jsonRes) => setOffer(jsonRes))
+        .catch((error) => console.log(error))
     }, []);
     console.log(offer);
     return (
