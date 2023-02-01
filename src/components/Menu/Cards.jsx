@@ -4,7 +4,7 @@ import '../../styles/Menu.css';
 function Cards({items}) {
   return (
     <div className='section-center'>
-       {items.map((index,item)=>{
+       {items.map((item,index)=>{
         const {name, images, description, price} = item;
         return(
             <div className="menu-item" key={index}>

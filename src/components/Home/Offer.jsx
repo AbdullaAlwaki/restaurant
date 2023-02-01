@@ -16,12 +16,12 @@ function Offer() {
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
-            {offer.map((index,item) => (
+            {offer.map((item,index) => (
                 <section key={index}>
                     <figure>
                         <img className="food_img" src={item.images} alt="" />
                         <figcaption>{item.name}</figcaption>
-                        <figcaption>{item.price} PLN</figcaption>
+                        <figcaption>{item.price} €</figcaption>
                         <figcaption>{item.description}</figcaption>
                     </figure>
                     <p className="new_sticker">new</p>

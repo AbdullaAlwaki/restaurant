@@ -108,6 +108,6 @@ export const items = [
         category: 'dinner',
         price: '10.99 €',
         img: 'https://www.savingdessert.com/wp-content/uploads/2020/05/French-Bread-Pizza-10.jpg',
-        desc: 'bread, salami, cheese, onion, jalapaneos, tomato'
+        desc: 'bread, salami, cheese, onion, jalapenos, tomato'
     }
 ]

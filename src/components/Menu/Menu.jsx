@@ -24,8 +24,7 @@ const Menu = () => {
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
-}, []);
-
+  }, []);
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "all") {
@@ -35,6 +34,7 @@ const Menu = () => {
     const newItems = allFood.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
+  console.log(menuItems);
 
   return (
     <main>
