@@ -1,57 +1,39 @@
 import React from "react";
-// import { Routers,Route} from "react-router-dom";
-/* import Menu from "" */
+import { NavLink } from "react-router-dom";
 import "../../styles/Fav.dishes.css";
-import pizza from "../../images/pizza.png";
-import burger from "../../images/burger.png"
-import falafel from "../../images/falafel.png"
-import mashawi from "../../images/mashawi.png"
-import bryani from "../../images/bryani.png"
+
 
 
 function FavDishes() {
+    const [favorite, setFavorite] = React.useState([]);
+    React.useEffect(() => {
+        fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
+            if (res.ok) {
+                return res.json();
+            }
+        }).then((jsonRes) => jsonRes.dishes)
+        .then((jsonRes) => jsonRes.filter((item) => item.isFavorites === true))
+        .then((jsonRes) => setFavorite(jsonRes))
+        .catch((error) => console.log(error))
+    }, []);
+    console.log(favorite);
     return (
         <div className="fav_dishes_container">
             <h2 className="heading_fav_dishes">Favourite dishes</h2>
             {/*container for pictures*/}
             <div className="pictures_fav">
-                <section>
-                    <div className="fix">
-                    <img className="pizza foto" src={pizza} alt="" />
-                        <p  className="food_name">pizza</p>
+                {favorite.map((item,index)=>{
+                return <div className="fav_content" key={index}>
+                   <div className="fav_image_cont" > <img className="fav_pic" src={item.images} alt="" /></div>
+                        <p className="food_name">{item.name}</p>
                     </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="burger foto " src={burger} alt="" />
-                        <p className="food_name">burger</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="falafel foto" src={falafel} alt="" />
-                        <p className="food_name">falafel</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="mashawi foto" src={mashawi} alt="" />
-                        <p className="food_name">mashawi</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="bryani foto" src={bryani} alt="" />
-                        <p className="food_name">bryani</p>
-                    </div >
-                </section>
+                })
+                }
             </div>
             <div>
-                <span> For More Discover our Menu </span>
-                {/* <Routers>
-                    <Route path="/menu" element={<Menu/>}/>
-
-                    </Routers>     */}
+                <p className="fav_p"> For More Discover our  <NavLink  className="fav_menu"
+            to='/menu '>Menu</NavLink></p>
+                   
             </div>
        </div>
 )   
