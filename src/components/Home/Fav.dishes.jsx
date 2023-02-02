@@ -1,6 +1,5 @@
 import React from "react";
-// import { Routers,Route} from "react-router-dom";
-/* import Menu from "" */
+import { NavLink } from "react-router-dom";
 import "../../styles/Fav.dishes.css";
 
 
@@ -8,7 +7,7 @@ import "../../styles/Fav.dishes.css";
 function FavDishes() {
     const [favorite, setFavorite] = React.useState([]);
     React.useEffect(() => {
-        fetch(`/api/addDishes`).then((res) => {
+        fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
             if (res.ok) {
                 return res.json();
             }
@@ -24,22 +23,17 @@ function FavDishes() {
             {/*container for pictures*/}
             <div className="pictures_fav">
                 {favorite.map((item,index)=>{
-                return <section key={index}>
-                    <div className="fix">
-                    <img className="bryani foto" src={item.images} alt="" />
+                return <div className="fav_content" key={index}>
+                   <div className="fav_image_cont" > <img className="fav_pic" src={item.images} alt="" /></div>
                         <p className="food_name">{item.name}</p>
                     </div >
-                </section>
-
                 })
                 }
             </div>
             <div>
-                <span> For More Discover our Menu </span>
-                {/* <Routers>
-                    <Route path="/menu" element={<Menu/>}/>
-
-                    </Routers>     */}
+                <p className="fav_p"> For More Discover our  <NavLink  className="fav_menu"
+            to='/menu '>Menu</NavLink></p>
+                   
             </div>
        </div>
 )   
