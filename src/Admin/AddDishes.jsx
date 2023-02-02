@@ -4,7 +4,6 @@ function AddDishes() {
   const [response, setResponse] = React.useState([]);
   const [method, setMethod] = React.useState("POST");
 
-
   const handleChange = (e) => {
     setMethod(e.target.value);
   };
