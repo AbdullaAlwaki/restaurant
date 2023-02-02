@@ -1,6 +1,4 @@
-/* body{
-  background-image:linear-gradient(to bottom left, rgb(247, 247, 241), rgb(12, 12, 12))
-} */
+
 h4 {
     letter-spacing:  0.1rem;
     text-transform: capitalize;
@@ -83,7 +81,7 @@ h4 {
     width: 20rem;
     height: 20rem;
     /* border: 0.25rem solid rgb(14, 13, 13); */
-    background-color: rgb(238, 235, 235);
+    /* background-color: rgb(238, 235, 235); */
     box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
     transition: transform .5s;
   }
@@ -110,7 +108,7 @@ h4 {
   .item-info header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px dotted hsl(210, 22%, 49%);
+    border-bottom: 0.5px dotted rgb(16, 17, 17);
   }
   .item-info h4 {
     margin-bottom: 0.5rem;
@@ -122,14 +120,14 @@ h4 {
   }
 
   .price {
-    color: #c59d5f;
+    color: #99210c;
     white-space: nowrap;
   }
 
   .desc {
     margin-bottom: 0;
     padding-top: 1rem;
-    color: rgb(82, 121, 165);
+    color: rgb(16, 17, 17);
   }
   
 
@@ -161,4 +159,8 @@ h4 {
     .photo {
       height: 200px;
     }
+  }
+
+  .menu-container{
+    background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164))
   }

@@ -11,10 +11,10 @@ const Menu = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState([]);
   const [allFood, setAllFood] = useState([]);
- 
 
   React.useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
+
     fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
         if (res.ok) {
             return res.json();
@@ -30,6 +30,7 @@ const Menu = () => {
     setActiveCategory(category);
     if (category === "all") {
       setMenuItems(allFood);
+      
       return;
     }
     const newItems = allFood.filter((item) => item.category === category);
@@ -38,8 +39,8 @@ const Menu = () => {
   console.log(menuItems);
 
   return (
-    <main>
-      <section className="menu section">
+    <main className="menu-container">
+      <section className="menu section" >
         <div className="title">
           <img src={logo} alt="logo" className="logo" />
           <h2>Menu List</h2>
