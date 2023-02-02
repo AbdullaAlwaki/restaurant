@@ -49,9 +49,6 @@ function AddDishes() {
           <option value="DELETE">delete</option>
         </select>
 
-        <input type="text" name="name" id="name" placeholder="dish name" />
-
-        <input type="text" name="dish images" id="dish images" placeholder="dish images"/>
         {/*What dish with name and image*/}
         <div className="whatDish">
           <h4 className="headingAdd">What dish name?</h4>
