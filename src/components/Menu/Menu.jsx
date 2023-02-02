@@ -3,41 +3,39 @@ import Cards from "./Cards.jsx";
  import Categories from "./Categories";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
-
+// import axios from "axios";
 
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
-//  const [categories, setCategories] = useState(allCategories);
- const [activeCategory, setActiveCategory] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState([]);
+  const [allFood, setAllFood] = useState([]);
  
 
   React.useEffect(() => {
-   
-    fetch(`/api/addDishes`).then((res) => {
+    setCategories(['all', 'breakfast', 'lunch', 'dinner'])
+    fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
         if (res.ok) {
             return res.json();
         }
     }).then((jsonRes) => jsonRes.dishes)
-    .then((jsonRes) => {setMenuItems(jsonRes);
-       return jsonRes})
+    .then((jsonRes) => {
+      setMenuItems(jsonRes);
+      setAllFood(jsonRes);
+      return jsonRes})
     .catch((error) => console.log(error))
-}, []);
-  console.log(menuItems);
-
-  const allCategories= ["all", ...new Set(menuItems.map((item)=> item.category))];
-
-  const [categories, setCategories] = useState(allCategories);
-  
+  }, []);
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "all") {
-      setMenuItems(menuItems);
+      setMenuItems(allFood);
       return;
     }
-    const newItems = menuItems.filter((item) => item.category === category);
+    const newItems = allFood.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
+  console.log(menuItems);
 
   return (
     <main>

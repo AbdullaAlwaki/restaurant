@@ -6,17 +6,15 @@ h4 {
     text-transform: capitalize;
     line-height: 1.25;
     margin-bottom: 0.75rem;
+    font-size: 0.875rem;
   }
   
   h3 {
     font-size: 1.25rem;
   }
   
-  h4 {
-    font-size: 0.875rem;
-  }
   
-  p {
+  p.menu {
     margin-bottom: 1.25rem;
     color: rgb(82, 121, 165);
   }
@@ -26,12 +24,8 @@ h4 {
     margin: 0 auto;
     max-width: 1170px;
     display: block;
+    width: 95vw;
   }
-  
-   
-    .section {
-      width: 95vw;
-    }
   
   .menu {
     padding: 5rem 0;
@@ -135,6 +129,7 @@ h4 {
   .desc {
     margin-bottom: 0;
     padding-top: 1rem;
+    color: rgb(82, 121, 165);
   }
   
 

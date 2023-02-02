@@ -4,10 +4,10 @@ import '../../styles/Menu.css';
 function Cards({items}) {
   return (
     <div className='section-center'>
-       {items.map((item)=>{
-        const {id, name, images, description, price} = item;
+       {items.map((item,index)=>{
+        const {name, images, description, price} = item;
         return(
-            <div className="menu-item" key={id}>
+            <div className="menu-item" key={index}>
               <a href="/"><img className='photo' src={images} alt={name} /></a> 
                <div className="item-info">
                 <header>
