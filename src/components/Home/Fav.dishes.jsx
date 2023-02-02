@@ -2,49 +2,37 @@ import React from "react";
 // import { Routers,Route} from "react-router-dom";
 /* import Menu from "" */
 import "../../styles/Fav.dishes.css";
-import pizza from "../../images/pizza.png";
-import burger from "../../images/burger.png"
-import falafel from "../../images/falafel.png"
-import mashawi from "../../images/mashawi.png"
-import bryani from "../../images/bryani.png"
+
 
 
 function FavDishes() {
+    const [favorite, setFavorite] = React.useState([]);
+    React.useEffect(() => {
+        fetch(`/api/addDishes`).then((res) => {
+            if (res.ok) {
+                return res.json();
+            }
+        }).then((jsonRes) => jsonRes.dishes)
+        .then((jsonRes) => jsonRes.filter((item) => item.isFavorites === true))
+        .then((jsonRes) => setFavorite(jsonRes))
+        .catch((error) => console.log(error))
+    }, []);
+    console.log(favorite);
     return (
         <div className="fav_dishes_container">
             <h2 className="heading_fav_dishes">Favourite dishes</h2>
             {/*container for pictures*/}
             <div className="pictures_fav">
-                <section>
+                {favorite.map((item,index)=>{
+                return <section key={index}>
                     <div className="fix">
-                    <img className="pizza foto" src={pizza} alt="" />
-                        <p  className="food_name">pizza</p>
+                    <img className="bryani foto" src={item.images} alt="" />
+                        <p className="food_name">{item.name}</p>
                     </div >
                 </section>
-                <section>
-                    <div className="fix">
-                    <img className="burger foto " src={burger} alt="" />
-                        <p className="food_name">burger</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="falafel foto" src={falafel} alt="" />
-                        <p className="food_name">falafel</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="mashawi foto" src={mashawi} alt="" />
-                        <p className="food_name">mashawi</p>
-                    </div >
-                </section>
-                <section>
-                    <div className="fix">
-                    <img className="bryani foto" src={bryani} alt="" />
-                        <p className="food_name">bryani</p>
-                    </div >
-                </section>
+
+                })
+                }
             </div>
             <div>
                 <span> For More Discover our Menu </span>
