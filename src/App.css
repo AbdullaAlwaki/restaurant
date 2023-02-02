@@ -3,13 +3,3 @@
   padding: 0;
 }
 
-.AddDishes_form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 5% auto;
-  width: 20%;
-  height: 100vh;
-  background-color: #ff0000;
-}
