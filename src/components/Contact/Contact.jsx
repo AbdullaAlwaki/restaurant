@@ -33,9 +33,22 @@ function Contact() {
             <div className="contactField">
                 <p className="headingContact">Contact Us</p>
                 <form action="" className="formContact">
-                    <input type="text" name="name" className="inputContact" placeholder="Your name"/>
-                    <input type="email" name="email" id="" className="inputContact" placeholder="Your email" />
-                    <input type="text" name="textfield" className="inputContact" placeholder="Your message"/>
+                    {/*input name*/}
+                    <div className="floating_group">
+                        <input type="text" name="name" 
+                    className="inputContact" required/>
+                        <label>Your name</label>
+                    </div>
+                    {/*input email*/}
+                    <div className="floating_group">
+                        <input type="email" name="email" className="inputContact" required/>
+                        <label>Your email</label>
+                    </div>
+                    {/*input message*/}
+                    <div className="floating_group">
+                        <textarea name="textfield" id="inputMessage" cols="30" rows="10" className="inputContact" required></textarea>
+                        <label>Your message</label>
+                    </div>
                     <button type="submit" className="buttonContact">Submit</button>
                 </form>
             </div>

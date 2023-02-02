@@ -3,3 +3,50 @@
   padding: 0;
 }
 
+/*floating label above input*/
+.floating_group /*div container for input and label */ {
+position: relative;
+}
+
+input {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  opacity: 0.2;
+}
+
+input:focus {
+  height: 2.2rem;
+}
+
+/*leave placeholder above input*/
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  transition: all 1s ease-in-out;
+  background-color: rgb(231, 231, 231);
+  opacity: 1;
+}
+
+/*bigger size when value inside*/
+input:valid {
+  height: 2.5rem;
+  font-size: 16px;
+}
+
+textarea:valid {
+  padding-top: 15px;
+}
+
+
+
+
+
