@@ -8,12 +8,12 @@ import "../../styles/Menu.css";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
- const [categories, setCategories] = useState([]);
- const [activeCategory, setActiveCategory] = useState([]);
+//  const [categories, setCategories] = useState(allCategories);
+ const [activeCategory, setActiveCategory] = useState("");
  
 
   React.useEffect(() => {
-    setCategories(['all', 'breakfast', 'lunch', 'dinner'])
+   
     fetch(`/api/addDishes`).then((res) => {
         if (res.ok) {
             return res.json();
@@ -25,6 +25,10 @@ const Menu = () => {
 }, []);
   console.log(menuItems);
 
+  const allCategories= ["all", ...new Set(menuItems.map((item)=> item.category))];
+
+  const [categories, setCategories] = useState(allCategories);
+  
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "all") {

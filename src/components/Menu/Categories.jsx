@@ -8,7 +8,7 @@ function Categories({filterItems, categories, activeCategory}) {
     <div className='btn-container'>
         {categories.map((category,index)=>{
       return (
-        <button kry={index} type='button' className={`${
+        <button  type='button' className={`${
             activeCategory === category? "filter-btn active" : "filter-btn"
         }`}  key={index} onClick={()=> filterItems(category)}>
             {category}
