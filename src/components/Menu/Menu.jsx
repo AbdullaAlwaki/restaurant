@@ -1,27 +1,41 @@
 import React, { useState } from "react";
 import Cards from "./Cards.jsx";
-import Categories from "./Categories";
-import { items } from "./data.js";
+ import Categories from "./Categories";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
-import Footer from "../../components/Footer.jsx";
+// import axios from "axios";
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
 const Menu = () => {
-  const [menuItems, setMenuItems] = useState(items);
-  const [activeCategory, setActiveCategory] = useState("");
-  const [categories, setCategories] = useState(allCategories);
+  const [menuItems, setMenuItems] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState([]);
+  const [allFood, setAllFood] = useState([]);
+ 
 
+  React.useEffect(() => {
+    setCategories(['all', 'breakfast', 'lunch', 'dinner'])
+    fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
+        if (res.ok) {
+            return res.json();
+        }
+    }).then((jsonRes) => jsonRes.dishes)
+    .then((jsonRes) => {
+      setMenuItems(jsonRes);
+      setAllFood(jsonRes);
+      return jsonRes})
+    .catch((error) => console.log(error))
+  }, []);
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "all") {
-      setMenuItems(items);
+      setMenuItems(allFood);
       return;
     }
-    const newItems = items.filter((item) => item.category === category);
+    const newItems = allFood.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
+  console.log(menuItems);
 
   return (
     <main>
@@ -34,13 +48,11 @@ const Menu = () => {
         <Categories
           categories={categories}
           activeCategory={activeCategory}
-          filterItems={filterItems}
+           filterItems={filterItems}
         />
 
         <Cards items={menuItems} />
       </section>
-
-      <Footer />
     </main>
   );
 };

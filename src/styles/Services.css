@@ -1,74 +1,106 @@
 .containerServ {
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    margin: 4rem auto;
+    background-color: rgba(245, 232, 56, 0.363);
+    border: 2px solid gray;
+}
+
+.headingServ {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: -1rem;
+}
+
+.containerServices {
+    display: flex; 
+    margin: -1rem; 
 }
 
 .reservation, .delivery {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-
+    display: grid;
+    margin: 3rem;
+    background-color: #3845f536;
+    border-radius: 30px;
+    border: 2px solid gray;
 }
 
-.boxOne {
-    width: 25rem;
-    height: 12rem;
-    background-color: rgb(182, 221, 10, 0.5);
+.img_Serv {
+    width: 17rem;
+    height: 10rem;
+    padding-top: 1rem;
+    justify-self: center;
+}
+
+.headingBox {
+    padding-bottom: 1rem;
     text-align: center;
-    padding-top: 5rem;
-    font-size: 25px;
-    font-weight: bold;
 }
 
-.boxTwo {
-    width: 45rem;
-    height: 12rem;
-    background-color: rgb(161, 161, 161, 0.5);
-    text-align: center;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.5rem;
+.textBox {
+    padding: 1rem;    
 }
 
-/*tablet size*/
-@media only screen and (min-width: 421px) and (max-width: 1220px) {
+/* tablet size*/
+@media screen and (max-width: 1024px) {
     .containerServ {
-        margin: 3rem 0;
+        margin: 1rem;
     }
 
-    .boxOne, .boxTwo {
-        height: 15rem;
+    .containerServices {
+        display: inline-block;
+        margin: 1rem;
+    }
+
+    .reservation, .delivery {
+        margin: 1rem;
+    }
+
+    .img_Serv {
+        border-radius: 30px;
     }
 }
 
 /*phone size*/
-@media only screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     .containerServ {
         margin: 0;
     }
 
+    .headingServ {
+        margin-bottom: -1rem;
+    }
+
+    .containerServices {
+        width: 90%;
+        display: inline-block;
+        margin: 1rem;
+    }
+
     .reservation, .delivery {
-        display: inline;
+        margin: 0s;
     }
 
-    .boxOne {
+    .img_Serv {
+        margin:0rem;
+        border-radius: 25px;
         width: auto;
-    }
-
-    .boxTwo {
-        width: auto;
-        height: fit-content;
+        max-width: 10rem;
     }
 }
 
 .buttonServ {
+    margin-bottom: 1rem;
     border-radius: 20px ;
     width: 10rem;
     height: 30px;
     text-align: center;
-    background-color: rgb(50, 170, 245);
-    color: black;
+    justify-self: center;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+
 }
 
 .buttonServ:hover {
