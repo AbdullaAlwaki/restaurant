@@ -28,7 +28,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "proxy": "https://mern-restaurant-backend.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
