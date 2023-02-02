@@ -24,7 +24,7 @@ function AddDishes() {
       isFavorites: form.get("is Favorites"),
     };
     try {
-      const response = await fetch("/api/addDishes", {
+      const response = await fetch("https://mern-restaurant-backend.onrender.com/api/addDishes", {
         method: method,
         headers: {
           "Content-Type": "application/json",

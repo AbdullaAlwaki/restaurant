@@ -4,7 +4,7 @@ import "../../styles/Home/Offer.css";
 function Offer() {
     const [offer, setOffer] = React.useState([]);
     React.useEffect(() => {
-        fetch(`/api/addDishes`).then((res) => {
+        fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
             if (res.ok) {
                 return res.json();
             }
