@@ -7,6 +7,7 @@ import email from "../../images/email.png"
 
 function Contact() {
     return (
+        <main className="mainContact">
         <div className="containerContact">
             <div className="smallCon">
                 <section className="smallConIns">
@@ -53,6 +54,7 @@ function Contact() {
                 </form>
             </div>
         </div>
+        </main>
     )
 }
 
