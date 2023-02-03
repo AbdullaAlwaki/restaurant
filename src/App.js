@@ -17,10 +17,12 @@ function App() {
       <div className='main-container'>
        <Routes>
         <Route  path='/' element={<Home/>}/>
+        <Route path='/restaurant_frontend' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/addDishes' element={<AddDishes/>}/>
+        <Route path='*' element={<h1>404 Not Found</h1>}/>
        </Routes>
       </div>
     <Footer/>
