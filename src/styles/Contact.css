@@ -56,7 +56,6 @@
     font-weight: bold;
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
 .formContact {
@@ -67,16 +66,28 @@
 
 .inputContact {
     width: 15rem;
-    height: 1.5rem;
+    border: 1px solid black;
     margin: 1rem;
-    border: 1px solid gray;
-    padding: 5px;
 }
 
 #inputMessage {
-    height: 10rem;
+    height: 12rem;
+    width: 15rem;
     text-align: start;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 8rem;
+}
+
+.labelContact {
+    left: 20px;
+    top: 22px;
+}
+
+.inputContact:focus ~ .labelContact,
+.inputContact:valid ~ .labelContact {
+    left: 20px;
+    top: 7px;
 }
 
 .buttonContact {
