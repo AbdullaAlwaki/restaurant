@@ -7,6 +7,7 @@ import email from "../../images/email.png"
 
 function Contact() {
     return (
+        <main className="mainContact">
         <div className="containerContact">
             <div className="smallCon">
                 <section className="smallConIns">
@@ -36,23 +37,24 @@ function Contact() {
                     {/*input name*/}
                     <div className="floating_group">
                         <input type="text" name="name" 
-                    className="inputContact" required/>
-                        <label>Your name</label>
+                        className="inputContact" required/>
+                        <label className="labelContact">Your name</label>
                     </div>
                     {/*input email*/}
                     <div className="floating_group">
                         <input type="email" name="email" className="inputContact" required/>
-                        <label>Your email</label>
+                        <label className="labelContact">Your email</label>
                     </div>
                     {/*input message*/}
                     <div className="floating_group">
                         <textarea name="textfield" id="inputMessage" cols="30" rows="10" className="inputContact" required></textarea>
-                        <label>Your message</label>
+                        <label className="labelContact">Your message</label>
                     </div>
                     <button type="submit" className="buttonContact">Submit</button>
                 </form>
             </div>
         </div>
+        </main>
     )
 }
 

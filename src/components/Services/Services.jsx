@@ -5,7 +5,8 @@ import reservation from "../../images/reservation.jpg"
 
 function Services() {
     return (
-        <div className="containerServ">
+        <main className="mainServices">
+            <div className="containerServ">
             <h1 className="headingServ">Our Services</h1>
             <div className="containerServices">
                 <section className="reservation">
@@ -21,8 +22,8 @@ function Services() {
                     <button className="buttonServ">Order now</button>
                 </section>
             </div>                        
-        </div>
-
+            </div>
+        </main>
         
         )
 }

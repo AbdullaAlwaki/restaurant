@@ -4,37 +4,55 @@
 }
 
 /*floating label above input*/
-.floating_group /*div container for input and label */ {
+/*!!! commented code: please define this inside css for your page with a class !!!*/
+.floating_group /*div container for input and label inside form*/ {
 position: relative;
 }
 
 input {
   position: relative;
+  height: 2rem;
+  margin: 1rem;
+  padding-left: 5px;
+  padding-top: 10px;
+  /*margin:*/
+  /*width:*/
 }
 
 label {
   position: absolute;
-  left: 20px;
-  top: 20px;
   opacity: 0.2;
+  /*left:*/
+  /*top:*/
 }
 
 input:focus {
   height: 2.2rem;
+  padding: 10px;
 }
 
 /*leave placeholder above input*/
 input:focus ~ label,
-textarea:focus ~ label,
-input:valid ~ label,
-textarea:valid ~ label {
+input:valid ~ label
+ {
   position: absolute;
-  top: 7px;
-  left: 20px;
   transition: all 1s ease-in-out;
   background-color: rgb(231, 231, 231);
   opacity: 1;
+  /*left:*/
+  /*top:*/
 }
+
+textarea:focus ~ label,
+textarea:valid ~ label {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background-color: rgb(231, 231, 231);
+  opacity: 1;
+  /*left:*/
+  /*top*/
+}
+
 
 /*bigger size when value inside*/
 input:valid {

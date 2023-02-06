@@ -1,0 +1,53 @@
+.mainRegister {
+    background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
+    border: 1px solid white;
+}
+
+.containerForm {
+    margin: 2rem auto;
+    width: 50%;
+    height: 40rem;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+}
+
+.headingRegister {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.inputRegister {
+    width: 20rem;
+    margin: 2rem;
+} 
+
+.labelRegister {
+    left: 35px;
+    top: 40px;
+}
+
+.inputRegister:focus ~ .labelRegister,
+.inputRegister:valid ~ .labelRegister
+ {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background-color: rgb(231, 231, 231);
+  opacity: 1;
+  left: 35px;
+  top: 25px;
+ }
+
+ .buttonRegister {
+    height: 2rem;
+    width: 5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
