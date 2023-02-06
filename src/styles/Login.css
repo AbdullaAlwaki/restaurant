@@ -8,6 +8,7 @@
     width: 50%;
     height: 40rem;
     box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+    background-color: rgb(245, 232, 56, 0.363);
 }
 
 .headingLogin {
@@ -38,8 +39,8 @@
 }
 
 .labelLogin {
-    top: 50px;
-    border: 2px solid red;
+    top: 22px;
+    left: 20px;
 }
 
 .inputLogin:focus ~ .labelLogin,
@@ -49,8 +50,8 @@
   transition: all 1s ease-in-out;
   background-color: rgb(231, 231, 231);
   opacity: 1;
-  left: 35px;
-  top: 25px;
+  left: 20px;
+  top: 7px;
  }
 
 .buttonLogin {
