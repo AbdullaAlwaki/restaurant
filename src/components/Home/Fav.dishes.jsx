@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import dishes from "../../help/help.jsx";
+import {dishes} from "../../help/help.jsx";
 import "../../styles/Fav.dishes.css";
 
 

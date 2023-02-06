@@ -18,7 +18,6 @@ function NavBar() {
           }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
             viewBox="0 0 20 20"
             fill="white"
@@ -78,12 +77,12 @@ function NavBar() {
               </NavLink>
             </li>
             <li>
-              {/* <a href="/addDishes">addishes Us</a> */}
+              {/* Dashboard */}
               <NavLink
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                to="/addDishes"
+                to="/Dashboard"
               >
-                Add Dishes
+                Dashboard
               </NavLink>
             </li>
           </ul>
@@ -91,8 +90,7 @@ function NavBar() {
         <div className="login">
           <ul>
             <li>
-              <a href="/signin">Sign In</a>
-            </li>
+              <NavLink to="/Login">Sign In</NavLink></li>
             <li className="login-pic">
               <NavLink to="/register">
                 <svg
@@ -100,9 +98,6 @@ function NavBar() {
                   fill="#ffffff"
                   height="35px"
                   width="35px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 402.161 402.161"
                 >                  
                           <path d="M201.08,49.778c-38.794,0-70.355,31.561-70.355,70.355c0,18.828,7.425,40.193,19.862,57.151 c14.067,19.181,32,29.745,50.493,29.745c18.494,0,36.426-10.563,50.494-29.745c12.437-16.958,19.862-38.323,19.862-57.151 C271.436,81.339,239.874,49.778,201.08,49.778z M201.08,192.029c-13.396,0-27.391-8.607-38.397-23.616 c-10.46-14.262-16.958-32.762-16.958-48.28c0-30.523,24.832-55.355,55.355-55.355s55.355,24.832,55.355,55.355 C256.436,151.824,230.372,192.029,201.08,192.029z" />
