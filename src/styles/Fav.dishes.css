@@ -30,9 +30,10 @@
   margin-bottom: 20px;
   flex-wrap: nowrap;
   padding: 25px; */
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
 
 .fav_content {
@@ -83,7 +84,6 @@
 
 .fav_menu {
   color: blue;
-
   width: 200px;
   height: 200px;
 }
