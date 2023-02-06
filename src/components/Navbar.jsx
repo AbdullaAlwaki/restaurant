@@ -77,7 +77,7 @@ function NavBar() {
             <a href="/signin">Sign In</a>
             </li>
           <li className="login-pic">
-            <a href="/register"><img className="login-img" src={login} alt="login-icon" /></a>
+            <NavLink to="/register"><img className="login-img" src={login} alt="login-icon" /></NavLink>
             </li>
         </ul>
       </div>
