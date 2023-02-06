@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Cards from "./Cards.jsx";
- import Categories from "./Categories";
+import Categories from "./Categories";
+import dishes from "../../help/help.jsx";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
-// import axios from "axios";
 
 
 const Menu = () => {
@@ -11,20 +11,16 @@ const Menu = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState([]);
   const [allFood, setAllFood] = useState([]);
+  const allDishes = useContext(dishes);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
-    fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
-        if (res.ok) {
-            return res.json();
-        }
-    }).then((jsonRes) => jsonRes.dishes)
-    .then((jsonRes) => {
+    allDishes.then((jsonRes) => {
       setMenuItems(jsonRes);
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
-  },[]);
+  },[allDishes]);
   
   const filterItems = (category) => {
     setActiveCategory(category);

@@ -22,14 +22,17 @@
 }
 
 .pictures_fav {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
   flex-wrap: nowrap;
-  padding: 25px;
+  padding: 25px; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  
 }
 
 .fav_content {
