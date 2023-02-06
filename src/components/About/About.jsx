@@ -31,15 +31,16 @@ function About() {
                     <h3 className="about_name">Ahmed</h3>
                     <span className="about_descreption">always excited to learn new</span>    
                 </div>
-                <div>
-                    <img  className="about_img"src={abdulla} alt="abdulla" />
-                    <h3 className="about_name">Abdulla </h3>
-                    <span className="about_descreption">the head master of Chaos</span>    
-                </div>
+              
                 <div>
                     <img className="about_img" src={kamalpreet} alt="kamalpreet" />
                     <h3 className="about_name">Kamalpreet</h3>
                     <span className="about_descreption">very curious about the new topics </span>    
+                </div>
+                <div>
+                    <img  className="about_img"src={abdulla} alt="abdulla" />
+                    <h3 className="about_name">Abdulla </h3>
+                    <span className="about_descreption">the head master of Chaos</span>    
                 </div>
                 <div>
                     <img  className="about_img"src={romina} alt="romina" />

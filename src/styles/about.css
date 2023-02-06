@@ -74,6 +74,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 30px;
     
 }
 .about_characters div{
@@ -113,4 +114,38 @@
     font-family:sans-serif;
     text-align: justify;
     
+}
+.about_descreption:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+    color: rgb(159, 79, 4);
+}
+
+@media screen and (max-width:1000px){
+    .about_section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_section_img{
+        display: none;
+    }
+    .about_characters{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_characters div{
+        margin: 20px;
+    }
+    .about_img{
+        width: 100px;
+        height: 150px;
+    }
+    .about_name{
+        font-size: 1.2rem;
+    }
+    .about_descreption{
+        font-size: 1rem;
+    }
 }
