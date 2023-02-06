@@ -1,9 +1,15 @@
+.mainServices {
+    background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
+    border: 1px solid white;
+}
+
 .containerServ {
     width: 90%;
     height: fit-content;
     margin: 4rem auto;
-    background-color: rgba(245, 232, 56, 0.363);
+    /* background-color: rgba(245, 232, 56, 0.363);
     border: 2px solid gray;
+    border-radius: 30px; */
 }
 
 .headingServ {
@@ -15,15 +21,17 @@
 
 .containerServices {
     display: flex; 
-    margin: -1rem; 
+    margin: -1rem;
 }
 
 .reservation, .delivery {
     display: grid;
     margin: 3rem;
-    background-color: #3845f536;
+    /* background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164)); */
+    background-color: rgba(167, 164, 164, 0.479);
     border-radius: 30px;
     border: 2px solid gray;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
 }
 
 .img_Serv {

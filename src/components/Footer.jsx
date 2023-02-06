@@ -28,7 +28,7 @@ function Footer() {
             </div>
             
             <div className="Fservices fadd">
-                <h3>Services</h3>
+                <h3 className="headingFooter">Services</h3>
                 <ul className="ul_services">
                     <li><a href="/">Sign in</a></li>
                     <li><a href="/about">Order</a></li>
@@ -36,7 +36,7 @@ function Footer() {
             </div>
 
             <div className="Fcontact fadd">
-                <h3>Contact info:</h3>
+                <h3 className="headingFooter">Contact info:</h3>
                 <br />
                 <p> Karl-Marx-Straße 172 ,
                  12043 Berlin</p>

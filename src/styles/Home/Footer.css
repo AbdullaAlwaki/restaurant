@@ -9,7 +9,7 @@ iframe{
     justify-content: center;
     align-items: center;
 }
-h3{
+.headingFooter{
     position: absolute;
     top: 20px;
     color: #fff;
