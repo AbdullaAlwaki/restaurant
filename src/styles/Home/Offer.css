@@ -10,35 +10,19 @@
     margin: 3rem;
 }
 
-/*desktop size*/
-@media only screen and (min-width: 1221px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(3, 15rem);
-        justify-items: center;
-    }
-}
-
-/*tablet size*/
-@media only screen and (min-width:421px) and (max-width:1220px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(2, 15rem);
-        justify-items: center;
-    }
-}
-/*phone size*/
-@media only screen and (max-width:420px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(1, 15rem);
-        justify-items: center;
-    }
-}
-
 .sectionOffer {
- display: inline-flex;
- margin: 1rem 5rem;
+    display: inline-flex;
+    flex-direction: row;
+    margin: 1rem;
+    width: fit-content;
+}
+
+.figureOffer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 15rem;
+    height: fit-content;
 }
 
 .food_img {
@@ -46,13 +30,30 @@
     height: 150px;
     border: 2px solid black;
     border-radius: 50%;
+    margin: auto;
 }
 
 .new_sticker {
-    width: 50px;
+    width: 40px;
     height: 20px;
+    margin-right: -3rem;
     background-color: greenyellow;
     color: white;
     text-align: center;
     font-weight: 600;
 }
+
+.nameOffer {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.priceOffer {
+    color: rgb(152, 247, 10);
+}
+
+.descriptionOffer {
+    color: rgba(0, 0, 0, 0.555);
+}
+
+

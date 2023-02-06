@@ -9,6 +9,7 @@ import Services from './components/Services/Services.jsx';
 import Contact from './components/Contact/Contact';
 import AddDishes from './Admin/AddDishes.jsx';
 import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/addDishes' element={<AddDishes/>}/>
-        <Route path='*' element={<h1>404 Not Found</h1>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='*' element={<Login/>}/>
        </Routes>
       </div>
     <Footer/>
