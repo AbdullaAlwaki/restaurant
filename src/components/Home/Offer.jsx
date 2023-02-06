@@ -11,16 +11,7 @@ function Offer() {
         .then((jsonRes) => setOffer(jsonRes))
         .catch((error) => console.log(error))
     }, [offers]);
-    // React.useEffect(() => {
-    //     fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
-    //         if (res.ok) {
-    //             return res.json();
-    //         }
-    //     }).then((jsonRes) => jsonRes.dishes)
-    //     .then((jsonRes) => jsonRes.filter((item) => item.isOffers === true))
-    //     .then((jsonRes) => setOffer(jsonRes))
-    //     .catch((error) => console.log(error))
-    // }, []);
+
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>

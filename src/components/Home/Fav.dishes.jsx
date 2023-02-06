@@ -13,16 +13,7 @@ function FavDishes() {
         .then((jsonRes) => setFavorite(jsonRes))
         .catch((error) => console.log(error))
     }, [fav]);
-    // React.useEffect(() => {
-    //     fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
-    //         if (res.ok) {
-    //             return res.json();
-    //         }
-    //     }).then((jsonRes) => jsonRes.dishes)
-    //     .then((jsonRes) => jsonRes.filter((item) => item.isFavorites === true))
-    //     .then((jsonRes) => setFavorite(jsonRes))
-    //     .catch((error) => console.log(error))
-    // }, []);
+
        return (
         <div className="fav_dishes_container">
             <h2 className="heading_fav_dishes">Favourite dishes</h2>
