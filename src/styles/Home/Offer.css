@@ -1,8 +1,11 @@
 .container_offer {
-    width: 60%;
+    width: 80%;
     height: fit-content;
     margin: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .heading_offer {
@@ -10,11 +13,26 @@
     margin: 3rem;
 }
 
-.sectionOffer {
-    display: inline-flex;
+.offer{
+    display: flex;
     flex-direction: row;
-    margin: 1rem;
-    width: fit-content;
+    justify-content: space-between;
+    padding: 25px;
+    width: 100%;
+}
+
+.cont_offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sectionOffer {
+    width: 15rem;
+    height: 20rem;
+    text-align: center;
 }
 
 .figureOffer {

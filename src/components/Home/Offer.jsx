@@ -16,18 +16,23 @@ function Offer() {
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
-            {offer.map((item,index) => (
-                <section key={index} className="sectionOffer">
-                    {/*container for pictures*/}
-                    <p className="new_sticker">%</p>
-                    <figure className="figureOffer">
-                        <img className="food_img" src={item.images} alt="" />
-                        <figcaption className="nameOffer">{item.name}</figcaption>
-                        <figcaption className="priceOffer">{item.price} €</figcaption>
-                        <figcaption className="descriptionOffer">{item.description}</figcaption>
-                    </figure>
-                </section>
-            ))}
+            <div className="offer">
+                {offer.map((item,index) => {
+                 return <div key={index} className="cont_offer">
+                            <section className="sectionOffer">
+                            {/*container for pictures*/}
+                                <p className="new_sticker">%</p>
+                                <figure className="figureOffer">
+                                    <img className="food_img" src={item.images} alt="" />
+                                    <figcaption className="nameOffer">{item.name}</figcaption>
+                                    <figcaption className="priceOffer">{item.price} €</figcaption>
+                                    <figcaption className="descriptionOffer">{item.description}</figcaption>
+                                </figure>
+                            </section>
+                        </div>
+            })
+            }
+            </div>
         </div>
     )
 }
