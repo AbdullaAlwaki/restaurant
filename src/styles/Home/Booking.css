@@ -1,43 +1,121 @@
 .booking {
     background-color: yellow;
-    width: 80%;
+    width: 90%;
     height: fit-content;
-    margin: auto;
     text-align: center;
-}
-
-/*phone size*/
-@media only screen and (max-width: 420px) {
-    .booking {
-        width: 100%;
-    }
+    position: absolute;
+    margin-top: -2rem;
+    left: 5%;
 }
 
 .headingBook {
     text-align: center;
 }
 
-.form {
-    display: inline-block;
-    margin-left: 3rem;
+.container_booking {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.formBooking {
+    display: inline-flex;
+    flex-direction: row wrap;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+
 }
 
 .inputBook {
-    width: 10rem;
-    height: 1.5rem;
+    width: 15rem;
     background-color: white;
-    display: inline;
-    margin: 1rem;
     border: none;
+    text-align: center;
+}
+
+.labelBook {
+    font-size: 20px;
+    width: 12rem;
+    top: 1rem;
+    left: 10%;
+    
+}
+
+.inputBook:focus ~ .labelBook,
+.inputBook:valid ~ .labelBook {
+    left: 10%;
+    top: 0.5rem;
+    font-size: 16px;
+    width: fit-content;
 }
 
 .buttonBook {
-    width: 10rem;
-    height: 1.5rem;
-    display: inline;
-    margin: 1rem;
-    background-color: black;
-    color: white;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 20px;
     font-weight: bold;
-    border: none;
+    align-self: center;
+}
+
+/*phone size*/
+@media only screen and (max-width: 450px) {
+    .booking {
+        width: 90%;
+    }
+    .container_booking{
+        display: flex;
+        flex-direction: column;
+    }
+    .formBooking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .labelBook {
+        top: 1.5rem;
+        font-size: 16px;
+    }
+    .inputBook:focus ~ .labelBook,
+    .inputBook:valid ~ .labelBook {
+        font-size: 16px;
+        top: 7px;
+}
+    .buttonBook {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/*tablet size*/
+@media only screen and (min-width: 451px) and (max-width: 1024px) {
+    .booking {
+        width: 90%;
+    }
+    .container_booking{
+        display: flex;
+        flex-direction: column;
+    }
+    .formBooking {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-self: center;
+    }
+
+    .inputBook {
+        width: 12rem;
+    }
+    .labelBook {
+        font-size: 16px;
+        top: 1.5rem;
+    }
+
+    .inputBook:focus ~ .labelBook,
+    .inputBook:valid ~ .labelBook {
+        font-size: 16px;
+        top: 7px;
+    }
+    .buttonBook {
+        margin-bottom: 0.5rem;
+    }
 }

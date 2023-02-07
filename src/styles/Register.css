@@ -26,12 +26,12 @@
 }
 
 .inputRegister {
-    width: 20rem;
-    margin: 2rem;
+    width: 100%;
+    margin: 2rem auto;
 } 
 
 .labelRegister {
-    left: 35px;
+    left: 15px;
     top: 40px;
 }
 
@@ -52,3 +52,4 @@
     border-radius: 20px;
     font-weight: bold;
 }
+
