@@ -1,13 +1,11 @@
 .about_container{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #b8b5b2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-
 }
 .about_heading{
     font-size: 2.5rem;
@@ -45,7 +43,6 @@
 }
 .about_section{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -69,18 +66,28 @@
 .about_characters{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, 300px); 
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    
+    /* flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 30px; */
     
 }
 .about_characters div{
   padding: 20px;
   display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 } 
 .about_img{
     width: 150px;
@@ -121,7 +128,7 @@
     color: rgb(159, 79, 4);
 }
 
-@media screen and (max-width:1000px){
+/* @media screen and (max-width:1000px){
     .about_section{
         flex-direction: column;
         align-items: center;
@@ -148,4 +155,4 @@
     .about_descreption{
         font-size: 1rem;
     }
-}
+} */
