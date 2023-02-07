@@ -1,7 +1,7 @@
 .container_offer {
     width: 80%;
     height: fit-content;
-    margin: auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,13 +10,13 @@
 
 .heading_offer {
     text-align: center;
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .offer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 25px;
     width: 100%;
 }
@@ -27,6 +27,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
 
 .sectionOffer {
@@ -36,11 +38,9 @@
 }
 
 .figureOffer {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
     width: 15rem;
-    height: fit-content;
+    height: 20rem;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
 }
 
 .food_img {
@@ -63,7 +63,7 @@
 
 .nameOffer {
     font-weight: bold;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .priceOffer {
@@ -74,4 +74,38 @@
     color: rgba(0, 0, 0, 0.555);
 }
 
+/*phone size*/
+@media screen and (max-width: 450px) {
+    .container_offer {
+        width: 100%;
+        margin-top: 17rem;
+    }
+    .offer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .heading_offer {
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+    
+}
+
+/*tablet size*/
+@media screen and (min-width: 451px) and (max-width: 1024px) {
+    .container_offer {
+        width: 100%;
+        margin-top: 10rem;
+    }
+    
+    .offer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heading_offer {
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+}
 
