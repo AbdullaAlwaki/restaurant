@@ -17,8 +17,8 @@ function Offer() {
             <h2 className="heading_offer">Offer of the week</h2>
             <div className="offer">
             {offer.map((item,index) => {
-                return <div className="cont_offer">
-                <section className="sectionOffer" key={index}>
+                return <div key={index} className="cont_offer">
+                <section className="sectionOffer" >
                     <figure className="figureOffer">
                         <p className="new_sticker">%</p>
                         <img className="food_img" src={item.images} alt="" />
@@ -28,8 +28,9 @@ function Offer() {
                     </figure>
                 </section>
             </div>
-            ))}
+            })}
         </div>
+    </div>
     )
 }
 
