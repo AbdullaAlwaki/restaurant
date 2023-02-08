@@ -15,7 +15,7 @@ function Booking() {
     };
     try {
       const response = await fetch(
-        "https://mern-restaurant-backend.onrender.com/api/bookTable",
+        "https://mern-restaurant-backend.onrender.com/api/table",
         {
           method: "POST",
           headers: {

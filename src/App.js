@@ -27,11 +27,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
 
-          {/* Route Dashboard */}
-          <Route path="/dashboard/*" element={<Dashboard />}>
-            {/* <Route path="AddDishes" element={<AddDishes />} />
-            <Route path="BookTable" element={<BookTable />} /> */}
-          </Route>
+          {/* Route Dashboard */} 
+          <Route path="/dashboard/*" element={<Dashboard />} />
 
           <Route path="*" element={<h1>404 not found </h1>} />
         </Routes>

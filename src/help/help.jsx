@@ -10,7 +10,7 @@ const dishesF = async () => {
 
 const tableF = async () => {
   const res = await fetch(
-    "https://mern-restaurant-backend.onrender.com/api/bookTable"
+    "https://mern-restaurant-backend.onrender.com/api/table"
   );
   const jsonRes = await res.json();
   return jsonRes;

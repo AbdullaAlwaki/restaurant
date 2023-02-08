@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AddDishes from "./components/AddDishes";
 import BookTable from "./components/BookTable";
 import Nav from "./components/Nav";
+import Contact from "./components/Contact";
 import "./style/Dashboard.css";
 
 function Dashboard() {
@@ -14,6 +15,7 @@ function Dashboard() {
         <Route path="/" element={<AddDishes />} />
         <Route path="AddDishes" element={<AddDishes />} />
         <Route path="BookTable" element={<BookTable />} />
+        <Route path="Contact" element={<Contact/>}/>
       </Routes>
     </div>
   );
