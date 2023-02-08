@@ -16,6 +16,14 @@ const tableF = async () => {
   return jsonRes;
 };
 
+const contactF = async () => {
+  const res = await fetch(
+    "https://mern-restaurant-backend.onrender.com/api/contact"
+  );
+  const jsonRes = await res.json();
+  return jsonRes.contact;
+};
+
 
 // let token=JSON.parse(localStorage.getItem("user"))
 // const headersAll = {
@@ -35,5 +43,7 @@ const tableF = async () => {
 //   const jsonRes = await res.json();
 //   return jsonRes;
 // };
+
 export const table = createContext(tableF());
 export const dishes = createContext(dishesF());
+export const contact = createContext(contactF());

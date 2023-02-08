@@ -1,9 +1,29 @@
-import React from 'react'
+import React from "react";
+import { contact } from "../../help/getData";
 
 function Contact() {
+  const [res, setRes] = React.useState([]);
+  const data = React.useContext(contact);
+  React.useEffect(() => {
+    data.then((jsonRes) => {
+      setRes(jsonRes);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <div>Contact</div>
-  )
+    <div>
+      <h1>Contact</h1>
+      {res.map((item) => {
+        return (
+          <div key={item._id}>
+            <h3>{item.name}</h3>
+            <p>{item.email}</p>
+            <p>{item.message}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

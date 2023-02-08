@@ -1,5 +1,5 @@
 import React from "react";
-import {dishes} from "../../help/help.jsx";
+import {dishes} from "../../help/getData";
 import "../../styles/Home/Offer.css";
 
 function Offer() {

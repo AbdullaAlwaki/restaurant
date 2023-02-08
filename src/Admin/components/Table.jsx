@@ -1,5 +1,5 @@
 import React from "react";
-import { table } from "../../help/help";
+import { table } from "../../help/getData";
 
 function BookTable() {
   const allTable = React.useContext(table);
@@ -12,7 +12,6 @@ function BookTable() {
       .catch((error) => console.log(error));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(bookTable);
   return (
     <div>
       <h1>Book Table</h1>

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import Cards from "./Cards.jsx";
 import Categories from "./Categories";
-import {dishes} from "../../help/help.jsx";
+import {dishes} from "../../help/getData";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
 

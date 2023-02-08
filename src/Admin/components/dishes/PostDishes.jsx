@@ -1,13 +1,8 @@
-import React from "react";
-import "../style/AddDishes.css";
+import React from 'react'
 
-export default function AddDishes() {
-  const [response, setResponse] = React.useState([]);
-  const [method, setMethod] = React.useState("POST");
-
-  const handleChange = (e) => {
-    setMethod(e.target.value);
-  };
+function PostDishes() {
+    const [response, setResponse] = React.useState([]);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,9 +20,9 @@ export default function AddDishes() {
     };
     try {
       const response = await fetch(
-        "http://localhost:5000/api/addDishes",
+        "http://localhost:10000/api/Dishes",
         {
-          method: method,
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
@@ -49,14 +44,9 @@ export default function AddDishes() {
         method="post"
         onSubmit={handleSubmit}
       >
-        <h1>Add Dishes</h1>
+        <h1>Dishes</h1>
 
-        <select name="" id="" onChange={handleChange}>
-          <option value="POST">post</option>
-          <option value="GET">get</option>
-          <option value="PUT">update</option>
-          <option value="DELETE">delete</option>
-        </select>
+        
 
         <div className="whatDish">
           <h4 className="headingAdd">What dish name?</h4>
@@ -179,8 +169,11 @@ export default function AddDishes() {
           Add Dishes
         </button>
       </form>
+      
       {response ? <h1>{response.message}</h1> : null}
       {response ? <p>{response.error}</p> : null}
     </div>
-  );
+  )
 }
+
+export default PostDishes
