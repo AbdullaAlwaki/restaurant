@@ -9,7 +9,7 @@ function DeleteDishes() {
     const form = new FormData(e.target);
     const name = form.get("name");
     try {
-      const response = await fetch(`http://localhost:10000/api/Dishes/${name}`, {
+      const response = await fetch(`https://mern-restaurant-backend.onrender.com/api/Dishes/${name}`, {
         method: "DELETE",
       });
       const result = await response.json();

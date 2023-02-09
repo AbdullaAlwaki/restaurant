@@ -20,7 +20,7 @@ function PostDishes() {
     };
     try {
       const response = await fetch(
-        "http://localhost:10000/api/Dishes",
+        "https://mern-restaurant-backend.onrender.com/api/Dishes",
         {
           method: "POST",
           headers: {
