@@ -6,6 +6,35 @@ import phoneNumber from "../../images/phoneNumber.png"
 import email from "../../images/email.png"
 
 function Contact() {
+    const [res , setRes] = React.useState(null);
+    const [err , setErr] = React.useState(null);
+
+    const handleContact = async (e) => {
+        e.preventDefault();
+        const form = new FormData(e.target);
+        const name = form.get("name");
+        const email = form.get("email");
+        const message = form.get("textfield");
+        const data = {
+            name,
+            email,
+            message
+        }
+        try {
+            const res = await fetch("https://mern-restaurant-backend.onrender.com/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            const json = await res.json();
+            setRes(json);
+        } catch (err) {
+            setErr(err);
+        }
+    }
+
     return (
         <main className="mainContact">
         <div className="containerContact">
@@ -33,7 +62,7 @@ function Contact() {
             </div>
             <div className="contactField">
                 <p className="headingContact">Contact Us</p>
-                <form action="" className="formContact">
+                <form action="" className="formContact" onSubmit={handleContact}>
                     {/*input name*/}
                     <div className="floating_group">
                         <input type="text" name="name" 
@@ -52,6 +81,8 @@ function Contact() {
                     </div>
                     <button type="submit" className="buttonContact">Submit</button>
                 </form>
+                {res && <p className="resContact">{res.message}</p>}
+                {err && <p className="errContact">{err.message}</p>}
             </div>
         </div>
         </main>

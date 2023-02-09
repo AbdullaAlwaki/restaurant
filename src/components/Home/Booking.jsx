@@ -13,6 +13,7 @@ function Booking() {
       date: form.get("date"),
       time: form.get("time"),
     };
+    console.log(data);
     try {
       const response = await fetch(
         "https://mern-restaurant-backend.onrender.com/api/table",
@@ -38,7 +39,7 @@ function Booking() {
     },
     {
         type: "number",
-        name: "amountOfPerson",
+        name: "person",
         label: "How many person?",
     },
     {
@@ -61,12 +62,12 @@ function Booking() {
                             <label className="labelBook">{item.label}</label> 
                         </div>
                     ))}
-                </form>
             {/*reservation button*/}
-            <button type="submit" className="buttonBook">Book now</button>
+                  <button type="submit" className="buttonBook">Book now</button>
+                </form>
             </div>
-            {response ? <h1>{response.message}</h1> : null}
-      {response ? <p>{response.error}</p> : null}
+            {response && <h1>{response.message}</h1> }
+      {response && <p>{response.error}</p>}
         </div>
     );
 }

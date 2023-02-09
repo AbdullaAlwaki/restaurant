@@ -1,7 +1,7 @@
 import React from "react";
-import { table } from "../../help/getData";
+import { table } from "../../../help/getData";
 
-function BookTable() {
+function Table() {
   const allTable = React.useContext(table);
   const [bookTable, setBookTable] = React.useState([]);
   React.useEffect(() => {
@@ -19,6 +19,8 @@ function BookTable() {
         return (
           <div key={item._id}>
             <h3>{item.name}</h3>
+            <p>{item._id}</p>
+            <p>{item.persons}</p>
             <p>{item.date}</p>
             <p>{item.time}</p>
           </div>
@@ -28,4 +30,4 @@ function BookTable() {
   );
 }
 
-export default BookTable;
+export default Table;

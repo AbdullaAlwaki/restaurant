@@ -1,6 +1,8 @@
 import React from "react";
 import "../../styles/Login.css"
-import loginLogo from "../../images/login.png"
+import loginLogo from "../../images/login.png";
+
+import { NavLink } from "react-router-dom";
 
 function Login() {
     return (
@@ -19,7 +21,7 @@ function Login() {
                     </div>
                     <button type="submit" className="buttonLogin">Login</button>
                 </form>
-                <p className="textLogin">If you have no account yet, <a href="/register">register</a> now!</p>
+                <p className="textLogin">If you have no account yet, <NavLink to="/register">register</NavLink> now!</p>
             </div>
         </main>
     )

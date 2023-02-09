@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Dishes from "./components/dishes/Dishes";
-import BookTable from "./components/Table";
-import Contact from "./components/Contact";
+import Table from "./components/table/Table";
+import Contact from "./components/contact/Contact";
 
 import "./style/Dashboard.css";
 
@@ -16,7 +16,7 @@ function Dashboard() {
       <Routes>
         <Route path="/" element={<Dishes />} />
         <Route path="Dishes" element={<Dishes />} />
-        <Route path="Table" element={<BookTable />} />
+        <Route path="Table" element={<Table />} />
         <Route path="Contact" element={<Contact/>}/>
       </Routes>
     </div>

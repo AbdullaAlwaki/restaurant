@@ -1,7 +1,7 @@
 import React from "react";
-import { contact } from "../../help/getData";
+import { contact } from "../../../help/getData";
 
-function Contact() {
+function GetContact() {
   const [res, setRes] = React.useState([]);
   const data = React.useContext(contact);
   React.useEffect(() => {
@@ -16,6 +16,7 @@ function Contact() {
       {res.map((item) => {
         return (
           <div key={item._id}>
+            <p>{item._id}</p>
             <h3>{item.name}</h3>
             <p>{item.email}</p>
             <p>{item.message}</p>
@@ -26,4 +27,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default GetContact;
