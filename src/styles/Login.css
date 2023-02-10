@@ -1,0 +1,66 @@
+.mainLogin {
+    background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
+    border: 1px solid white;
+}
+
+.containerLogin {
+    margin: 2rem auto;
+    width: 50%;
+    height: 40rem;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+    background-color: rgb(245, 232, 56, 0.363);
+}
+
+.headingLogin {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.loginImg {
+    margin: 1rem auto;
+    display: flex;
+    justify-self: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.inputLogin {
+    width: 15rem;
+    margin: 1rem;
+}
+
+.labelLogin {
+    top: 22px;
+    left: 20px;
+}
+
+.inputLogin:focus ~ .labelLogin,
+.inputLogin:valid ~ .labelLogin
+ {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background-color: rgb(231, 231, 231);
+  opacity: 1;
+  left: 20px;
+  top: 7px;
+ }
+
+.buttonLogin {
+    height: 2rem;
+    width: 5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.textLogin {
+    text-align: center;
+    margin-top: 5rem;
+}

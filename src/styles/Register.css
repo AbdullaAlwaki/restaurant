@@ -8,6 +8,7 @@
     width: 50%;
     height: 40rem;
     box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+    background-color: rgb(245, 232, 56, 0.363);
 }
 
 .headingRegister {
@@ -25,12 +26,12 @@
 }
 
 .inputRegister {
-    width: 20rem;
-    margin: 2rem;
+    width: 100%;
+    margin: 2rem auto;
 } 
 
 .labelRegister {
-    left: 35px;
+    left: 15px;
     top: 40px;
 }
 
@@ -51,3 +52,4 @@
     border-radius: 20px;
     font-weight: bold;
 }
+
