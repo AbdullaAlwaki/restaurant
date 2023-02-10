@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import { reducer, initialState } from '../Context/reducer';
 
 //create a context
-export const dataContext = createContext(0);
+export const dataContext = createContext();
 
 
 //create context component

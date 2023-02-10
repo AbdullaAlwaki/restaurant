@@ -6,7 +6,7 @@ import logo from "../images/MERN.svg";
 import { dataContext } from "./Context/context";
 
 function NavBar() {
-  const state = useContext(dataContext);
+  const {state, dispatch} = useContext(dataContext);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const activeStyle = { color: "yellow" };
 
@@ -95,7 +95,7 @@ function NavBar() {
           <li>
               <Link className="myOrder_link" to="/myorder">
               {<FaShoppingCart />}
-                              {state}
+                              {state.cart.length}
               </Link>
             </li>
            

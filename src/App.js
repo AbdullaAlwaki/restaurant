@@ -8,12 +8,13 @@ import Footer from './components/Footer.jsx';
 import Services from './components/Services/Services.jsx';
 import Contact from './components/Contact/Contact';
 import Register from './components/Register/Register';
-import Order from './components/Order';
+
 import Context from './components/Context/context';
 
 import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
+import Cart from './components/Cart';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
-          <Route path='/myorder' element={<Order/>}/>
+          <Route path='/myorder' element={<Cart/>}/>
           {/* Route Dashboard */} 
           <Route path="/dashboard/*" element={<Dashboard />} />
 
