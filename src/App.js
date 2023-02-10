@@ -19,20 +19,27 @@ import Dashboard from "./Admin/Dashboard.jsx";
 function App() {
   return (
     <div className="App">
-    
-     <NavBar/>
-      <div className='main-container'>
-       <Routes>
-        <Route  path='/' element={<Home/>}/>
-        <Route path='/restaurant_frontend' element={<Home/>}/>
-        <Route path='/menu' element={<Menu/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='*' element={<h1>404 Not Found</h1>}/>
-        <Route path='/register' element={<Register/>}/>
-       </Routes>
+      <Context>
+         <NavBar />
+      <div className="main-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path='/myorder' element={<Order/>}/>
+          {/* Route Dashboard */} 
+          <Route path="/dashboard/*" element={<Dashboard />} />
+
+          <Route path="*" element={<h1>404 not found </h1>} />
+        </Routes>
       </div>
-    <Footer/>
+     
+      </Context>
+      <Footer />
     </div>
   );
 }

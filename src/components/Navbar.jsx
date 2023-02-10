@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FaShoppingCart } from 'react-icons/fa';
 import "../styles/Navbar.css";
 import logo from "../images/MERN.svg";
@@ -92,12 +92,13 @@ function NavBar() {
         </div>
         <div className="login">
           <ul>
-            <li>
+          <li>
               <Link className="myOrder_link" to="/myorder">
               {<FaShoppingCart />}
                               {state}
               </Link>
             </li>
+           
             <li>
               <NavLink to="/Login">Sign In</NavLink></li>
             <li className="login-pic">

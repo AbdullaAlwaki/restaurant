@@ -4,7 +4,7 @@ import Categories from "./Categories";
 import {dishes} from "../../help/getData";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
-import {dataContext} from "../Context/context";
+import { dataContext } from "../Context/context.jsx";
 
 
 const Menu = () => {
@@ -12,18 +12,16 @@ const Menu = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState([]);
   const [allFood, setAllFood] = useState([]);
-
   const allDishes = useContext(dishes);
-const state =useContext(dataContext)
-console.log(state)
+  const {state, dispatch} = useContext(dataContext);
+  // console.log(state)
   useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
     allDishes.then((jsonRes) => {
-       console.log(jsonRes)
-      state.state.dispatch({type:"MENU" , payload:jsonRes})
+      // console.log(jsonRes)
       // setMenuItems(jsonRes);
-console.log(state.state.menu)
-      setMenuItems(state.state.menu)
+      dispatch({type:"MENU", payload: jsonRes})
+      // console.log(state.state.menu)
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
