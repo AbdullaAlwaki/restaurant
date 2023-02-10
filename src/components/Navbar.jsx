@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { FaShoppingCart } from 'react-icons/fa';
 import "../styles/Navbar.css";
 import logo from "../images/MERN.svg";
+import { dataContext } from "./Context/context";
 
 function NavBar() {
+  const {state, dispatch} = useContext(dataContext);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const activeStyle = { color: "yellow" };
 
@@ -90,6 +93,12 @@ function NavBar() {
         </div>
         <div className="login">
           <ul>
+            <li>
+              <Link className="myOrder_link" to="/myorder">
+              {<FaShoppingCart />}
+                              {state.cart.length}
+              </Link>
+            </li>
             <li>
               <a href="/signin">Sign In</a>
             </li>

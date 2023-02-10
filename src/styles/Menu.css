@@ -66,7 +66,8 @@ h4 {
   }
   
   .active {
-    color: rgb(4, 102, 4);
+    color: rgb(250, 253, 250);
+    background-color: black;
     
   }
   
@@ -135,11 +136,16 @@ h4 {
   }
   
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 500px) {
     .menu-item {
-      grid-template-columns: 225px 1fr;
-      gap: 0 1.25rem;
+      /* grid-template-columns: 225px 1fr;
+      gap: 0 1.25rem; */
+      display: flex;
+      flex-direction: column;
       max-width: 40rem;
+    }
+    .btn-container{
+      display: grid;
     }
     .photo {
       height: 175px;
@@ -154,6 +160,7 @@ h4 {
     .photo {
       height: 200px;
     }
+    
   }
   @media screen and (min-width: 1170px) {
     .section-center {

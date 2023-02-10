@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import dishes from "../../help/help.jsx";
 import logo from "../../images/MERN.svg";
 import "../../styles/Menu.css";
+import {dataContext} from "../Context/context";
 
 
 const Menu = () => {
@@ -11,12 +12,18 @@ const Menu = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState([]);
   const [allFood, setAllFood] = useState([]);
-  const allDishes = useContext(dishes);
 
+  const allDishes = useContext(dishes);
+const state =useContext(dataContext)
+console.log(state)
   useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
     allDishes.then((jsonRes) => {
-      setMenuItems(jsonRes);
+       console.log(jsonRes)
+      state.state.dispatch({type:"MENU" , payload:jsonRes})
+      // setMenuItems(jsonRes);
+console.log(state.state.menu)
+      setMenuItems(state.state.menu)
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
@@ -26,12 +33,12 @@ const Menu = () => {
     setActiveCategory(category);
     if (category === "all") {
       setMenuItems(allFood);
-      
       return;
     }
     const newItems = allFood.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
+
 
   return (
     <main className="menu-container">
@@ -46,8 +53,9 @@ const Menu = () => {
           activeCategory={activeCategory}
            filterItems={filterItems}
         />
-
-        <Cards items={menuItems} />
+        
+        <Cards items={menuItems}  />
+      
       </section>
     </main>
   );
