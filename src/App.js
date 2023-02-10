@@ -11,12 +11,15 @@ import Contact from "./components/Contact/Contact";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
+import Context from "./components/Context/context";
+import Cart from "./components/Cart";
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Context>
+         <NavBar />
       <div className="main-container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,13 +29,15 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
-
+          <Route path='/myorder' element={<Cart/>}/>
           {/* Route Dashboard */} 
           <Route path="/dashboard/*" element={<Dashboard />} />
 
           <Route path="*" element={<h1>404 not found </h1>} />
         </Routes>
       </div>
+     
+      </Context>
       <Footer />
     </div>
   );
