@@ -13,19 +13,19 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState([]);
   const [allFood, setAllFood] = useState([]);
   const allDishes = useContext(dishes);
+  // eslint-disable-next-line no-unused-vars
   const {state, dispatch} = useContext(dataContext);
-  // console.log(state)
   useEffect(() => {
     setCategories(['all', 'breakfast', 'lunch', 'dinner'])
     allDishes.then((jsonRes) => {
-      // console.log(jsonRes)
-      // setMenuItems(jsonRes);
+      setMenuItems(jsonRes);
       dispatch({type:"MENU", payload: jsonRes})
       // console.log(state.state.menu)
       setAllFood(jsonRes);
       return jsonRes})
     .catch((error) => console.log(error))
-  },[allDishes]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
   
   const filterItems = (category) => {
     setActiveCategory(category);
@@ -42,7 +42,10 @@ const Menu = () => {
     <main className="menu-container">
       <section className="menu section" >
         <div className="title">
-          <img src={logo} alt="logo" className="logo" />
+          <div className="con_logo">
+                      <img src={logo} alt="logo" className="logo" />
+
+          </div>
           <h2>Menu List</h2>
           <div className="underline"></div>
         </div>

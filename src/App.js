@@ -31,7 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
-          <Route path='/myorder' element={<Cart/>}/>
+          <Route path='/myOrder' element={<Cart/>}/>
           {/* Route Dashboard */} 
           <Route path="/dashboard/*" element={<Dashboard />} />
 

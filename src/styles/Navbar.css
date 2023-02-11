@@ -12,7 +12,7 @@
 
 .logo-img{
     width: 50px;
-    margin-left: 2%;
+    margin-left: 50%;
 }
 
 .navbar-menu{
@@ -20,14 +20,14 @@
 }
 
 .navbar-menu ul{
+
     display: flex;
     padding: 0;
 }
 
 .navbar-menu li{
-    list-style-type: none;
-    margin: 0 1rem;
-    
+    list-style-type: none;   
+    margin: 0; 
 }
 
 .navbar-menu li a{
@@ -35,28 +35,26 @@
     display: block;
     width: 100%;
     color: white;
+    padding: 1.3rem 1rem;
 }
 
 .navbar-menu li a:hover{
-    color: rgb(60, 165, 235);
+    background: red;
 }
 
 .login{
     margin-left: auto;
     margin-right: 3rem;
-    
 }
 
 .login ul{
     display: flex;
     align-items: center;
     padding: 0;
-    
 }
 
 .login li{
-    list-style-type: none;
-    margin: 0 1rem;
+    margin: 0; 
 }
 
 .login li a{
@@ -67,14 +65,9 @@
 }
 
 .login li a:hover{
-    color: rgb(60, 165, 235);
-}
+    background: red;
+  }
 
-.login-img{
-    width: 35px;
-    background-color: white;
-    border-radius: 50%;
-}
 
 .hamburger{
     border: 0;
@@ -95,6 +88,18 @@
 
 .hamburger:hover{
     background-color: rgb(60, 165, 235);
+}
+
+.myOrder_link{
+    font-size: 1.5rem;
+    padding: 0.96rem ;
+}
+
+.log_in{
+  padding: 1.3rem 0.5rem;
+}
+.profile{
+  padding: 0.69rem 0.5rem;
 }
 
 /* media queries */
