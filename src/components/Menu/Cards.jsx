@@ -1,13 +1,24 @@
-import React, { useContext } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { dataContext } from "../Context/context";
 import '../../styles/Menu.css';
-import { dataContext } from '../Context/context';
+import logo from "../../images/MERN.svg";
 
-function Cards({items}) {
+function Cards_2() {
+  const { state, dispatch } = useContext(dataContext);
+  const [items, setItems] = useState([state.menu]);
+//   console.log(items);
+  const filterItems = (category) => {
+    if (category === "all") {setItems(state.menu); return};
+    setItems(state.menu.filter((dish) => dish.category === category));
+  };
 
-  const {state, dispatch} = useContext(dataContext);
 
-  function addToCart(item){
+  useEffect(()=>{
+         setItems(state.menu)
+  console.log('useEffect', state.menu)
+}, [state.menu]);
+
+function addToCart(item){
     const itemIndex = state.cart.findIndex((el)=> el._id === item._id )
     // console.log(itemIndex);
   
@@ -18,35 +29,53 @@ function Cards({items}) {
     
     }
   }
-//   const [order,setOrder]=useState([])
-// const navigate=useNavigate()
-// const addOrder=(item) =>{
-// setOrder([...order,item])
-// }
-//   const test =()=>{
-//     navigate("/myorder",{state:{order:order }})
-//   }
   return (
-    <div className='section-center'>
-       {items.map((item,index)=>{
-        const {name, images, description, price} = item;
-        return(
-            <div className="menu-item" key={index} onClick={()=>addToCart(item)}>
-              <img className='photo' src={images} alt={name} />
-               <div className="item-info">
+     
+      <main className="menu-container">
+      <section className="menu section" >
+        <div className="title">
+          <img src={logo} alt="logo" className="logo" />
+          <h2>Menu List</h2>
+          <div className="underline"></div>
+          </div>
+      <div className="btn-container">
+        <button onClick={() => filterItems("all")} className="filter-btn">
+          All
+        </button>
+         <button onClick={() => filterItems("breakfast")} className="filter-btn">
+          Breakfast
+        </button>
+        <button onClick={() => filterItems("lunch")} className="filter-btn">
+          Lunch
+        </button>
+       
+        <button onClick={() => filterItems("dinner")} className="filter-btn">
+          Dinner
+        </button>
+      </div>
+     <div className='section-center'>
+      {items.map((dish, index) => {
+        return (
+            
+            <div className="menu-item" key={index} onClick={()=>addToCart(dish)}>
+              <img className="photo" src={dish.images} alt={dish.name} />
+              <div className="item-info">
                 <header>
-                    <h4>{name}</h4>
-                    <h4 className='price'>{price} €</h4>
+                  <h4>{dish.name}</h4>
+                  <h4 className="price">{dish.price} €</h4>
                 </header>
-                <p className='desc'>{description}</p>
-               </div>
-               {/* <button >Add to order</button> */}
+                <p className="desc">{dish.description}</p>
+              </div>
+              {/* <button >Add to order</button> */}
             </div>
-        )
-       })}
-       {/* <button onClick={test}>Test</button> */}
-    </div>
-  )
+          
+        );
+      })}
+      </div>
+      </section>
+      </main>
+   
+  );
 }
 
-export default Cards;
+export default Cards_2;

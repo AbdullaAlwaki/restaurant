@@ -17,10 +17,13 @@ function itemIncrement(item){
   console.log(action)
   dispatch(action)
   }
+  function getTotal (products) {
+    return products.reduce((a,b)=>a+b.price*b.qty, 0)
+ }
 const cartArray = state.cart.map((item,index)=>(
           <tr key='index'>
-            <th scope='row'>{index+1}</th>
-          <td className='order-img'><img src={item.images} alt='orderedDish'/></td>
+            <th  scope='row'>{index+1}</th>
+          <td className='order-img'><img className='dish-img' src={item.images} alt='orderedDish'/></td>
           <td>{item.name}</td>
           <td>
             <span>
@@ -56,8 +59,17 @@ return(
       </thead>
       <tbody className='table-body'>
         {cartArray}
+        
       </tbody>
+     
      </table>
+     
+      <div className="cart-total">Total: {getTotal(state.cart).toFixed(2)}</div>
+
+     <div className='pay-to'>
+      <button className='menu-back'>Back to Menu</button>
+      <button className='menu-back'>Go to Payment</button>
+      </div>
   </div>
 )
 }

@@ -49,6 +49,7 @@ h4 {
 
   .filter-btn:active{
     color: green;
+    
   }
   
   .filter-btn {
@@ -175,3 +176,4 @@ h4 {
   .menu-container{
     background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164))
   }
+
