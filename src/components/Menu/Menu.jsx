@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { dataContext } from '../Context/context';
-import Cards_2 from './Cards';
+import Cards from './Cards';
 
 function Menu_2() {
     const {state, dispatch} = useContext(dataContext);
@@ -11,6 +11,7 @@ function Menu_2() {
             const jres = await res.json();
             dispatch({type:'MENU', payload: jres.dishes});
         })()
+        // eslint-disable-next-line
     },[])
     console.log(state)
     // const { state, dispatch } = useContext(dataContext);
@@ -64,7 +65,7 @@ function Menu_2() {
 //     </div>)
   return (
     <div>
-        <Cards_2 />
+        <Cards />
     </div>
   )
 }
