@@ -1,4 +1,4 @@
-.order-container{
+.order-container, .shipping-info{
     width: 75%;
     height: 100%;
     background-color: aliceblue;
@@ -98,6 +98,143 @@ table{
   }
   }
 
+ .shipping-header{
+  display: grid;
+  place-items: center;
+ }
 
+
+ .svg-order{
+  width:100%;
+  max-width: 600px;
+ }
  
+ .info-data{
+  display: flex;
+ justify-content: center;
+ align-items: center; 
+ padding-top: 15px; 
+  height: inherit;
+  padding: 20px;
+  width: 65%;
+  margin: auto;
+ }
+
+ .info-data h2{
+  text-align: center;
+  padding: 15px;
+ }
+ 
+  .order-form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 20px 0 #095484; 
+  }
+ .form-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px; 
+  width: calc(100% - 10px);
+  padding: 5px;
+  }
+ 
+  .name-item, .city-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+  }
+
+  .form-item-name{
+    width:45%;
+    border: 1px solid #ccc;
+    border-radius: 3px; 
+    
+  }
+
+
+  .item p{
+    margin-left: 20px;
+  }
+  .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
+  color: #095484;
+  }
+  .item input:hover, .item select:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 6px 0 #095484;
+  color: #095484;
+  }
+  .item {
+  /* position: relative; */
+  margin: 10px 0;
+  }
+ 
+    label.check {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 10px 0;
+      cursor: pointer;
+      }
+      .question p{
+      margin-left: 1.2rem;
+      }
+      span.required {
+      margin-left: 0;
+      color: red;
+      }
+
+    .checkbox-item{
+     display: flex;
+      width: 80%;
+      align-items: center;
+    }  
+
+    .checkbox-item p{
+      width: 80%;
+    }
+  @media (max-width: 868px) {
+    .name-item, .city-item {
+    display: flex;
+    flex-wrap: wrap;
+   
+    }
+   
+   
+    .info-data{
+      width:100%;
+    }
+
+    .name-item{
+      width: 100%;
+    }
+    .form-item-name{
+      width: 100%;
+      padding: 0;
+    
+    }
+    }
+
+
+.shipment{
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding-top: 15px; 
+   height: inherit;
+   padding: 20px;
+   
+   margin: auto;
+}
+  .shipment label, .payment label{
+    all:unset;
+  }
+.payment-img{
+  all:unset;
+  width: 30%;
+}
+
+
 

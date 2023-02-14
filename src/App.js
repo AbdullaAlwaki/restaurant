@@ -15,6 +15,7 @@ import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
 import Cart from './components/Cart';
+import PersonalInfo from './components/Order/PersonalInfo';
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/myorder' element={<Cart/>}/>
           {/* Route Dashboard */} 
           <Route path="/dashboard/*" element={<Dashboard />} />
+          
 
           <Route path="*" element={<h1>404 not found </h1>} />
         </Routes>

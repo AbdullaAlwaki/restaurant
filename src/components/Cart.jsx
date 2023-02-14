@@ -1,13 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaMinusCircle, FaPlusCircle, FaTrashAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Cart.css';
 import { dataContext } from './Context/context'
+import OrderHeader from './Order/OrderHeader';
+import PersonalInfo from './Order/PersonalInfo';
+import Shipping from './Order/Shipping';
 // import {useLocation}from "react-router-dom"
-
 
 
 function Cart() {
 const {state, dispatch} = useContext(dataContext);
+const [page, setPage] = useState(0);
+
 function itemDecrement(item){
 dispatch({type: 'DECREMENT', payload: item._id})
 }
@@ -41,8 +46,21 @@ const cartArray = state.cart.map((item,index)=>(
           </td>
           </tr>
         ))
-console.log(cartArray);
+
+ const navigate = useNavigate();
+function goToMenu (){
+    const path = `/menu`;
+    navigate(path);
+}
+
+function changePage(value){
+  console.log(page)
+     setPage(value);
+}
 return(
+<div>
+
+{page ===0 ?(
   <div className='order-container'>
         <h2 className='order-heading'>My Order</h2>
      <table>
@@ -67,9 +85,17 @@ return(
       <div className="cart-total">Total: {getTotal(state.cart).toFixed(2)}</div>
 
      <div className='pay-to'>
-      <button className='menu-back'>Back to Menu</button>
-      <button className='menu-back'>Go to Payment</button>
+      <button className='menu-back'onClick={goToMenu}>Back to Menu</button>
+      <button className='menu-back' onClick={()=>{changePage(1)}}>Go to Payment</button>
+      </div> 
       </div>
+): null}
+   
+
+
+     {page > 0? <OrderHeader page={page}/> : null}
+      {page === 1? <PersonalInfo setPage={setPage} /> : null}
+      {page === 2? <Shipping  setPage={setPage}/> : null}
   </div>
 )
 }
