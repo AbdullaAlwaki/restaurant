@@ -1,5 +1,5 @@
 .addDishes {
-    background-color: rgb( 245, 232, 56, 0.363);
+    background-color: rgba(131, 94, 15, 0);
     width: 80%;
     margin: 2rem auto;
     padding: 1rem;
@@ -10,7 +10,7 @@
 
 /*grey containers*/
 .whatDish, .kindOfDish, .addPrice, .veganDish, .offerDish, .addFavoriteDish {
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(243, 151, 14);
     width: 50%;
     margin: 0.5rem auto;
     padding: 0.5rem;
