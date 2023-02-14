@@ -41,26 +41,6 @@ function Register() {
                         </div>
                     ))
                             }
-                    {/* <div className="floating_group">
-                        <input type="text" name="firstName" className="inputRegister" required/>
-                        <label className="labelRegister">First Name</label>
-                    </div>
-                    <div className="floating_group">
-                        <input type="text" name="lastName" className="inputRegister" required/>
-                        <label className="labelRegister">Last Name</label>
-                    </div>
-                    <div className="floating_group">
-                        <input type="email" name="email" id="" className="inputRegister" required/>
-                        <label className="labelRegister">Email</label>
-                    </div>
-                    <div className="floating_group">
-                        <input type="password" name="password" id="" className="inputRegister" required/>
-                        <label className="labelRegister">Password</label>
-                    </div>
-                    <div className="floating_group">
-                        <input type="password" name="password" id="" className="inputRegister" required/>
-                        <label className="labelRegister">Confirm Password</label>
-                    </div> */}
                     <button type="submit" className="buttonRegister">Submit</button>
                 </form>
             </div>

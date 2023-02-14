@@ -1,60 +1,73 @@
-import React, { useState } from "react";
-import Cards from "./Cards.jsx";
- import Categories from "./Categories";
-import logo from "../../images/MERN.svg";
-import "../../styles/Menu.css";
-// import axios from "axios";
+import React, { useContext, useEffect } from 'react'
+import { dataContext } from '../Context/context';
+import Cards from './Cards';
+
+function Menu_2() {
+    const {state, dispatch} = useContext(dataContext);
+
+    useEffect(()=>{
+        (async()=>{
+            const res = await fetch("https://mern-restaurant-backend.onrender.com/api/Dishes");
+            const jres = await res.json();
+            dispatch({type:'MENU', payload: jres.dishes});
+        })()
+        // eslint-disable-next-line
+    },[])
+    console.log(state)
+    // const { state, dispatch } = useContext(dataContext);
+//   const [items, setItems] = useState([]);
+// //   console.log(items);
+//   const filterItems = (category) => {
+//     if (category === "all") {setItems(state.menu); return};
+//     setItems(state.menu.filter((dish) => dish.category === category));
+//   };
 
 
-const Menu = () => {
-  const [menuItems, setMenuItems] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState([]);
-  const [allFood, setAllFood] = useState([]);
+//   useEffect(()=>{
+//           setItems(state.menu)
+//   console.log('useEffect', state.menu)
+//  }, [state.menu]);
 
-  React.useEffect(() => {
-    setCategories(['all', 'breakfast', 'lunch', 'dinner'])
-    fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
-        if (res.ok) {
-            return res.json();
-        }
-    }).then((jsonRes) => jsonRes.dishes)
-    .then((jsonRes) => {
-      setMenuItems(jsonRes);
-      setAllFood(jsonRes);
-      return jsonRes})
-    .catch((error) => console.log(error))
-  },[]);
-  
-  const filterItems = (category) => {
-    setActiveCategory(category);
-    if (category === "all") {
-      setMenuItems(allFood);
-      
-      return;
-    }
-    const newItems = allFood.filter((item) => item.category === category);
-    setMenuItems(newItems);
-  };
+//   return (
+//     <div>
+//       <div className="filter-btns-cont">
+//         <button onClick={() => filterItems("all")} className="filter-btn">
+//           All
+//         </button>
+//         <button onClick={() => filterItems("lunch")} className="filter-btn">
+//           Lunch
+//         </button>
+//         <button onClick={() => filterItems("breakfast")} className="filter-btn">
+//           Breakfast
+//         </button>
+//         <button onClick={() => filterItems("dinner")} className="filter-btn">
+//           Dinner
+//         </button>
+//       </div>
 
+//       {items.map((dish, index) => {
+//         return (
+          
+//             <div className="menu-item" key={index}>
+//               <img className="photo" src={dish.images} alt={dish.name} />
+//               <div className="item-info">
+//                 <header>
+//                   <h4>{dish.name}</h4>
+//                   <h4 className="price">{dish.price} €</h4>
+//                 </header>
+//                 <p className="desc">{dish.description}</p>
+//               </div>
+//               {/* <button >Add to order</button> */}
+//             </div>
+          
+//         );
+//       })}
+//     </div>)
   return (
-    <main className="menu-container">
-      <section className="menu section" >
-        <div className="title">
-          <img src={logo} alt="logo" className="logo" />
-          <h2>Menu List</h2>
-          <div className="underline"></div>
-        </div>
-        <Categories
-          categories={categories}
-          activeCategory={activeCategory}
-           filterItems={filterItems}
-        />
+    <div>
+        <Cards />
+    </div>
+  )
+}
 
-        <Cards items={menuItems} />
-      </section>
-    </main>
-  );
-};
-
-export default Menu;
+export default Menu_2

@@ -1,9 +1,9 @@
-.mainRegister {
+.mainLogin {
     background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
     border: 1px solid white;
 }
 
-.containerForm {
+.containerLogin {
     margin: 2rem auto;
     width: 50%;
     height: 40rem;
@@ -11,45 +11,56 @@
     background-color: rgb(245, 232, 56, 0.363);
 }
 
-.headingRegister {
+.headingLogin {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     padding-top: 1rem;
 }
 
-.registerForm {
+.loginImg {
+    margin: 1rem auto;
+    display: flex;
+    justify-self: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.loginForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
 }
 
-.inputRegister {
-    width: 100%;
-    margin: 2rem auto;
-} 
-
-.labelRegister {
-    left: 15px;
-    top: 40px;
+.inputLogin {
+    width: 15rem;
+    margin: 1rem;
 }
 
-.inputRegister:focus ~ .labelRegister,
-.inputRegister:valid ~ .labelRegister
+.labelLogin {
+    top: 22px;
+    left: 20px;
+}
+
+.inputLogin:focus ~ .labelLogin,
+.inputLogin:valid ~ .labelLogin
  {
   position: absolute;
   transition: all 1s ease-in-out;
   background-color: rgb(231, 231, 231);
   opacity: 1;
-  left: 35px;
-  top: 25px;
+  left: 20px;
+  top: 7px;
  }
 
- .buttonRegister {
+.buttonLogin {
     height: 2rem;
     width: 5rem;
     border-radius: 20px;
     font-weight: bold;
 }
-
+.textLogin {
+    text-align: center;
+    margin-top: 5rem;
+}

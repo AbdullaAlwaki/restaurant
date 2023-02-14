@@ -49,6 +49,7 @@ h4 {
 
   .filter-btn:active{
     color: green;
+    
   }
   
   .filter-btn {
@@ -66,8 +67,8 @@ h4 {
   }
   
   .active {
-    color: rgb(4, 102, 4);
-    
+    color: rgb(250, 253, 250);
+    background-color: rgb(255, 0, 0);
   }
   
   .section-center {
@@ -77,6 +78,7 @@ h4 {
     display: grid;
     gap: 3rem 2rem;
     justify-items: center;
+    cursor: pointer;
   }
   
   .menu-item {
@@ -101,11 +103,16 @@ h4 {
   }
 
   .logo {
-    object-fit: cover;
-    height: auto;
+    height: 100px;
     width: 100px;
-    border-radius: 100%; 
-    background-color: black; 
+    padding: 1rem;
+  }
+  .con_logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 1rem auto;
   }
   
   
@@ -135,11 +142,16 @@ h4 {
   }
   
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 500px) {
     .menu-item {
-      grid-template-columns: 225px 1fr;
-      gap: 0 1.25rem;
+      /* grid-template-columns: 225px 1fr;
+      gap: 0 1.25rem; */
+      display: flex;
+      flex-direction: column;
       max-width: 40rem;
+    }
+    .btn-container{
+      display: grid;
     }
     .photo {
       height: 175px;
@@ -154,6 +166,7 @@ h4 {
     .photo {
       height: 200px;
     }
+    
   }
   @media screen and (min-width: 1170px) {
     .section-center {
@@ -168,3 +181,4 @@ h4 {
   .menu-container{
     background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164))
   }
+

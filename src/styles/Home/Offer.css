@@ -1,44 +1,46 @@
 .container_offer {
-    width: 60%;
+    width: 80%;
     height: fit-content;
-    margin: auto;
-    text-align: center;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .heading_offer {
     text-align: center;
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
-/*desktop size*/
-@media only screen and (min-width: 1221px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(3, 15rem);
-        justify-items: center;
-    }
+.offer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
+    width: 100%;
 }
 
-/*tablet size*/
-@media only screen and (min-width:421px) and (max-width:1220px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(2, 15rem);
-        justify-items: center;
-    }
-}
-/*phone size*/
-@media only screen and (max-width:420px) {
-    .pictures {
-        display: grid;
-        grid-template-columns: repeat(1, 15rem);
-        justify-items: center;
-    }
+.cont_offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
 
 .sectionOffer {
- display: inline-flex;
- margin: 1rem 5rem;
+    width: 15rem;
+    height: 20rem;
+    text-align: center;
+}
+
+.figureOffer {
+    width: 15rem;
+    height: 20rem;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
 }
 
 .food_img {
@@ -46,13 +48,64 @@
     height: 150px;
     border: 2px solid black;
     border-radius: 50%;
+    margin: auto;
 }
 
 .new_sticker {
-    width: 50px;
+    width: 40px;
     height: 20px;
+    margin-right: -3rem;
     background-color: greenyellow;
     color: white;
     text-align: center;
     font-weight: 600;
 }
+
+.nameOffer {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.priceOffer {
+    color: rgb(152, 247, 10);
+}
+
+.descriptionOffer {
+    color: rgba(0, 0, 0, 0.555);
+}
+
+/*phone size*/
+@media screen and (max-width: 450px) {
+    .container_offer {
+        width: 100%;
+        margin-top: 17rem;
+    }
+    .offer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .heading_offer {
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+    
+}
+
+/*tablet size*/
+@media screen and (min-width: 451px) and (max-width: 1024px) {
+    .container_offer {
+        width: 100%;
+        margin-top: 10rem;
+    }
+    
+    .offer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heading_offer {
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+}
+

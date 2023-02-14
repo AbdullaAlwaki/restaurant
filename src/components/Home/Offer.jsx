@@ -1,5 +1,5 @@
 import React from "react";
-import dishes from "../../help/help.jsx";
+import {dishes} from "../../help/getData";
 import "../../styles/Home/Offer.css";
 
 function Offer() {
@@ -11,33 +11,26 @@ function Offer() {
         .then((jsonRes) => setOffer(jsonRes))
         .catch((error) => console.log(error))
     }, [offers]);
-    // React.useEffect(() => {
-    //     fetch(`https://mern-restaurant-backend.onrender.com/api/addDishes`).then((res) => {
-    //         if (res.ok) {
-    //             return res.json();
-    //         }
-    //     }).then((jsonRes) => jsonRes.dishes)
-    //     .then((jsonRes) => jsonRes.filter((item) => item.isOffers === true))
-    //     .then((jsonRes) => setOffer(jsonRes))
-    //     .catch((error) => console.log(error))
-    // }, []);
+
     return (
         <div className="container_offer">
             <h2 className="heading_offer">Offer of the week</h2>
-            {offer.map((item,index) => (
-                <section key={index}>
-                    <figure>
+            <div className="offer">
+            {offer.map((item,index) => {
+                return <div key={index} className="cont_offer">
+                <section className="sectionOffer" >
+                    <figure className="figureOffer">
+                        <p className="new_sticker">%</p>
                         <img className="food_img" src={item.images} alt="" />
-                        <figcaption>{item.name}</figcaption>
-                        <figcaption>{item.price} €</figcaption>
-                        <figcaption>{item.description}</figcaption>
+                        <figcaption className="nameOffer">{item.name}</figcaption>
+                        <figcaption className="priceOffer">{item.price} €</figcaption>
+                        <figcaption className="descriptionOffer">{item.description}</figcaption>
                     </figure>
-                    <p className="new_sticker">new</p>
                 </section>
-            ))}
-            {/*container for pictures*/}
-            {/* <button onClick={h}>sdfhgdsf</button> */}
+            </div>
+            })}
         </div>
+    </div>
     )
 }
 
