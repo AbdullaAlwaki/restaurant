@@ -17,6 +17,7 @@ import Dashboard from "./Admin/Dashboard.jsx";
 import Cart from './components/Cart';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -26,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu/>} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
