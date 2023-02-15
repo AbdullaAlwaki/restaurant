@@ -1,7 +1,9 @@
 export const initialState = {
     menu: [],
-    cart: []
+    cart: [],
+  
 }
+
 
 function addToCart(state, action){
     const cartElem = action.payload
@@ -23,10 +25,13 @@ function increment(state, action){
     return {...state, cart: newCart}
 }
 
+
 export function reducer(state, action){
     switch(action.type){
         case "MENU":
             return {...state, menu:action.payload}
+
+       
         
         case "ADDTOCART":
           

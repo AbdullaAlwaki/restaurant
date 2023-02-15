@@ -231,10 +231,86 @@ table{
   .shipment label, .payment label{
     all:unset;
   }
-.payment-img{
-  all:unset;
-  width: 30%;
+
+.shipment h2, .payment h2{
+  text-align: center;
+  padding: 1rem;
+}
+
+.shipment{
+  display: flex;
+  flex-direction: column; 
+}
+
+.shipment  label{
+    /* width: 180px; */
+    box-shadow: var(--shadow-big);
+    padding: var(--space-medium);
+    margin-bottom: var(--space-small);
+    display: flex;
+    justify-items: center;
+    align-content: center;
+  }
+.payment-img, .liefer-img{
+  
+  height: 10rem;
+  border-radius: 1rem;
+ border: 2px solid black;
+}
+
+.payment-img:active{
+  box-shadow: 3px 1px 7px 7px rgba(8, 44, 251, 0.52);
+}
+.shipment-mode{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pickUp{
+  width: 100%;
+  box-sizing: border-box;
+  height: 10rem;
+ border: 2px solid black;
+  border-radius: 1rem;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 
 
+.payment-mode2{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.paypal{
+  width: 75%;
+  height: 10rem;
+  color: rgb(47, 46, 46);
+   border-radius: 1rem;
+  box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.paypal:active{
+  color: blue;
+}
+
+.visa_svg:checked ~ .paypal{
+  color:rgba(8, 44, 251, 0.52)
+}
+
+.bar_img:checked ~ .liefer-img{
+  fill: #02480c;
+
+}
+
+.liefer-img{
+  fill: #000000;
+
+}

@@ -15,7 +15,7 @@ import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
 import Cart from './components/Cart';
-import PersonalInfo from './components/Order/PersonalInfo';
+
 
 
 

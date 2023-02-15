@@ -9,7 +9,10 @@ function Menu_2() {
         (async()=>{
             const res = await fetch("https://mern-restaurant-backend.onrender.com/api/Dishes");
             const jres = await res.json();
+            console.log(jres)
+
             dispatch({type:'MENU', payload: jres.dishes});
+            // dispatch({type:"OFFER" , payload:jres.dishes})
         })()
         // eslint-disable-next-line
     },[])
