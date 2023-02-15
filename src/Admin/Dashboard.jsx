@@ -14,12 +14,14 @@ function Dashboard() {
       
       <Nav />
       <Routes>
-        <Route path="/" element={<Dishes />} />
+        <Route path="/" element={<Dishes  />} />
         <Route path="Dishes" element={<Dishes />} />
         <Route path="Table" element={<Table />} />
         <Route path="Contact" element={<Contact/>}/>
       </Routes>
+      
     </div>
+    
   );
 }
 
