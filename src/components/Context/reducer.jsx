@@ -1,6 +1,8 @@
 export const initialState = {
   menu: [],
   cart: [],
+  offer:[],
+  favorite:[]
 };
 
 function addToCart(state, action) {
@@ -23,18 +25,12 @@ function increment(state, action) {
 }
 
 
-(async () => {
-  const res = await fetch(
-    `https://mern-restaurant-backend.onrender.com/api/Dishes`
-  );
-  const jres = await res.json();
-  initialState.menu= jres.dishes
-})();
-
 export function reducer(state, action) {
   switch (action.type) {
     case "MENU":
-      return { ...state, menu: action.payload };
+      const favorite = action.payload.filter((item) => item.isFavorites === true);
+      const offer = action.payload.filter((ele) => ele.isOffers === true);
+      return {...state, menu: action.payload, favorite: favorite, offer: offer};
 
     case "ADDTOCART":
       return addToCart(state, action);

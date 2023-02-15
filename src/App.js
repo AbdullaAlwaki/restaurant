@@ -9,18 +9,30 @@ import Footer from './components/Footer.jsx';
 import Services from './components/Services/Services.jsx';
 import Contact from './components/Contact/Contact';
 import Register from './components/Register/Register';
-import Context from './components/Context/context';
 import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
 import Cart from './components/Cart';
+import { dataContext } from "./components/Context/context";
 
 
 function App() {
-  
+  const { dispatch } = React.useContext(dataContext);
+  React.useEffect(() => {
+    (async () => {
+      const res = await fetch(
+        `https://mern-restaurant-backend.onrender.com/api/Dishes`
+      );
+      const jres = await res.json();
+      
+      dispatch({ type: "MENU", payload: jres.dishes });
+    })();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="App">
-      <Context>
+
          <NavBar />
       <div className="main-container">
         <Routes>
@@ -39,7 +51,6 @@ function App() {
         </Routes>
       </div>
      
-      </Context>
       <Footer />
     </div>
   );

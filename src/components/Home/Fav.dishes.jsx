@@ -11,9 +11,8 @@ function FavDishes() {
     const { state } = React.useContext(dataContext);
     const [favorite, setFavorite] = React.useState([]);
     React.useEffect(() => {
-        const favorite = state.menu.filter((item) => item.isFavorites === true);
-        setFavorite(favorite);
-    }, [state]);
+        setFavorite(state.favorite);
+    }, [state.favorite]);
 
        return (
         <div className="fav_dishes_container">

@@ -8,9 +8,9 @@ function Offer() {
   const [offer, setOffer] = React.useState([]);
   React.useEffect(() => {
     
-    setOffer(state.menu.filter((item) => item.isOffers === true));
+    setOffer(state.offer);
     // eslint-disable-next-line
-  }, []);
+  }, [state.offer]);
 
   return (
     <div className="container_offer">

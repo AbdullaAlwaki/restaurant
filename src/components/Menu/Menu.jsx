@@ -16,17 +16,6 @@ function Menu() {
     setItems(state.menu.filter((dish) => dish.category === category));
   };
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await fetch(
-  //       `https://mern-restaurant-backend.onrender.com/api/Dishes`
-  //     );
-  //     const jres = await res.json();
-      
-  //     dispatch({ type: "MENU", payload: jres.dishes });
-  //   })();
-    
-  // }, []);
 useEffect(() =>{
   setItems(state.menu);
 }

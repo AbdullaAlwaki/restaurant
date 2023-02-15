@@ -7,9 +7,9 @@ import { dataContext } from "./Context/context";
 
 function NavBar() {
   // eslint-disable-next-line no-unused-vars
-  const { state, dispatch } = useContext(dataContext);
+  const { state } = useContext(dataContext);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const activeStyle = { color: "yellow" };
+
 
   return (
     <>
@@ -36,7 +36,7 @@ function NavBar() {
             <li>
               {/* <a href="/home">Home</a> */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                
                 to="/"
               >
                 Home
@@ -45,7 +45,6 @@ function NavBar() {
             <li>
               {/* <a href="/about">About</a> */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/about"
               >
                 About
@@ -54,7 +53,6 @@ function NavBar() {
             <li>
               {/* <a href="/menu">Menu</a> */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/menu"
               >
                 Menu
@@ -63,7 +61,6 @@ function NavBar() {
             <li>
               {/* <a href="/services">Services</a> */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/services"
               >
                 Services
@@ -72,7 +69,6 @@ function NavBar() {
             <li>
               {/* <a href="/contact">Contact Us</a> */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/contact"
               >
                 Contact
@@ -81,7 +77,6 @@ function NavBar() {
             <li>
               {/* Dashboard */}
               <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/Dashboard"
               >
                 Dashboard
