@@ -29,6 +29,7 @@
     border-radius: 1.5rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     transition: 0.3s;
+
     
     
 }
@@ -38,6 +39,12 @@
     width: 15rem;
     text-align: center;
     margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    transition: 0.3s;
+
+
 
 
 }
@@ -50,13 +57,18 @@
     padding: 0.5rem;
     margin: 0.5rem;
     align-items: center;
+    transition: 0.3s;
+
 
 
 }
 
 #breakfast, #lunch, #dinner, #vegan_true, #vegan_false, #offer_true, #offer_false, #favorite_true, #favorite_false {
     margin-left: 1rem;
+    
     margin-right: 1rem;
+    transition: 0.3s;
+
 
 }
 
@@ -74,6 +86,7 @@
     transition: 0.3s;
 
 
+
 }
 
 .buttonAddDish:hover {
@@ -81,6 +94,7 @@
     color: white;
     border: 1px solid white;
     transition: 0.3s;
+
 
 }
 
@@ -90,6 +104,7 @@
         width: 100%;
         padding: 1rem;
         border-radius: 0;
+
     }
 
     .whatDish, .kindOfDish, .addPrice, .veganDish, .offerDish, .addFavoriteDish {
@@ -109,6 +124,17 @@
     .inputWhatDish, .inputPrice, .inputDescription {
         width: 80%;
 
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .inputWhatDish, .inputPrice, .inputDescription {
+        width: 80%;
     }
 
 }
+
