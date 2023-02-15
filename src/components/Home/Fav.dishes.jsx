@@ -1,18 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import {dishes} from "../../help/getData";
+
+import { dataContext } from "../Context/context";
+
 import "../../styles/Home/Fav.dishes.css";
 
 
 
 function FavDishes() {
+    const { state } = React.useContext(dataContext);
     const [favorite, setFavorite] = React.useState([]);
-    const fav = React.useContext(dishes);
     React.useEffect(() => {
-        fav.then((jsonRes) => jsonRes.filter((item) => item.isFavorites === true))
-        .then((jsonRes) => setFavorite(jsonRes))
-        .catch((error) => console.log(error))
-    }, [fav]);
+        const favorite = state.menu.filter((item) => item.isFavorites === true);
+        setFavorite(favorite);
+    }, [state]);
 
        return (
         <div className="fav_dishes_container">

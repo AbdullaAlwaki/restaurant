@@ -6,21 +6,17 @@ import logo from "../../images/MERN.svg";
 function Cards_2() {
   const { state, dispatch } = useContext(dataContext);
   const [items, setItems] = useState([state.menu]);
-//   console.log(items);
   const filterItems = (category) => {
     if (category === "all") {setItems(state.menu); return};
     setItems(state.menu.filter((dish) => dish.category === category));
   };
 
-
   useEffect(()=>{
          setItems(state.menu)
-  console.log('useEffect', state.menu)
 }, [state.menu]);
 
 function addToCart(item){
     const itemIndex = state.cart.findIndex((el)=> el._id === item._id )
-    // console.log(itemIndex);
   
     if(itemIndex !== -1){
       dispatch({type: 'INCREMENT', payload: item._id})

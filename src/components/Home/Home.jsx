@@ -5,6 +5,7 @@ import Booking from "./Booking.jsx";
 import FavDishes from "./Fav.dishes.jsx";
 
 function Home() {
+
   return (
     <div>
       <Carousel />

@@ -14,7 +14,6 @@ dispatch({type: 'DECREMENT', payload: item._id})
 
 function itemIncrement(item){
   const action = {type: 'INCREMENT', payload: item._id}
-  console.log(action)
   dispatch(action)
   }
   function getTotal (products) {
