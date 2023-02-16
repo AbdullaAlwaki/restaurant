@@ -69,8 +69,8 @@ function UpdateDishes() {
 
   return (
     <div >
-      <form action="" onSubmit={handleDish}>
-        <input type="text" className="post-form" name="id" id="id" placeholder="Enter Dish Id" />
+      <form action="" className="first-form" onSubmit={handleDish}>
+        <input type="text"  name="id" id="id" placeholder="Enter Dish Id" />
         <button className="buttonAddDish"> Find Dish</button>
       </form>
 
