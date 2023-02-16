@@ -16,7 +16,7 @@ function GetDishes() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div >
       <h1>Dishes</h1>
       {res.map((item) => {
         return (

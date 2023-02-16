@@ -13,17 +13,20 @@ export default function AddDishes() {
     setMethod(e.target.value);
   };
   return (
-    <>
-      <select name="" id="" onChange={handleChange}>
+    <div className="dishes_container">
+
+    
+      <select className="selection" onChange={handleChange}>
         <option value="POST">post</option>
         <option value="GET">get</option>
         <option value="PUT">update</option>
         <option value="DELETE">delete</option>
       </select>
+     
       {method === "POST" && <PostDishes />}
       {method === "GET" && <GetDishes />}
       {method === "DELETE" && <DeleteDishes />}
       {method === "PUT" && <UpdateDishes />}
-    </>
+    </div>
   );
 }

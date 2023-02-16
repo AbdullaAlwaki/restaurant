@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+
 
 function PostDishes() {
     const [response, setResponse] = React.useState([]);
@@ -39,17 +41,14 @@ function PostDishes() {
   return (
     <div>
       <form
-        className="addDishes"
-        action=""
-        method="post"
-        onSubmit={handleSubmit}
-      >
+        className="post-form" action="" method="post"onSubmit={handleSubmit}     >
+ 
         <h1>Dishes</h1>
 
         
 
-        <div className="whatDish">
-          <h4 className="headingAdd">What dish name?</h4>
+        <div className="dish-info">
+          <h4 className="headingAdd"> Name Of The Dish?</h4>
           <input
             className="inputWhatDish"
             type="text"
@@ -66,29 +65,10 @@ function PostDishes() {
           />
         </div>
 
-        <div className="kindOfDish">
-          <h4>What kind of dish?</h4>
-          <section className="addBreakfast">
-            <label htmlFor="breakfast">Breakfast</label>
-            <input
-              type="radio"
-              name="category"
-              id="breakfast"
-              value="breakfast"
-            />
-          </section>
-          <section className="addLunch">
-            <label htmlFor="lunch">Lunch</label>
-            <input type="radio" name="category" id="lunch" value="lunch" />
-          </section>
-          <section className="addDinner">
-            <label htmlFor="dinner">Dinner</label>
-            <input type="radio" name="category" id="dinner" value="dinner" />
-          </section>
-        </div>
+       
 
         {/*Price and description*/}
-        <div className="addPrice">
+        <div className="dish-info">
           <h4>Price and description:</h4>
           <input
             className="inputPrice"
@@ -104,11 +84,33 @@ function PostDishes() {
             id="description"
             placeholder="description"
           />
+
+          {/*is dishes*/}
+        </div>
+         <div className="dish-info">
+          <h4>What kind of dish?</h4>
+          <div className='radio-container' >
+          <section className="addBreakfast">
+            <label htmlFor="breakfast">Breakfast</label>
+            <input
+              type="radio"name="category"id="breakfast"value="breakfast"/>
+          </section>
+          <section className="addLunch">
+            <label htmlFor="lunch">Lunch</label>
+            <input type="radio" name="category" id="lunch" value="lunch" />
+          </section>
+          <section className="addDinner">
+            <label htmlFor="dinner">Dinner</label>
+            <input type="radio" name="category" id="dinner" value="dinner" />
+          </section>
+          </div>
+        
         </div>
 
         {/*vegan*/}
-        <div className="veganDish">
+        <div className="dish-info">
           <h4>Is the dish vegan?</h4>
+          <div className='radio-container'>
           <section className="veganTrue">
             <label htmlFor="is Vegan true">Yes</label>
             <input type="radio" name="is Vegan" id="vegan_true" value="true" />
@@ -122,11 +124,15 @@ function PostDishes() {
               value="false"
             />
           </section>
+
+          </div>
+         
         </div>
 
         {/*offer of the week*/}
-        <div className="offerDish">
+        <div className="dish-info">
           <h4>Is the dish an offer?</h4>
+          <div className='radio-container'>
           <section className="offerTrue">
             <label htmlFor="is offers true">Yes</label>
             <input type="radio" name="is offers" id="offer_true" value="true" />
@@ -140,11 +146,14 @@ function PostDishes() {
               value="false"
             />
           </section>
+          </div>
+          
         </div>
 
         {/*favorite dishes*/}
-        <div className="addFavoriteDish">
+        <div className="dish-info">
           <h4>Is the dish a favorite dish?</h4>
+          <div className='radio-container'> 
           <section className="favoriteTrue">
             <label htmlFor="is Favorites true">Yes</label>
             <input
@@ -163,6 +172,8 @@ function PostDishes() {
               value="false"
             />
           </section>
+          </div>
+         
         </div>
 
         <button type="submit" className="buttonAddDish">

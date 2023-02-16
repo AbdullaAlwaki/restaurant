@@ -15,7 +15,7 @@ function Nav() {
           Table
         </NavLink>
         </li>
-        <li>
+        <li className="Admin_nav_li">
         <NavLink className="Admin_Nav" to="/Dashboard/Contact">
           Contact
         </NavLink>
