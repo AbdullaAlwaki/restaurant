@@ -1,4 +1,4 @@
-.order-container, .shipping-info{
+.order-container, .shipment, .payment{
     width: 75%;
     height: 100%;
     background-color: aliceblue;
@@ -218,15 +218,11 @@ table{
 
 
 .shipment{
-  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center; 
-  padding-top: 15px; 
    height: inherit;
-   padding: 20px;
    
-   margin: auto;
 }
   .shipment label, .payment label{
     all:unset;
@@ -234,7 +230,8 @@ table{
 
 .shipment h2, .payment h2{
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 .shipment{
@@ -251,35 +248,37 @@ table{
     justify-items: center;
     align-content: center;
   }
-.payment-img, .liefer-img{
+.payment-img, .liefer-img, .bar-img{
   
   height: 10rem;
   border-radius: 1rem;
- border: 2px solid black;
+ 
 }
 
-.payment-img:active{
-  box-shadow: 3px 1px 7px 7px rgba(8, 44, 251, 0.52);
-}
+
 .shipment-mode{
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.pickUp{
-  width: 100%;
+.pickUp {
   box-sizing: border-box;
-  height: 10rem;
- border: 2px solid black;
+  height: 8.5rem;
+  box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
   border-radius: 1rem;
   text-align: center;
-  padding-top: 4rem;
-  font-size: 1.5rem;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
-
+.pickUp-radio:checked ~ .pickUp{
+  background-color: blue;
+  color: white;
+}
 
 .payment-mode2{
   width: 100%;
@@ -291,26 +290,40 @@ table{
   width: 75%;
   height: 10rem;
   color: rgb(47, 46, 46);
-   border-radius: 1rem;
-  box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
   justify-content: space-around;
   align-items: center;
 }
 
-.paypal:active{
-  color: blue;
+.shipping-info input{
+  display: none;
 }
 
 .visa_svg:checked ~ .paypal{
-  color:rgba(8, 44, 251, 0.52)
+  color:blue
 }
 
-.bar_img:checked ~ .liefer-img{
-  fill: #02480c;
+.bar_img:checked ~ .bar-img{
+  fill: rgb(76, 114, 18);
 
 }
 
 .liefer-img{
   fill: #000000;
 
+}
+
+.liefer_img:checked ~ .liefer-img{
+  fill: rgb(195, 175, 26);
+}
+@media screen and (max-width:800px){
+  .shipment-mode, .payment-mode2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .liefer-img, .pickUp{
+  margin-bottom: 1.5rem;
+ }
+ 
 }
