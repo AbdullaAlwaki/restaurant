@@ -69,21 +69,15 @@ function UpdateDishes() {
 
   return (
     <div >
-        <input  className="post-form" type="text"  placeholder="Enter Dish Id" />
-      
-      <button className="buttonAddDish"> Find Dish</button>
-      
-      
-
-      
+      <form action="" onSubmit={handleDish}>
+        <input type="text" className="post-form" name="id" id="id" placeholder="Enter Dish Id" />
+        <button className="buttonAddDish"> Find Dish</button>
+      </form>
 
       {dish && (
         <form className="post-form" action="" key={dish._id} onSubmit={handleUpdate}>
           <div className="dish-info">
       <h1>Update Dishes</h1>
-        <input  className="post-form" type="text"  placeholder="Enter Dish Id" />
-      
-      <button className="buttonAddDish"> Find Dish</button>
         </div>
         <div className="dish-info">
 
