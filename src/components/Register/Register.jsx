@@ -36,8 +36,8 @@ function Register() {
                 <form action="" className="registerForm">
                     {input.map((item, index) => (
                         <div key={index} className="floating_group">
-                            <input type={item.type} name={item.name} className="inputRegister" id="registerInput" required/>
-                            <label className="labelRegister" for="registerInput">{item.label}</label>
+                            <input type={item.type} name={item.name} className="inputRegister" id={"registerInput" + index} required/>
+                            <label className="labelRegister" for={"registerInput" + index} >{item.label}</label>
                         </div>
                     ))
                             }

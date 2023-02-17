@@ -57,8 +57,8 @@ function Booking() {
               <form className="formBooking" action="" method="post" onSubmit={handleSubmit}>
                   {booking.map((item, index) => (
                      <div key={index} className="floating_group">
-                        <input type={item.type} name={item.name} className="inputBook" id="inputBooking" required/>
-                        <label className="labelBook" for="inputBooking">{item.label}</label> 
+                        <input type={item.type} name={item.name} className="inputBook" id={"inputBooking" + index} required/>
+                        <label className="labelBook" for={"inputBooking" + index}>{item.label}</label> 
                       </div>
                   ))}
                 {/*reservation button*/}
