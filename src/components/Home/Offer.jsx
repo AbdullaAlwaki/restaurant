@@ -1,6 +1,5 @@
 import React from "react";
 import { dataContext } from "../Context/context";
-
 import "../../styles/Home/Offer.css";
 
 function Offer() {

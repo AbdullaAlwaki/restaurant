@@ -1,8 +1,10 @@
+/*styling background*/
 .mainRegister {
     background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
     border: 1px solid white;
 }
 
+/*styling register box*/
 .containerForm {
     margin: 2rem auto;
     width: 50%;
@@ -11,45 +13,53 @@
     background-color: rgb(245, 232, 56, 0.363);
 }
 
+/*styling for register form*/
 .headingRegister {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     padding-top: 1rem;
 }
-
 .registerForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
 }
-
 .inputRegister {
     width: 100%;
     margin: 2rem auto;
+    position: relative;
+    height: 2rem;
+    padding-left: 5px;
+    padding-top: 10px;
 } 
-
-.labelRegister {
-    left: 15px;
-    top: 40px;
+.inputRegister:focus {
+    height: 2.2rem;
+    padding: 10px;
 }
-
+.inputRegister:valid {
+    height: 2.5rem;
+    font-size: 16px;
+}
+.labelRegister {
+    left: 10px;
+    top: 40px;
+    position: absolute;
+    opacity: 0.2;
+}
 .inputRegister:focus ~ .labelRegister,
-.inputRegister:valid ~ .labelRegister
- {
+.inputRegister:valid ~ .labelRegister {
   position: absolute;
   transition: all 1s ease-in-out;
   background-color: rgb(231, 231, 231);
   opacity: 1;
-  left: 35px;
+  left: 10px;
   top: 25px;
  }
-
  .buttonRegister {
     height: 2rem;
     width: 5rem;
     border-radius: 20px;
     font-weight: bold;
 }
-

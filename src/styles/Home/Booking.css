@@ -1,56 +1,76 @@
+/*styling booking container*/
 .booking {
     background-color: yellow;
     width: 90%;
     height: fit-content;
     text-align: center;
     position: absolute;
-    margin-top: -2rem;
+    margin-top: -4rem;
     left: 5%;
 }
 
+/*styling heading*/
 .headingBook {
     text-align: center;
+    margin-top: 0.5rem;
 }
 
-.container_booking {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
+/*styling for form*/
 .formBooking {
-    display: inline-flex;
-    flex-direction: row wrap;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     align-self: center;
-    justify-content: center;
-    width: 80%;
-
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 10px;
 }
 
+/*styling for inputs*/
 .inputBook {
     width: 15rem;
     background-color: white;
     border: none;
     text-align: center;
+    position: relative;
+    height: 2rem;
+    margin: 1rem;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+.inputBook:focus {
+    height: 2.2rem;
+    padding: 10px;
+}
+.inputBook:valid {
+    height: 2.5rem;
+    font-size: 16px;
 }
 
+/*styling or labels*/
 .labelBook {
     font-size: 20px;
     width: 12rem;
     top: 1rem;
     left: 10%;
-    
+    position: absolute;
+    opacity: 0.2; 
 }
 
+/*styling for label above input*/
 .inputBook:focus ~ .labelBook,
 .inputBook:valid ~ .labelBook {
     left: 10%;
     top: 0.5rem;
     font-size: 16px;
     width: fit-content;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background-color: rgb(231, 231, 231);
+    opacity: 1;
 }
 
+/*styling button*/
 .buttonBook {
     height: 2rem;
     width: 8rem;
@@ -59,63 +79,32 @@
     align-self: center;
 }
 
-/*phone size*/
-@media only screen and (max-width: 450px) {
-    .booking {
-        width: 90%;
-    }
-    .container_booking{
-        display: flex;
-        flex-direction: column;
-    }
+/*styling for small size until tablet size*/
+
+/*styling only for form*/
+@media screen and (max-width: 711px) {
     .formBooking {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    .labelBook {
-        top: 1.5rem;
-        font-size: 16px;
-    }
-    .inputBook:focus ~ .labelBook,
-    .inputBook:valid ~ .labelBook {
-        font-size: 16px;
-        top: 7px;
-}
-    .buttonBook {
-        margin-bottom: 0.5rem;
     }
 }
 
-/*tablet size*/
-@media only screen and (min-width: 451px) and (max-width: 1024px) {
-    .booking {
-        width: 90%;
-    }
-    .container_booking{
-        display: flex;
-        flex-direction: column;
-    }
-    .formBooking {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-self: center;
-    }
-
-    .inputBook {
-        width: 12rem;
-    }
+/*styling for labels*/
+@media screen and (min-width: 609px) and (max-width: 711px) {
     .labelBook {
-        font-size: 16px;
-        top: 1.5rem;
+        left: 30%;
     }
-
     .inputBook:focus ~ .labelBook,
     .inputBook:valid ~ .labelBook {
-        font-size: 16px;
-        top: 7px;
+        left: 30%;
     }
-    .buttonBook {
-        margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 608px) {
+    .labelBook {
+        left: 25%;
+    }
+    .inputBook:focus ~ .labelBook,
+    .inputBook:valid ~ .labelBook {
+        left: 20%;
     }
 }
