@@ -17,7 +17,7 @@ function Footer() {
             <div className="Fup" >
             <div className="iframe fadd" dangerouslySetInnerHTML={{__html: iframe?iframe:""}}></div>
             <div className="Fpages fadd">
-                <h3 className="pages">Pages </h3>
+                <h3 className="h3-Fpages ">Pages </h3>
                 <ul className="ul_services">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
@@ -28,9 +28,9 @@ function Footer() {
             </div>
             
             <div className="Fservices fadd">
-                <h3 className="headingFooter">Services</h3>
-                <ul className="ul_services">
-                    <li><a href="/">Sign in</a></li>
+                <h3 className="headingFooter h3-Fservices">Services</h3>
+                <ul className="ul_services ">
+                    <li><a href="/">Book a Table</a></li>
                     <li><a href="/about">Order</a></li>
                 </ul>
             </div>
