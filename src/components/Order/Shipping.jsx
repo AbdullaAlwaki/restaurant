@@ -202,7 +202,7 @@ c-42 132 -149 242 -272 278 l-42 12 -3 481 -2 482 27 6 c42 10 134 60 170 91
       ): null}
         <div className='pay-to'>
       <button className='menu-back'onClick={()=>{props.setPage(1)}}>Previous</button>
-      <button className='menu-back' onClick={()=>{props.setPage(0)}}>Next</button>
+      <button className='menu-back' onClick={()=>{props.setPage(3)}}>Next</button>
       </div>
 
       

@@ -114,7 +114,7 @@ table{
  justify-content: center;
  align-items: center; 
  padding-top: 15px; 
-  height: inherit;
+  height: 100%;
   padding: 20px;
   width: 65%;
   margin: auto;
@@ -127,7 +127,8 @@ table{
  
   .order-form {
   width: 100%;
-  padding: 20px;
+ 
+  padding:3rem;
   border-radius: 6px;
   background: #fff;
   box-shadow: 0 0 20px 0 #095484; 
@@ -137,26 +138,29 @@ table{
   border: 1px solid #ccc;
   border-radius: 3px; 
   width: calc(100% - 10px);
-  padding: 5px;
+  padding: 0.5rem;
+  height: 20%;
   }
  
   .name-item, .city-item{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+    height: 20%;
   }
 
   .form-item-name{
     width:45%;
     border: 1px solid #ccc;
     border-radius: 3px; 
-    
+    height:2rem;
+    margin-bottom: 1rem;
   }
 
 
   .item p{
     margin-left: 20px;
+    margin-bottom: 10px;
   }
   .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
   color: #095484;
@@ -179,6 +183,7 @@ table{
       }
       .question p{
       margin-left: 1.2rem;
+      margin-bottom: 5px;
       }
       span.required {
       margin-left: 0;
@@ -326,4 +331,10 @@ table{
   margin-bottom: 1.5rem;
  }
  
+}
+
+.order-done{
+  font-size: 4rem ;
+   text-align: center;
+   padding: 10rem;
 }
