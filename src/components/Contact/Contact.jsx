@@ -66,18 +66,18 @@ function Contact() {
                     {/*input name*/}
                     <div className="floating_group">
                         <input type="text" name="name" 
-                        className="inputContact" required/>
-                        <label className="labelContact">Your name</label>
+                        className="inputContact" id="contactName"required/>
+                        <label className="labelContact" for="contactName">Your name</label>
                     </div>
                     {/*input email*/}
                     <div className="floating_group">
-                        <input type="email" name="email" className="inputContact" required/>
-                        <label className="labelContact">Your email</label>
+                        <input type="email" name="email" className="inputContact" id="contactEmail" required/>
+                        <label className="labelContact" for="contactEmail">Your email</label>
                     </div>
                     {/*input message*/}
                     <div className="floating_group">
                         <textarea name="textfield" id="inputMessage" cols="30" rows="10" className="inputContact" required></textarea>
-                        <label className="labelContact">Your message</label>
+                        <label className="labelContact" for="inputMessage">Your message</label>
                     </div>
                     <button type="submit" className="buttonContact">Submit</button>
                 </form>

@@ -1,19 +1,30 @@
 import React from 'react';
+import { useContext } from 'react';
+import { dataContext } from '../Context/context';
 
 export default function PersonalInfo(props){
     
+  const {state, dispatch} = useContext(dataContext);
+  function submitHandler(e){
+     e.preventDefault();
+
+     const formData = new FormData(e.target);
+
+     const customer = Object.fromEntries(formData.entries());
+     dispatch({type: 'PERSONALDETAILS', payload: customer})
+  }
 
 
 return(
     <div className="personal-info">
         <div className="info-data">
-            <form className='order-form'>
+            <form className='order-form' onSubmit={submitHandler}>
                 <h2>Personal Details</h2>
        <div class="item">
           <p>Name</p>
           <div class="name-item">
-            <input type="text"className='form-item-name' name="firstName" placeholder="First"/>
-            <input type="text" className='form-item-name' name="lastName" placeholder="Last"/>
+            <input  type="text"className='form-item-name' name="firstName" placeholder="First"/>
+            <input  type="text" className='form-item-name' name="lastName" placeholder="Last"/>
           </div>
         </div>
         <div class="item">
@@ -44,6 +55,7 @@ return(
            
           </div>
         </div>
+        <button className="submit-details" type='submit'>Submit</button>
             </form>
        </div>
 

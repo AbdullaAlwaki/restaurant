@@ -1,14 +1,15 @@
+/*styling background*/
 .mainContact {
     background-image:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(167, 164, 164));
     border: 1px solid white;
 }
 
+/*styling for container (boxes and contact field*/
 .containerContact {
     margin: 5rem;
     display: flex;
     justify-content: center;
     position: relative;
-    
 }
 
 /*4 grey boxes with icons*/
@@ -19,7 +20,6 @@
     margin-right: -5rem;
     
 }
-
 .smallConIns {
     background-color: rgb(214, 212, 212);
     height: 14rem;
@@ -30,14 +30,12 @@
     z-index: 9;
     box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
 }
-
 .logoContact {
     width: 5rem;
     height: 5rem;
     background-color: rgb(245, 232, 56, 0.363);
     padding: 0.5rem;
 }
-
 .textIcon {
     margin-top: 1rem;
 }
@@ -50,26 +48,34 @@
     opacity: 1;
     box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
 }
-
 .headingContact {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin-top: 1rem;
 }
-
 .formContact {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .inputContact {
     width: 15rem;
     border: 1px solid black;
-    margin: 1rem;
+    position: relative;
+    height: 2rem;
+     margin: 1rem;
+     padding-left: 5px;
+    padding-top: 10px;
 }
-
+.inputContact:focus {
+    height: 2.2rem;
+    padding: 10px;
+}
+.inputContact:valid{
+    height: 2.5rem;
+    font-size: 16px;
+}
 #inputMessage {
     height: 12rem;
     width: 15rem;
@@ -78,24 +84,32 @@
     margin-bottom: 0.5rem;
     padding-bottom: 8rem;
 }
-
+#inputMessage:valid {
+    padding-top: 15px;
+}
 .labelContact {
     left: 20px;
     top: 22px;
+    position: absolute;
+    opacity: 0.2;
 }
-
 .inputContact:focus ~ .labelContact,
 .inputContact:valid ~ .labelContact {
     left: 20px;
     top: 7px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background-color: rgb(231, 231, 231);
+    opacity: 1;
 }
-
 .buttonContact {
     height: 2rem;
     width: 4rem;
     border-radius: 20px;
     font-weight: bold;
 }
+
+/*styling for different sizes*/
 
 /*tablet size*/
 @media screen and (max-width: 1024px) {
@@ -105,43 +119,37 @@
         flex-direction: column;
         align-items: center;
     }
-
     .smallCon {
         gap: 0;
         margin-right: 0;
     }
-
     .smallConIns {
         height: 12rem;
         width: 12rem;
         padding: 0;
     }
-
     .logoContact {
         width: 4rem;
         height: 4rem;
     }
-
     .headingIcon {
         font-size: 16px;
         margin: auto ;
     }
-
     .textIcon {
         margin-top: 0.5rem;
     }
 }
 
+/*phone size*/
 @media screen and (max-width: 450px) {
     .containerContact {
         margin: auto;
     }
-    
     .smallCon {
         width: 95%;
         margin: auto;
     }
-    
     .smallConIns {
         width: 9rem;
         height: 9rem;
@@ -150,15 +158,12 @@
         width: 3rem;
         height: 3rem;
     }
-
     .headingIcon {
         font-size: 14px;
     }
-
     .textIcon {
         font-size: 12px;
     }
-
     .contactField {
         width: 95%;
         margin-bottom: 0.5rem;

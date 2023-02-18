@@ -54,20 +54,18 @@ function Booking() {
   return (
         <div className="booking">
             <h2 className="headingBook">Book a table now</h2>
-            <div className="container_booking">
-                <form className="formBooking" action="" method="post" onSubmit={handleSubmit} >
-                    {booking.map((item, index) => (
-                       <div key={index} className="floating_group">
-                            <input type={item.type} name={item.name} className="inputBook" required/>
-                            <label className="labelBook">{item.label}</label> 
-                        </div>
-                    ))}
-            {/*reservation button*/}
-                  <button type="submit" className="buttonBook">Book now</button>
-                </form>
-            </div>
+              <form className="formBooking" action="" method="post" onSubmit={handleSubmit}>
+                  {booking.map((item, index) => (
+                     <div key={index} className="floating_group">
+                        <input type={item.type} name={item.name} className="inputBook" id={"inputBooking" + index} required/>
+                        <label className="labelBook" for={"inputBooking" + index}>{item.label}</label> 
+                      </div>
+                  ))}
+                {/*reservation button*/}
+                <button type="submit" className="buttonBook">Book now</button>
+              </form>
             {response && <h1>{response.message}</h1> }
-      {response && <p>{response.error}</p>}
+            {response && <p>{response.error}</p>}
         </div>
     );
 }
