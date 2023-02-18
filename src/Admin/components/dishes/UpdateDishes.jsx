@@ -91,7 +91,7 @@ function UpdateDishes() {
         </div>
 
           <div className="dish-info" >
-          <h4>What kind of dish?</h4>
+          <h4>What kind of dishes?</h4>
             <div className='radio-container'>
             <section className="addBreakfast">
             <label htmlFor="breakfast">Breakfast</label>
@@ -150,7 +150,7 @@ function UpdateDishes() {
             <input
               type="radio"
               name="isVeg"
-              id="isVeg"
+               id="isVeg" 
               defaultChecked={dish.isVeg ? true : false}
               value="true"
             />
@@ -158,7 +158,7 @@ function UpdateDishes() {
             <input
               type="radio"
               name="isVeg"
-              id="isNotVeg"
+              id="isNotVeg" 
               defaultChecked={dish.isVeg ? false : true}
               value="false"
             />
