@@ -29,28 +29,28 @@ function About() {
                 <div>
                     <img className="about_img" src={ahmed} alt="ahmed" />
                     <h3 className="about_name">Ahmed</h3>
-                    <span className="about_descreption">always excited to learn new</span>    
+                    <span className="about_descreption">Always Excited to Learn  New   Things</span>    
                 </div>
               
                 <div>
                     <img className="about_img" src={kamalpreet} alt="kamalpreet" />
                     <h3 className="about_name">Kamalpreet</h3>
-                    <span className="about_descreption">very curious about the new topics </span>    
+                    <span className="about_descreption">very Curious About the New Topics </span>    
                 </div>
                 <div>
                     <img  className="about_img"src={abdulla} alt="abdulla" />
                     <h3 className="about_name">Abdulla </h3>
-                    <span className="about_descreption">the head master of Chaos</span>    
+                    <span className="about_descreption">The Head Master of Chaos</span>    
                 </div>
                 <div>
                     <img  className="about_img"src={romina} alt="romina" />
                     <h3 className="about_name">Romina</h3>
-                    <span className="about_descreption">like to style everthing perfectly</span>    
+                    <span className="about_descreption">like to Style Everything perfectly</span>    
                 </div>
                 <div>
                     <img  className="about_img"src={sergey}alt="sergey" />
                     <h3 className="about_name ">Sergey</h3>
-                    <span className="about_descreption"> A true backend expert </span> 
+                    <span className="about_descreption"> A true Backend Expert </span> 
                 </div>   
             </div>
         </div>

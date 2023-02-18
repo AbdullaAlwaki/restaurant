@@ -118,11 +118,15 @@
     border-radius: 5px;
     border: 1px solid #fbf6f6;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    color: #ef2222;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
 
+}
+
+.dish-info input{
+    color: #0b2a3c;
 }
 
 
@@ -143,10 +147,43 @@
 
 }
 
+.first-form{
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.first-form input{
+    height: 2.5rem;
+    width: 40%;
+    margin: 1rem;
+    padding-left: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #0b2a3c;
+    background-color: rgba(216, 200, 200, 0.5);
+    color: #ef2222;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.first-form ::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color:  #0b2a3c;
+}
+
 
 .buttonAddDish{
     height: 2rem;
-    width: 10rem;
+    width: 7rem;
     margin: 1rem;
     padding-left: 5px;
     padding-top: 10px;
