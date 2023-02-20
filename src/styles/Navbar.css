@@ -55,6 +55,7 @@
 
 .login li{
     margin: 0; 
+    list-style: none;
 }
 
 .login li a{
