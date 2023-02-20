@@ -10,11 +10,18 @@ iframe{
     align-items: center;
 }
 .headingFooter{
-    position: absolute;
+ /*    position: absolute; */
     top: 20px;
     color: #fff;
     font-size: 1.5rem;
-    margin-bottom: 1%;
+}
+.h3-Fpages{
+    margin-top:  35px;
+
+}
+.h3-Fservices{
+    margin-bottom:  50px;
+
 }
 footer{
     position: relative;
@@ -23,9 +30,9 @@ footer{
     background: #111;
     color: #fff;
 }
-li{
+.ul_services li{
     list-style: none;
-    margin: 10% 0;
+    margin: 4% 0;
 }
 a{
     text-decoration: none;
@@ -36,10 +43,9 @@ a:hover{
 }
 
 .Fup{
-    margin-bottom: 2%;
+    margin: 2%;
     background: #111;
     width: 100%;
-    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -54,12 +60,7 @@ a:hover{
 
 }
 
-.Fpages{
-    display: flex;
-    justify-content: space-around;
-    font-size: large;
-    padding-top: 45px;
-}
+
 .Fdown{
     display: flex;
     justify-content: space-between;
@@ -93,15 +94,20 @@ a:hover{
         justify-content: center;
         align-items: center;
     }
-    h3{
+    .headingFooter{
         top: 50%;
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0;
     }
     .ul_services{
-        padding-bottom: 13%;
+        margin-bottom: 80px;
+
     }
+    .ul_services li{
+        margin: 10% 0;
+    }
+    
     .Fup{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -119,11 +125,12 @@ a:hover{
         color: rgb(0, 73, 122);
     }
     .Fpayments{
-        width: 50%;
+        width: 35%;
         font-size:xx-large;
     }
     .Fpages{
-        padding-top: 15%;
+        padding-top: 40%;
+
     }
     
     .fadd{
@@ -134,23 +141,21 @@ a:hover{
         justify-content: center;
         align-items: center;
     }
-    .Fpayments{
-        width:20%;
-    }
-    .pages{
-        top: 30px;
-        
-    }
+   
+ 
     .Fcontact{
         padding-top: 10%;
     }
-    .Fservices{
-        padding-top: 15%;
-    }
     .Ficons{
-        width: 50%;
+        width: 100%;
         justify-content: space-around;
         font-size: xx-large;
-        padding: 5px;
+      
+    }
+    .Fservices{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
     }
 }

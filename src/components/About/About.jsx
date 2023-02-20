@@ -21,8 +21,8 @@ function About() {
                         Food Without Error is a food delivery service that provid healthy and delicious meals to customers. We are a team of five students from  <a className="about_a" href="https://www.digitalcareerinstitute.org/"> DCI</a>  Digital Career Institute. We are  passionate about food and we want to make it easier for people to eat healthy and delicious food. We are  currently offering our service in Berlin, Germany.
                     </p>
                 </div>
-                <div>
-                    <img className="about_section_img" src={food_serving} alt="about" />
+                <div className="about_section_img">
+                    <img  src={food_serving} alt="about" />
                 </div>
             </div>
             <div className="about_characters">

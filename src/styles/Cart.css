@@ -162,9 +162,9 @@ table{
     margin-left: 20px;
     margin-bottom: 10px;
   }
-  .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
+  .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder{
   color: #095484;
-  }
+  } 
   .item input:hover, .item select:hover {
   border: 1px solid transparent;
   box-shadow: 0 0 6px 0 #095484;
