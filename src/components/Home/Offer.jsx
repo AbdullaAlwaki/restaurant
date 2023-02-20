@@ -8,7 +8,6 @@ function Offer() {
   React.useEffect(() => {
     
     setOffer(state.offer);
-    // eslint-disable-next-line
   }, [state.offer]);
 
   return (
