@@ -58,7 +58,7 @@ function Booking() {
                   {booking.map((item, index) => (
                      <div key={index} className="floating_group">
                         <input type={item.type} name={item.name} className="inputBook" id={"inputBooking" + index} required/>
-                        <label className="labelBook" for={"inputBooking" + index}>{item.label}</label> 
+                        <label className="labelBook" htmlFor={"inputBooking" + index}>{item.label}</label> 
                       </div>
                   ))}
                 {/*reservation button*/}
