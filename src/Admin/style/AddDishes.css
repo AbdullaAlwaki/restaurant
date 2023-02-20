@@ -203,6 +203,51 @@
     color: white;
 }
 
+.delete-dishes-h1{
+    text-align: center;
+    background-color: #fbf6f6;
+    width: 30%;
+    margin: auto;
+}
+.get-dishes{
+   width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+}
+.get-dishes-all{
+
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr)); 
+    grid-gap: 70px;
+  
+
+}
+
+.get-dishes-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 450px;
+   /*  background-color: rgba(15, 45, 92, 0.9); */
+    color:rgb(28, 5, 5);
+    margin: auto;
+    box-shadow: 10px 5px 5px  rgba(15, 45, 92, 0.9);
+    
+}
+
+.get-dishes-items img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 

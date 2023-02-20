@@ -16,23 +16,25 @@ function GetDishes() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div >
+    <div  className="get-dishes">
       <h1>Dishes</h1>
+      <div className="get-dishes-all" >
       {res.map((item) => {
         return (
-          <div key={item._id}>
-            <h3>{item.name}</h3>
-            <p>{item._id}</p>
-            <img src={item.images} width="250px" height="250px" alt="" />
-            <p>{item.category}</p>
-            <p>{item.price}</p>
-            <p>{item.description}</p>
-            <p>{item.isVeg}</p>
-            <p>{item.isOffers}</p>
-            <p>{item.isFavorites}</p>
+         
+          <div className="get-dishes-items" key={item._id}>
+            <img src={item.images}  width="250px" height="250px" alt="" />
+            <h3> Name: {item.name}</h3>
+            <p> ID :{item._id}</p>
+            <p> Category :{item.category}</p>
+            <p> Price: {item.price}</p>
+            <p> Description: {item.description}</p>
           </div>
+
+          
         );
       })}
+    </div>
     </div>
   );
 }

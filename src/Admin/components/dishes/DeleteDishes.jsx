@@ -20,12 +20,12 @@ function DeleteDishes() {
   };
   return (
     <div>
-      <h1>Delete Dishes</h1>
+      <h1 className="delete-dishes-h1">Delete Dishes</h1>
       {res && <h2>{res.message}</h2>}
       {res && <h2>{res.error}</h2>}
-      <form action=""  onSubmit={handleChange} >
+      <form action=""  className="first-form" onSubmit={handleChange} >
         <input type="text" name="name"  placeholder="Enter Dish Name" />
-        <button >Delete</button>
+        <button className="buttonAddDish" >Delete</button>
       </form>
     </div>
   );
