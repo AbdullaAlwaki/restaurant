@@ -3,7 +3,9 @@ export const initialState = {
   cart: [],
   offer:[],
   favorite:[],
-  customer: {}
+  customer: {},
+  shipping: "",
+  payment: ""
 };
 
 function addToCart(state, action) {
@@ -35,7 +37,8 @@ export function reducer(state, action) {
 
     case "ADDTOCART":
       return addToCart(state, action);
-
+    case "EMPTYCART":
+      return { ...state, cart: []}
     case "REMOVEFROMCART":
       return {
         ...state,
@@ -58,6 +61,11 @@ export function reducer(state, action) {
       case "PERSONALDETAILS":
         return{ ...state, customer: action.payload};
 
+    case "SHIPPINGDETAILS":
+      return{ ...state, shipping: action.payload};
+    
+    case "PAYMENTDETAILS":
+        return{ ...state, payment: action.payload};
         
     default:
       throw new Error(`The action ${action.type} not defined`);
