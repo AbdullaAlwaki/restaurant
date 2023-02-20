@@ -338,3 +338,38 @@ table{
    text-align: center;
    padding: 10rem;
 }
+
+.order-details{
+   width: 30%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 3px 1px 7px 7px rgba(17, 17, 17, 0.22);
+    padding: 2rem;
+    margin: auto;
+}
+
+.detail-bill td{
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+.total-final{
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  padding: 1rem;
+}
+
+.total-final p{
+  padding-left: 1rem;
+}
+
+.bill-details{
+margin: 5% 0;
+}
+
+.last-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
