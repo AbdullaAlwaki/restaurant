@@ -33,7 +33,10 @@ useEffect(() =>{
     <main className="menu-container">
       <section className="menu section">
         <div className="title">
-          <img src={logo} alt="logo" className="logo" />
+          <div className="con_logo">
+            <img src={logo} alt="logo" className="logo" />
+          </div>
+          
           <h2>Menu List</h2>
           <div className="underline"></div>
         </div>
