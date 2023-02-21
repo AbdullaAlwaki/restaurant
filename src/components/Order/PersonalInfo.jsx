@@ -4,7 +4,7 @@ import { dataContext } from '../Context/context';
 
 export default function PersonalInfo(props){
     
-  const {state, dispatch} = useContext(dataContext);
+  const {dispatch} = useContext(dataContext);
   function submitHandler(e){
      e.preventDefault();
 
@@ -20,23 +20,23 @@ return(
         <div className="info-data">
             <form className='order-form' onSubmit={submitHandler}>
                 <h2>Personal Details</h2>
-       <div class="item">
+       <div className="item">
           <p>Name</p>
-          <div class="name-item">
+          <div className="name-item">
             <input  type="text"className='form-item-name' name="firstName" placeholder="First"/>
             <input  type="text" className='form-item-name' name="lastName" placeholder="Last"/>
           </div>
         </div>
-        <div class="item">
+        <div className="item">
           <p>Email</p>
           <input type="text" className='form-item' name="email"/>
         </div>
-        <div class="item">
+        <div className="item">
           <p>Phone</p>
           <input type="text" className='form-item' name="phone"/>
         </div>
         
-        <div class="item">
+        <div className="item">
           <p>Address</p>
           <input type="text" className='form-item' name="StreetName" placeholder="Street Name" />
           <input type="text" className='form-item' name="House" placeholder="House No." />
@@ -46,9 +46,9 @@ return(
             <input type="text" className='form-item'name='country' placeholder="Country" />
           </div>
         </div>
-        <div class="question">
+        <div className="question">
           <p>Privacy Policy<span class="required">*</span></p>
-          <div class="checkbox-item">
+          <div className="checkbox-item">
          
               <input type="checkbox"  value="none" id="check_1" name="check" required/>
               <p>I agree to the <a href="https://www.w3docs.com/privacy-policy">privacy policy.</a></p>

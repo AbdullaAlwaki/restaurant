@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { dataContext } from '../Context/context';
 
-function Order_finish() {
+function OrderFinish() {
   const{ dispatch} = useContext(dataContext);
     const navigate = useNavigate();
     
@@ -38,4 +38,4 @@ function Order_finish() {
   )
 }
 
-export default Order_finish
+export default OrderFinish

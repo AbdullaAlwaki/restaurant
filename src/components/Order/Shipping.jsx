@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FaPaypal,FaCcVisa } from 'react-icons/fa';
 import { dataContext } from '../Context/context';
 function Shipping(props) {
-    const {state, dispatch} = useContext(dataContext);
+    const {dispatch} = useContext(dataContext);
 
      function setShipping(e){
      dispatch({type: 'SHIPPINGDETAILS', payload:e.target.value} )

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { dataContext } from '../Context/context'
 
-function Order_details(props) {
+function OrderDetails(props) {
 
 const {state} = useContext(dataContext);
 function getTotal (products) {
@@ -75,4 +75,4 @@ console.log(state);
   )
 }
 
-export default Order_details
+export default OrderDetails
