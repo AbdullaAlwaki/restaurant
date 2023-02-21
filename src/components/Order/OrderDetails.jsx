@@ -8,7 +8,6 @@ function getTotal (products) {
   return products.reduce((a,b)=>a+b.price*b.qty, 0)
 }
 
-console.log(state);
   return (
     <div className='bill-details'>
       <div className="order-details">
