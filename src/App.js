@@ -14,6 +14,7 @@ import Login from "./components/Login/Login";
 import Dashboard from "./Admin/Dashboard.jsx";
 import Cart from './components/Cart';
 import { dataContext } from "./components/Context/context";
+import Bill from './components/Order/Bill';
 
 
 
@@ -45,9 +46,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
           <Route path='/myOrder' element={<Cart/>}/>
+           <Route path="/Bill" element={<Bill/>}/>
           {/* Route Dashboard */} 
           <Route path="/dashboard/*" element={<Dashboard />} />
-          
+         
 
           <Route path="*" element={<h1>404 not found </h1>} />
         </Routes>

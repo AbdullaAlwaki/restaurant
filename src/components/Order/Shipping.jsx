@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaPaypal,FaCcVisa } from 'react-icons/fa';
+import { dataContext } from '../Context/context';
 function Shipping(props) {
-    const [warning, setWarning] = useState(false);
+    const {state, dispatch} = useContext(dataContext);
 
-    const submitOrderShipPay = (e) => {
-        e.preventDefault();
-        if (e.target.checkValidity()) {
-          setWarning(false);
-          props.setPage(3);
-        } else {
-          setWarning(true);
-        }
-      };
+     function setShipping(e){
+     dispatch({type: 'SHIPPINGDETAILS', payload:e.target.value} )
+     }
+     
+     function setPayment(e){
+      dispatch({type: 'PAYMENTDETAILS', payload: e.target.value})
+     }
+
   return (
-    <div className='shipping-info' onSubmit={submitOrderShipPay}>
+    <div className='shipping-info' >
 
         <div className="shipment">
              <h2>Shipping</h2>
@@ -25,6 +25,7 @@ function Shipping(props) {
             name="shipping"
             value="liferando"
             className='liefer_img'
+            onChange={setShipping}
             />
              
 <svg className='liefer-img'
@@ -89,6 +90,7 @@ c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z"/>
             name="shipping"
             value="pickUp"
             className='pickUp-radio'
+            onChange={setShipping}
             />
             <p className='pickUp'>Pickup</p>
          {/* <img className='payment-img'  src={pickUp} alt="pickUp" /> */}
@@ -107,6 +109,7 @@ c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z"/>
             name="payment"
             value="Paypal"
             className='visa_svg'
+            onChange={setPayment}
             />
             <FaPaypal className='paypal'/>
          {/* <img className='payment-img'  src={payPal} alt="payPal"/> */}
@@ -118,6 +121,7 @@ c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0 23 -7 30 -15z"/>
             name="payment"
             value="Bar-bezahlen"
             className='bar_img'
+            onChange={setPayment}
             />
     
 <svg version="1.0" 
@@ -190,6 +194,7 @@ c-42 132 -149 242 -272 278 l-42 12 -3 481 -2 482 27 6 c42 10 134 60 170 91
             name="payment"
             value="Visa"
             className='visa_svg'
+            onChange={setPayment}
             />
             <FaCcVisa className='paypal'/>
         {/* <img className='payment-img'  src={visa} alt="visa"/> */}
@@ -197,9 +202,6 @@ c-42 132 -149 242 -272 278 l-42 12 -3 481 -2 482 27 6 c42 10 134 60 170 91
              </div>
       
         </div>
-        {warning?(
-        <h2>Please choose shipping and payment mode.</h2>
-      ): null}
         <div className='pay-to'>
       <button className='menu-back'onClick={()=>{props.setPage(1)}}>Previous</button>
       <button className='menu-back' onClick={()=>{props.setPage(3)}}>Next</button>

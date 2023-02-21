@@ -38,12 +38,12 @@ return(
         
         <div class="item">
           <p>Address</p>
-          <input type="text" className='form-item' name="name" placeholder="Street Name" />
-          <input type="text" className='form-item' name="name" placeholder="House No." />
+          <input type="text" className='form-item' name="StreetName" placeholder="Street Name" />
+          <input type="text" className='form-item' name="House" placeholder="House No." />
           <div class="city-item">
-            <input type="text" className='form-item' placeholder="City" />
-            <input type="text" className='form-item' placeholder="Postal / Zip code" />
-            <input type="text" className='form-item' placeholder="Country" />
+            <input type="text" className='form-item'name='city' placeholder="City" />
+            <input type="text" className='form-item' name='zipCode' placeholder="Postal / Zip code" />
+            <input type="text" className='form-item'name='country' placeholder="Country" />
           </div>
         </div>
         <div class="question">

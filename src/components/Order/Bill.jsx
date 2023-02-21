@@ -1,17 +1,31 @@
-import React, { useContext } from 'react'
+import React, {useContext} from "react";
+import { useNavigate } from 'react-router-dom';
 import { dataContext } from '../Context/context'
 
-function Order_details(props) {
-
-const {state} = useContext(dataContext);
+function Bill(){
+      
+const {state, dispatch} = useContext(dataContext);
+const navigate = useNavigate();
 function getTotal (products) {
   return products.reduce((a,b)=>a+b.price*b.qty, 0)
 }
 
+
+
+function cartEmpty(){
+
+dispatch({type:"EMPTYCART"})
+}
+function goToMenu (){
+    const path = `/menu`;
+    navigate(path);
+    cartEmpty()
+}
+
 console.log(state);
   return (
-    <div className='bill-details'>
-      <div className="order-details">
+   <div className="bill-details">
+    <div className="order-details ">
         <h2>Order Details</h2>
         <div className="profile-details">
             <h3>Customer Details:</h3>
@@ -64,15 +78,13 @@ console.log(state);
           
         </div>
       </div>
-
-
-
-<div className='pay-to'>
-      <button className='menu-back'onClick={()=>{props.setPage(2)}}>Previous</button>
-      <button className='menu-back' onClick={()=>{props.setPage(4)}}>Next</button>
+      <div className="last-button">
+        <button className='menu-back'onClick={goToMenu}>Back to Menu</button>
       </div>
-    </div>
-  )
+      
+   </div>
+      
+    )
 }
 
-export default Order_details
+export default Bill
