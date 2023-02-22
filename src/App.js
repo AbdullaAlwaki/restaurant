@@ -23,7 +23,7 @@ function App() {
   React.useEffect(() => {
     (async () => {
       const res = await fetch(
-        `https://mern-restaurant-backend.onrender.com/api/Dishes`
+        `/Dishes`
       );
       const jres = await res.json();
       
