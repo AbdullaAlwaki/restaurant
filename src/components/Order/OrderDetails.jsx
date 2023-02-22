@@ -1,14 +1,13 @@
 import React, { useContext } from 'react'
 import { dataContext } from '../Context/context'
 
-function Order_details(props) {
+function OrderDetails(props) {
 
 const {state} = useContext(dataContext);
 function getTotal (products) {
   return products.reduce((a,b)=>a+b.price*b.qty, 0)
 }
 
-console.log(state);
   return (
     <div className='bill-details'>
       <div className="order-details">
@@ -75,4 +74,4 @@ console.log(state);
   )
 }
 
-export default Order_details
+export default OrderDetails

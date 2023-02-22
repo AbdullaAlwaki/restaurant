@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Cart.css';
 import { dataContext } from './Context/context'
 import OrderHeader from './Order/OrderHeader';
-import Order_details from './Order/Order_details';
-import Order_finish from './Order/Order_finish';
+import OrderDetails from './Order/OrderDetails';
+import OrderFinish from './Order/OrderFinish';
 import PersonalInfo from './Order/PersonalInfo';
 import Shipping from './Order/Shipping';
 // import {useLocation}from "react-router-dom"
@@ -55,7 +55,6 @@ function goToMenu (){
 }
 
 function changePage(value){
-  console.log(page)
      setPage(value);
 }
 return(
@@ -97,8 +96,9 @@ return(
      {page > 0? <OrderHeader page={page}/> : null}
       {page === 1? <PersonalInfo setPage={setPage} /> : null}
       {page === 2? <Shipping  setPage={setPage}/> : null}
-      {page === 3? <Order_details setPage={setPage}/> : null}
-      {page === 4? <Order_finish setPage={setPage}/> : null}
+      
+      {page === 3? <OrderDetails setPage={setPage}/> : null}
+      {page === 4? <OrderFinish setPage={setPage}/> : null}
   </div>
 )
 }

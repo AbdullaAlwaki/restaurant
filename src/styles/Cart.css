@@ -356,7 +356,7 @@ table{
 .total-final{
   display: flex;
   align-items: center;
-  justify-content:end;
+  justify-content: flex-end;
   padding: 1rem;
 }
 
@@ -372,4 +372,11 @@ margin: 5% 0;
   display: flex;
   justify-content: center;
   margin-top: 5%;
+}
+
+
+@media screen and (max-width:1000px){
+  .order-details{
+    width: 80%;
+  }
 }
