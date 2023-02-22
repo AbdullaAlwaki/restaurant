@@ -24,11 +24,11 @@ function GetDishes() {
          
           <div className="get-dishes-items" key={item._id}>
             <img src={item.images}  width="250px" height="250px" alt="" />
-            <h3> Name: {item.name}</h3>
-            <p> ID :{item._id}</p>
-            <p> Category :{item.category}</p>
-            <p> Price: {item.price}</p>
-            <p> Description: {item.description}</p>
+            <h3> Name:  {item.name}</h3>
+            <p> <span> ID :</span>{item._id}</p>
+            <p> <span> Category :</span>{item.category}</p>
+            <p> <span> Price: {item.price}</span></p>
+            <p> <span>Description: </span>{item.description}</p>
           </div>
 
           

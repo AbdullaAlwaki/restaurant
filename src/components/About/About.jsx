@@ -13,7 +13,7 @@ function About() {
     return (
         <div className="about_container">
             <div className="about_section">
-                <div>
+                <div className="about-section-details">
                     <h2 className="about_heading">About Us</h2>
                     <p className="about_solgan"> Food Without Error</p>
             
@@ -29,18 +29,18 @@ function About() {
                 <div>
                     <img className="about_img" src={ahmed} alt="ahmed" />
                     <h3 className="about_name">Ahmed</h3>
-                    <span className="about_descreption">Always Excited to Learn  New   Things</span>    
+                    <span className="about_descreption"> Always Excited to Learn New Things</span>    
                 </div>
               
+                <div>
+                    <img  className="about_img"src={abdulla} alt="abdulla" />
+                    <h3 className="about_name">Abdulla </h3>
+                    <span className="about_descreption">The Head Master of Coding</span>    
+                </div>
                 <div>
                     <img className="about_img" src={kamalpreet} alt="kamalpreet" />
                     <h3 className="about_name">Kamalpreet</h3>
                     <span className="about_descreption">very Curious About the New Topics </span>    
-                </div>
-                <div>
-                    <img  className="about_img"src={abdulla} alt="abdulla" />
-                    <h3 className="about_name">Abdulla </h3>
-                    <span className="about_descreption">The Head Master of Chaos</span>    
                 </div>
                 <div>
                     <img  className="about_img"src={romina} alt="romina" />
