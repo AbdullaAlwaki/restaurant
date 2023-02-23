@@ -97,7 +97,7 @@ function NavBar() {
 
             <li>
               <NavLink to="/Login" className="log_in">
-                Sign In
+                {localStorage.getItem("user")?"Login" :"Logout"}
               </NavLink>
             </li>
             <li>

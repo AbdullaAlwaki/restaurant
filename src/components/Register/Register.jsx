@@ -1,8 +1,12 @@
 import React from "react";
 import "../../styles/Register.css"
 
+import { useNavigate } from "react-router-dom";
+
 function Register() {
     const [user, setUser] = React.useState(null);
+    const navigate = useNavigate();
+
     const handelSubmit =  (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
@@ -15,7 +19,7 @@ function Register() {
         if(password !== confirmPassword) return alert("Password and Confirm Password must be same");
 
         try {
-             fetch("https://mern-restaurant-backend.onrender.com/api/register", {
+             fetch("https://mern-restaurant-backend.onrender.com/api/sginup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -30,6 +34,10 @@ function Register() {
                 .then((res) => res.json())
                 .then((data) => {
                     setUser(data);
+                    setInterval(() => {
+                        navigate("/login");
+                    }
+                    , 2000);
                 }
                 );
         } catch (error) {
@@ -77,7 +85,7 @@ function Register() {
                     ))
                             }
                     <button type="submit" className="buttonRegister">Submit</button>
-                    {user && <p>{user.message}</p>}
+                    {user && <p style={{ color: "red" }}>{user.message}</p>}
                 </form>
             </div>
         </main>

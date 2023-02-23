@@ -2,10 +2,11 @@ import React from "react";
 import "../../styles/Login.css";
 import loginLogo from "../../images/login.png";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Login() {
-//   const [res, setRes] = React.useState([]);
+  const [res, setRes] = React.useState([]);
+  const navigate = useNavigate();
 
   const handleChange = async (e) => {
     e.preventDefault();
@@ -13,7 +14,7 @@ function Login() {
     const email = form.get("email");
     const password = form.get("password");
     try {
-      await fetch("https://mern-restaurant-backend.onrender.com/api/login", {
+      await fetch("https://mern-restaurant-backend.onrender.com/api/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,7 +25,13 @@ function Login() {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+          setRes(data);
+          localStorage.setItem("user", true);
+          setInterval(() => {
+            navigate("/");
+          }, 2000);
+        })
         .catch((err) => console.log(err));
     } catch (error) {
       console.log(error);
@@ -69,6 +76,7 @@ function Login() {
           If you have no account yet, <NavLink to="/register">register</NavLink>{" "}
           now!
         </p>
+        {res?.message && <p className="textLogin">{res.message}</p>}
       </div>
     </main>
   );

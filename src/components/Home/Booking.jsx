@@ -13,7 +13,6 @@ function Booking() {
       date: form.get("date"),
       time: form.get("time"),
     };
-    console.log(data);
     try {
       const response = await fetch(
         "https://mern-restaurant-backend.onrender.com/api/table",
@@ -62,7 +61,7 @@ function Booking() {
                       </div>
                   ))}
                 {/*reservation button*/}
-                <button type="submit" className="buttonBook">Book now</button>
+                <button type="submit" className="buttonBook">{localStorage.getItem("user")? "Book now":"Need to login"}</button>
               </form>
             {response && <h1>{response.message}</h1> }
             {response && <p>{response.error}</p>}
