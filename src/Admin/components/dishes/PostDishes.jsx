@@ -43,7 +43,7 @@ function PostDishes() {
       <form
         className="post-form" action="" method="post"onSubmit={handleSubmit}     >
  
-        <h1>Dishes</h1>
+        <h1>Post Dishes</h1>
 
         
 

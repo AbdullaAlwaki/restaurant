@@ -17,7 +17,7 @@ function GetDishes() {
   }, []);
   return (
     <div  className="get-dishes">
-      <h1>Dishes</h1>
+      <h1> Get Dishes</h1>
       <div className="get-dishes-all" >
       {res.map((item) => {
         return (

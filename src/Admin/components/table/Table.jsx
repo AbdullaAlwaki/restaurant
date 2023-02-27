@@ -5,7 +5,7 @@ import GetTable from "./GetTable";
 // import DeleteDishes from "./DeleteDishes";
 import UpdateTable from "./UpdateTable";
 
-import "../../style/AddDishes.css";
+import "../../style/table.css";
 import DeleteTable from "./DeleteTable";
 
 export default function Table() {
@@ -14,18 +14,18 @@ export default function Table() {
     setMethod(e.target.value);
   };
   return (
-    <>
-      <select name="" id="" onChange={handleChange}>
+    < div className="table_container" >
+      <select  className="selection" onChange={handleChange}>
         <option value="GET">get</option>
-        <option value="POST">post</option>
         <option value="PUT">update</option>
         <option value="DELETE">delete</option>
       </select>
+
       {method === "GET" && <GetTable />}
       {method === "PUT" && <UpdateTable />}
       {method === "DELETE" && <DeleteTable />}
       {/* {method === "POST" && <PostDishes />}
        */}
-    </>
+    </div>
   );
 }

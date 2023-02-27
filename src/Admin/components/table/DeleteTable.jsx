@@ -18,13 +18,13 @@ export default function DeleteTable() {
     }
   };
   return (
-    <div>
-        <h1>Delete Table</h1>
+    <div className="delete-vh-50">
+        <h1 className="delete-table-h1">Delete Table</h1>
         {res && <h2>{res.message}</h2>}
         {res && <h2>{res.error}</h2>}
-        <form action=""  onSubmit={handleChange} >
+        <form className="first-form"  onSubmit={handleChange} >
             <input type="text" name="id"  placeholder="Enter Table ID" />
-            <button >Delete</button>
+            <button  className="buttonTable" >Delete</button>
         </form>
         
     </div>

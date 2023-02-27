@@ -68,16 +68,20 @@ function UpdateDishes() {
   };
 
   return (
-    <div >
+    <div  className="update-page-view" >
+       <h1 className="update-contacts-h1"> Update Dishes</h1>
+    
       <form action="" className="first-form" onSubmit={handleDish}>
+      
         <input type="text"  name="id" id="id" placeholder="Enter Dish Id" />
-        <button className="buttonAddDish"> Find Dish</button>
+        <button className="buttonContacts"> Find Dish</button>
       </form>
 
       {dish && (
         <form className="post-form" action="" key={dish._id} onSubmit={handleUpdate}>
           <div className="dish-info">
-      <h1>Update Dishes</h1>
+          <h1>Update Dishes</h1>
+     
         </div>
         <div className="dish-info">
 
@@ -214,7 +218,7 @@ function UpdateDishes() {
           </div>
           </div>
 
-          <button  type="submit" className="buttonAddDish">Update Dish</button>
+          <button  type="submit" className="buttonContacts">Update Dish</button>
         </form>
       )}
       {res && <h1>{res.massage}</h1> }

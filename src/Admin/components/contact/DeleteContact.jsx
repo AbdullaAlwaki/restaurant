@@ -18,13 +18,13 @@ function DeleteContact() {
     }
   };
   return (
-    <div>
-      <h1>Delete Contact</h1>
+    <div className="delete-vh-50">
+      <h1  className="delete-contacts-h1">Delete Contact</h1>
       {res && <h2>{res.message}</h2>}
       {res && <h2>{res.error}</h2>}
-      <form action=""  onSubmit={handleChange} >
+      <form action="" className="first-form"  onSubmit={handleChange} >
         <input type="text" name="id"  placeholder="Enter Contact ID" />
-        <button >Delete</button>
+        <button   className="buttonAddDish">Delete</button>
       </form>
     </div>
   );

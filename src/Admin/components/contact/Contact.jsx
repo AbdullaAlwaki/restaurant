@@ -4,7 +4,7 @@ import GetContact from "./GetContect";
 import DeleteContact from "./DeleteContact";
 import UpdateContact from "./UpdateContact";
 
-import "../../style/AddDishes.css";
+import "../../style/contacts.css";
 
 export default function Contact() {
   const [method, setMethod] = React.useState("GET");
@@ -12,10 +12,10 @@ export default function Contact() {
     setMethod(e.target.value);
   };
   return (
-    <>
-      <select name="" id="" onChange={handleChange}>
+    <div className="contacts_container"  >
+
+      <select className="selection" onChange={handleChange}>
         <option value="GET">get</option>
-        <option value="POST">post</option>
         <option value="PUT">update</option>
         <option value="DELETE">delete</option>
       </select>
@@ -23,8 +23,7 @@ export default function Contact() {
       {method === "GET" && <GetContact />}
       {method === "DELETE" && <DeleteContact />}
       {method === "PUT" && <UpdateContact />}
-      {/* {method === "POST" && <PostDishes />}
-       */}
-    </>
+
+    </div>
   );
 }
