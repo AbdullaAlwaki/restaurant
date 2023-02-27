@@ -61,7 +61,7 @@ function Booking() {
                       </div>
                   ))}
                 {/*reservation button*/}
-                <button type="submit" className="buttonBook">{localStorage.getItem("user")? "Book now":"Need to login"}</button>
+                <button type="submit" className="buttonBook">{localStorage.getItem("token")? "Book now":"Need to login"}</button>
               </form>
             {response && <h1>{response.message}</h1> }
             {response && <p>{response.error}</p>}
