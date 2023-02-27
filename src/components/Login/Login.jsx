@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Login.css";
 import loginLogo from "../../images/login.png";
-import axios from "axios";
+import axios from "../../util/axios.config";
 
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -20,7 +20,6 @@ function Login() {
         "/api/signIn",
        dataAll,
         {
-          baseURL:'https://mern-restaurant-backend.onrender.com',
           headers: {
             "Content-Type": "application/json",
             withCredentials : true
