@@ -102,7 +102,7 @@
 
 .Admin_nav_li {
     padding: 0 20px;
-    margin: 0 20px;
+
     border-right: 1px solid #ffffff;
     height: 100%;
     display: flex;
@@ -116,21 +116,7 @@
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
+  width: 100%;
+  padding: 1rem 1rem;
 }
 
-/* .Admin_nav_li a:hover {
-  color: #30d40f;
-}
-
-.Admin_nav_li a:active {
-  color: #f9f8f5;
-}
-
-.Admin_nav_li a:visited {
-  color: #d4940f;
-}
-
-.Admin_nav_li a:link {
-  color: #d4940f;
-}
- */

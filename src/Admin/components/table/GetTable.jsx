@@ -13,19 +13,22 @@ function Table() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="get-table">
       <h1>Book Table</h1>
+      <div className="get-table-all">
       {bookTable.map((item) => {
         return (
-          <div key={item._id}>
-            <h3>{item.name}</h3>
-            <p>{item._id}</p>
-            <p>{item.persons}</p>
-            <p>{item.date}</p>
-            <p>{item.time}</p>
+          <div  className="get-table-items"key={item._id}>
+            <h3> Name:  {item.name}</h3>
+            <p><span> ID : </span> {item._id} </p>
+            <p><span> No. :  </span>{item.persons}</p>
+            <p><span>Date :  </span> {item.date}</p>
+            <p><span> Time :  </span>{item.time}</p>
           </div>
         );
       })}
+      </div>
+      
     </div>
   );
 }

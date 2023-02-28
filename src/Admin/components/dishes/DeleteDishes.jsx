@@ -18,7 +18,7 @@ function DeleteDishes() {
     }
   };
   return (
-    <div>
+    <div  className="delete-vh-50">
       <h1 className="delete-dishes-h1">Delete Dishes</h1>
       {res && <h2>{res.message}</h2>}
       {res && <h2>{res.error}</h2>}

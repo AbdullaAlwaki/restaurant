@@ -35,6 +35,8 @@ function PostDishes() {
         onSubmit={handleSubmit}
       >
         <h1>Dishes</h1>
+ 
+        <h1>Post Dishes</h1>
 
         <div className="dish-info">
           <h4 className="headingAdd"> Name Of The Dish?</h4>

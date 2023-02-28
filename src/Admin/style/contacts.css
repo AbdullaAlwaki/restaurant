@@ -1,0 +1,102 @@
+.contacts_container{
+    background-image: url(../images/dishes.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.get-contacts{
+    width: 100%;
+     background-color: white;
+     color: black;
+     font-size: 1.5rem;
+     margin: auto;
+     text-align: center;
+ }
+
+.get-contacts-all{
+
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr)); 
+    grid-gap: 70px;
+  
+
+}
+.get-contacts-items{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 450px;
+    color:rgb(28, 5, 5);
+    margin: auto;
+    box-shadow: 10px 5px 5px  rgba(15, 45, 92, 0.9);
+    
+}
+.get-contacts-items img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.get-contacts-items h3{
+    width: 100%;
+
+    text-align: center;
+
+}
+.get-contacts-items span {
+    font-weight: bold;
+}
+
+.get-contacts-items p:last-child{
+    text-align: left;
+}
+.update-contacts-h1{
+    text-align: center;
+    background-color:#0b2a3c;
+    color: white;
+    width: 20%;
+    height: 3rem;
+    margin: auto;
+    padding-top: 5px;
+
+}
+.buttonContacts{
+    height: 2rem;
+    width: 7rem;
+    margin: 1rem;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #fbf6f6;
+    background-color: white;
+    color: #c29e0e;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonContacts:hover{
+    background-color: #c29e0e;
+    color: white;
+}
+.delete-contacts-h1{
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 20%;
+    height: 3rem;
+    margin: auto;
+    padding-top: 5px;
+  
+}

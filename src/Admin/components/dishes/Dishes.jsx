@@ -23,6 +23,7 @@ export default function AddDishes() {
         <option value="DELETE">delete</option>
       </select>
      
+     
       {method === "POST" && <PostDishes />}
       {method === "GET" && <GetDishes />}
       {method === "DELETE" && <DeleteDishes />}

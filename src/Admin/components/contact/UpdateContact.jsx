@@ -50,11 +50,11 @@ export default function UpdateContact() {
         }
     };
   return (
-    <div>
-        <h1>Update Contact</h1>
+    <div className="update-page-view" >
+        <h1 className="update-dishes-h1">Update Contact</h1>
         {res && <h2>{res.message}</h2>}
         {res && <h2>{res.error}</h2>}
-        <form action="" onSubmit={handleContact}>
+        <form action="" className="first-form" onSubmit={handleContact}>
         <input type="text" name="_id" id="_id" placeholder="Enter Contact Id" />
         <button>Find Contact </button>
       </form>

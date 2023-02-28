@@ -57,10 +57,13 @@ function UpdateDishes() {
   };
 
   return (
-    <div>
+    <div  className="update-page-view" >
+       <h1 className="update-contacts-h1"> Update Dishes</h1>
+    
       <form action="" className="first-form" onSubmit={handleDish}>
-        <input type="text" name="id" id="id" placeholder="Enter Dish Id" />
-        <button className="buttonAddDish"> Find Dish</button>
+      
+        <input type="text"  name="id" id="id" placeholder="Enter Dish Id" />
+        <button className="buttonContacts"> Find Dish</button>
       </form>
 
       {dish && (
@@ -71,17 +74,10 @@ function UpdateDishes() {
           onSubmit={handleUpdate}
         >
           <div className="dish-info">
-            <h1>Update Dishes</h1>
-          </div>
-          <div className="dish-info">
-            <input type="text" name="name" id="name" defaultValue={dish.name} />
-            <input
-              type="text"
-              name="images"
-              id="image"
-              defaultValue={dish.images}
-            />
-          </div>
+          <h1>Update Dishes</h1>
+     
+        </div>
+        <div className="dish-info">
 
           <div className="dish-info">
             <h4>What kind of dishes?</h4>
@@ -157,56 +153,8 @@ function UpdateDishes() {
             </div>
           </div>
 
-          <div className="dish-info">
-            <h4>Is the dish an offer?</h4>
-            <div className="radio-container">
-              <section>
-                <label htmlFor="isOffers">is Offer</label>
-                <input
-                  type="radio"
-                  name="isOffers"
-                  id="isOffers"
-                  defaultChecked={dish.isOffers ? true : false}
-                  value="true"
-                />
-                <label htmlFor="isNotOffer">is Not Offer</label>
-                <input
-                  type="radio"
-                  name="isOffers"
-                  id="isNotOffer"
-                  defaultChecked={dish.isOffers ? false : true}
-                  value="false"
-                />
-              </section>
-            </div>
+          <button  type="submit" className="buttonContacts">Update Dish</button>
           </div>
-          <div className="dish-info">
-            <h4>Is the dish a favorite dish?</h4>
-            <div className="radio-container">
-              <section>
-                <label htmlFor="isFavorite">is Favorite</label>
-                <input
-                  type="radio"
-                  name="isFavorite"
-                  id="isFavorite"
-                  defaultChecked={dish.isFavorites ? true : false}
-                  value="true"
-                />
-                <label htmlFor="isNotFavorite">is Not Favorite</label>
-                <input
-                  type="radio"
-                  name="isFavorite"
-                  id="isNotFavorite"
-                  defaultChecked={dish.isFavorites ? false : true}
-                  value="false"
-                />
-              </section>
-            </div>
-          </div>
-
-          <button type="submit" className="buttonAddDish">
-            Update Dish
-          </button>
         </form>
       )}
       {res && <h1>{res.massage}</h1>}

@@ -52,13 +52,13 @@ export default function UpdateTable() {
 
 
   return (
-    <div>
-        <h1>Update Table</h1>
+    <div className="update-page-view">
+        <h1 className="update-table-h1">Update Table</h1>
         {res && <h2>{res.message}</h2>}
         {res && <h2>{res.error}</h2>}
-        <form action="" onSubmit={handleTable}>
+        <form className="first-form" onSubmit={handleTable}>
         <input type="text" name="id" id="id" placeholder="Enter Table Id" />
-        <button>Find Table </button>
+        <button className="buttonTable">Find Table </button>
         </form>
         {dataTable && (
             <form action="" onSubmit={handleChange}>
@@ -66,7 +66,7 @@ export default function UpdateTable() {
             <input type="number" name="persons" id="persons" placeholder="Enter Table Persons" defaultValue={dataTable.persons} />
             <input type="text" name="time" id="time" placeholder="Enter Table Time" defaultValue={dataTable.time} />
             <input type="date" name="date" id="date" placeholder="Enter Table Date" defaultValue={dataTable.date} />
-            <button>Update Table </button>  
+            <button className="buttonTable">Update Table </button>  
             </form>
         )}
 

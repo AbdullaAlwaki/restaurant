@@ -205,9 +205,23 @@
 
 .delete-dishes-h1{
     text-align: center;
-    background-color: #fbf6f6;
-    width: 30%;
+    background-color: red;
+    color: white;
+    width: 20%;
+    height: 3rem;
     margin: auto;
+    padding-top: 5px;
+  
+}
+.update-dishes-h1{
+    text-align: center;
+    background-color:#0b2a3c;
+    color: white;
+    width: 20%;
+    height: 3rem;
+    margin: auto;
+    padding-top: 5px;
+
 }
 .get-dishes{
    width: 100%;
@@ -260,6 +274,14 @@
 
 .get-dishes-items p:last-child{
     text-align: left;
+}
+
+.delete-vh-50{
+    height: 50vh;
+}
+
+.update-page-view{
+    margin-bottom:13%;
 }
 
 
