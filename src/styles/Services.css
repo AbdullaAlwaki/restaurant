@@ -112,6 +112,6 @@
 }
 
 .buttonServ:hover {
-    width: 12rem;
-    height: 40px;
+    transform: scale(1.3);
+    
 }

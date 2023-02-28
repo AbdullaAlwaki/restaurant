@@ -148,6 +148,9 @@ table{
     width: 100%;
     height: 20%;
   }
+  .privacy{
+    color: rgb(0, 136, 255);
+  }
 
   .form-item-name{
     width:45%;
