@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "../../../util/axios.config"
+
 
 function DeleteDishes() {
   const [res, setRes] = React.useState([]);
@@ -9,11 +11,8 @@ function DeleteDishes() {
     const form = new FormData(e.target);
     const name = form.get("name");
     try {
-      const response = await fetch(`https://mern-restaurant-backend.onrender.com/api/Dishes/${name}`, {
-        method: "DELETE",
-      });
-      const result = await response.json();
-      setRes(result);
+      const response = await axios.delete(`/api/Dishes/${name}`);
+      setRes(response.data);
     } catch (error) {
       console.log(error);
     }

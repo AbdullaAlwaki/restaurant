@@ -12,45 +12,23 @@ function Login() {
   const handleChange = async (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
-    const dataAll ={
-  email :form.get("email"),
-    password :form.get("password")}
+    const dataAll = {
+      email: form.get("email"),
+      password: form.get("password"),
+    };
     try {
-      const res = await axios.post(
-        "/api/signIn",
-       dataAll,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            withCredentials : true
-          },
-        }
-      );
-      // fetch("http://localhost:10000/api/signIn", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //     credentials: "include",
-      //   },
-      //   body: JSON.stringify(dataAll),
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => {
-        //     console.log(data)})
-        //   .catch((err) => console.log(err));
-        const data1 =  res.data
-        
-        // save the cookie in the browser
-        //document.cookie = `token=${data.token}; path=/; max-age=3600`;
-        
-        
+      const response = await axios.post("/api/signIn", dataAll, {
+        headers: {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        },
+      });
+      const res = response.data;
 
-      console.log(data1);
       if (res?.message) {
         setRes(res.message);
         localStorage.setItem("token", res.token);
-        console.log(res.user);
-        setInterval(() => {
+        setTimeout(() => {
           navigate("/");
         }, 2000);
       } else {

@@ -22,7 +22,6 @@ function App() {
   React.useEffect(() => {
     (async () => {
       const res = await axios(`/api/Dishes`);
-console.log(res.data);
       dispatch({ type: "MENU", payload: res.data.dishes });
     })();
     // eslint-disable-next-line
