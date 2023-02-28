@@ -51,7 +51,7 @@ return(
           <div className="checkbox-item">
          
               <input type="checkbox"  value="none" id="check_1" name="check" required/>
-              <p>I agree to the <a href="https://www.w3docs.com/privacy-policy">privacy policy.</a></p>
+              <p>I agree to the <a className='privacy' href="https://www.w3docs.com/privacy-policy">privacy policy.</a></p>
            
           </div>
         </div>
