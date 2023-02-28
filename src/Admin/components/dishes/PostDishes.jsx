@@ -19,10 +19,15 @@ function PostDishes() {
       isFavorites: form.get("is Favorites"),
     };
     try {
-      const response = await axios.post("/api/Dishes", data);
+      const response = await axios.post("/api/Dishes", data, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      });
       setResponse(response.data);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -35,7 +40,7 @@ function PostDishes() {
         onSubmit={handleSubmit}
       >
         <h1>Dishes</h1>
- 
+
         <h1>Post Dishes</h1>
 
         <div className="dish-info">

@@ -4,6 +4,7 @@ import openingTimes from "../../images/openingTimes.png"
 import address from "../../images/address.png"
 import phoneNumber from "../../images/phoneNumber.png"
 import email from "../../images/email.png"
+import axios from "../../util/axios.config"
 
 function Contact() {
     const [res , setRes] = React.useState(null);
@@ -21,15 +22,8 @@ function Contact() {
             message
         }
         try {
-            const res = await fetch("https://mern-restaurant-backend.onrender.com/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
-            const json = await res.json();
-            setRes(json);
+            const res = await axios.post("/api/contact", data);
+            setRes(res.data);
         } catch (err) {
             setErr(err);
         }

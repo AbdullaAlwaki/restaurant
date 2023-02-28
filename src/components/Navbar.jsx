@@ -4,12 +4,23 @@ import { FaShoppingCart } from "react-icons/fa";
 import "../styles/Navbar.css";
 import logo from "../images/MERN.svg";
 import { dataContext } from "./Context/context";
+import axios from "../util/axios.config";
 
 function NavBar() {
   // eslint-disable-next-line no-unused-vars
   const { state } = useContext(dataContext);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
+  const [admin, setAdmin] = React.useState(false);
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      axios.get(`/api/user/${localStorage.getItem("token")}`)
+      .then(res=> setAdmin(res.data.admin))
+      .catch(err=> console.log(err.message))
+       
+     
+      // setAdmin(res.data.admin);
+    }
+  }, []);
 
   return (
     <>
@@ -35,53 +46,30 @@ function NavBar() {
           <ul>
             <li>
               {/* <a href="/home">Home</a> */}
-              <NavLink
-                
-                to="/"
-              >
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               {/* <a href="/about">About</a> */}
-              <NavLink
-                to="/about"
-              >
-                About
-              </NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
               {/* <a href="/menu">Menu</a> */}
-              <NavLink
-                to="/menu"
-              >
-                Menu
-              </NavLink>
+              <NavLink to="/menu">Menu</NavLink>
             </li>
             <li>
               {/* <a href="/services">Services</a> */}
-              <NavLink
-                to="/services"
-              >
-                Services
-              </NavLink>
+              <NavLink to="/services">Services</NavLink>
             </li>
             <li>
               {/* <a href="/contact">Contact Us</a> */}
-              <NavLink
-                to="/contact"
-              >
-                Contact
-              </NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li>
-              {/* Dashboard */}
-              <NavLink
-                to="/Dashboard"
-              >
-                Dashboard
-              </NavLink>
-            </li>
+            {admin && (
+              <li>
+                {/* Dashboard */}
+                <NavLink to="/Dashboard">Dashboard</NavLink>
+              </li>
+            )}
           </ul>
         </div>
         <div className="login">
@@ -97,7 +85,7 @@ function NavBar() {
 
             <li>
               <NavLink to="/Login" className="log_in">
-                {localStorage.getItem("token")?"Logout" :"Login"}
+                {localStorage.getItem("token") ? "Logout" : "Login"}
               </NavLink>
             </li>
             <li>

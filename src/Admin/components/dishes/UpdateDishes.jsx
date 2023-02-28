@@ -78,6 +78,13 @@ function UpdateDishes() {
      
         </div>
         <div className="dish-info">
+        <input type="text" name="name" id="name" defaultValue={dish.name} />
+          <input
+            type="text"
+            name="images"
+            id="image"
+            defaultValue={dish.images}
+          />
 
           <div className="dish-info">
             <h4>What kind of dishes?</h4>

@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/Home/Booking.css";
+import axios from "../../util/axios.config"
 
 function Booking() {
   const [response, setResponse] = React.useState([]);
@@ -14,18 +15,8 @@ function Booking() {
       time: form.get("time"),
     };
     try {
-      const response = await fetch(
-        "https://mern-restaurant-backend.onrender.com/api/table",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
-      const result = await response.json();
-      setResponse(result);
+      const res = await axios.post("/api/table",data);
+      setResponse(res.data);
     } catch (error) {
       console.log(error);
     }

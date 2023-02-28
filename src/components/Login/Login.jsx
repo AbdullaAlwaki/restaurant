@@ -20,7 +20,7 @@ function Login() {
       const response = await axios.post("/api/signIn", dataAll, {
         headers: {
           "Content-Type": "application/json",
-          withCredentials: true,
+          // withCredentials: true,
         },
       });
       const res = response.data;

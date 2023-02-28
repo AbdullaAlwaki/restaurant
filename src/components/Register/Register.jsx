@@ -1,13 +1,13 @@
 import React from "react";
 import "../../styles/Register.css";
-
+import axios from "../../util/axios.config"
 import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [user, setUser] = React.useState(null);
   const navigate = useNavigate();
 
-  const handelSubmit = (e) => {
+  const handelSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     const firstName = data.get("firstName");
@@ -15,28 +15,21 @@ function Register() {
     const email = data.get("email");
     const password = data.get("password");
     const confirm = data.get("confirmPassword");
-
-    try {
-      fetch("https://mern-restaurant-backend.onrender.com/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
+    const dataForm = {
+      firstName,
           lastName,
           email,
           password,
           confirm,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setUser(data);
-          setInterval(() => {
+    }
+    try {
+      const res = await axios.post("/api/signup", dataForm)
+        if(res.data){
+          setUser(res.data);
+
+          setTimeout(() => {
             navigate("/login");
-          }, 2000);
-        });
+          }, 2000);}
     } catch (error) {
       console.log(error);
     }

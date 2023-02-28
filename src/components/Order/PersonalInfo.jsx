@@ -40,14 +40,14 @@ return(
           <p>Address</p>
           <input type="text" className='form-item' name="StreetName" placeholder="Street Name" />
           <input type="text" className='form-item' name="House" placeholder="House No." />
-          <div class="city-item">
+          <div className="city-item">
             <input type="text" className='form-item'name='city' placeholder="City" />
             <input type="text" className='form-item' name='zipCode' placeholder="Postal / Zip code" />
             <input type="text" className='form-item'name='country' placeholder="Country" />
           </div>
         </div>
         <div className="question">
-          <p>Privacy Policy<span class="required">*</span></p>
+          <p>Privacy Policy<span className="required">*</span></p>
           <div className="checkbox-item">
          
               <input type="checkbox"  value="none" id="check_1" name="check" required/>

@@ -22,7 +22,6 @@ function goToMenu (){
     cartEmpty()
 }
 
-console.log(state);
   return (
    <div className="bill-details">
     <div className="order-details ">
