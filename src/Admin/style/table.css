@@ -101,3 +101,26 @@
 .delete-vh-50{
     height: 50vh;
 }
+.delete-table-h1{
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 20%;
+    height: 3rem;
+    margin: auto;
+    padding-top: 5px;
+  
+}
+
+@media screen and (max-width: 768px){
+    .get-table-all{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+    .get-table-items{
+        width: 100%;
+    }
+
+
+}
+
+
